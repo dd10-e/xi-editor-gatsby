@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     color: rgba(0, 0, 0, 0.87);
   }
   & > ${'p'} {
-    display: flex;
+    display: block !important;
     justify-content: start;
     color: #462a16;
     margin-top: 1rem;
@@ -38,6 +38,10 @@ const Wrapper = styled.div`
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
   }
+
+  /* img {
+    display: block !important;
+  } */
 `
 
 export const HTMLContent = ({ content, className }) => (
