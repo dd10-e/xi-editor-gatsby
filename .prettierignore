@@ -1,0 +1,7 @@
+# Tailwindcss
+output.css
+tailwind.css
+tailwind.js
+
+# Netlify CMS
+/static
