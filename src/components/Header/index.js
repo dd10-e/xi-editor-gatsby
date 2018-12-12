@@ -51,7 +51,7 @@ class Header extends React.Component {
               <div className="-ml-2 pt-2">
                 <MenuItem to="/" title="home" />
                 <MenuItem to="/documentation/config" title="docs" />
-                <MenuItem to="/gsoc" title="gsoc" />
+                <MenuItem to="/gsoc/gsoc" title="gsoc" />
                 <MenuItem to="/contribute" title="contribute" />
                 <MenuItem to="/building-docs" title="buildind docs" />
                 <MenuItem to="/blog" title="blog" />

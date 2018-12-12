@@ -1,29 +1,72 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 
+import Content, { HTMLContent } from '../components/content'
 import Layout from '../components/layout'
 
-const BuildindDocsPage = () => (
-  <Layout>
-    <div className="flex text-grey-darkest ">
-      <div className="w-3/5">
-        <h1 className="mx-4 md:mx-0 mt-4 font-medium text-4xl">
-          Building Docs
-        </h1>
-        <p className="text-normal leading-normal mt-6">
-          The xi editor project is an attempt to build a high quality text
-          editor, using modern software engineering techniques. It is initially
-          built for macOS, using Cocoa for the user interface. There are also
-          frontends for other operating systems available from third-party
-          developers.
-        </p>
-        <p className="mt-4 mb-2">Goals include:</p>
-        <p>
-          Please refer to the October 2018 roadmap to learn more about planned
-          features.
-        </p>
-      </div>
-    </div>
-  </Layout>
-)
+export const BuildindDocsTemplate = ({
+  title,
+  contentComponent,
+  content,
+  helmet,
+}) => {
+  const PostContent = contentComponent || Content
+  return (
+    <section>
+      {helmet || ''}
+      <h1 className="mx-4 md:mx-0 mt-4 font-medium text-4xl">{title}</h1>
+      <PostContent content={content} className="ml-4 lg:ml-0" />
+    </section>
+  )
+}
 
-export default BuildindDocsPage
+BuildindDocsTemplate.propTypes = {
+  content: PropTypes.node.isRequired,
+  contentComponent: PropTypes.func,
+  description: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  helmet: PropTypes.object,
+}
+
+const BuildindDocs = ({ data }) => {
+  const site = data.site.siteMetadata
+  return (
+    <Layout>
+      <BuildindDocsTemplate
+        contentComponent={HTMLContent}
+        title={data.markdownRemark.frontmatter.title}
+        content={data.markdownRemark.html}
+        helmet={
+          <Helmet title={` ${site.title} ${site.titleSeparator} Contribute`}>
+            <meta
+              name="description"
+              content={`${data.markdownRemark.frontmatter.description}`}
+            />
+          </Helmet>
+        }
+      />
+    </Layout>
+  )
+}
+export const query = graphql`
+  query {
+    markdownRemark(fields: { sourceName: { eq: "build-docs" } }) {
+      html
+      frontmatter {
+        title
+        description
+      }
+    }
+
+    site {
+      siteMetadata {
+        title
+        titleSeparator
+      }
+    }
+  }
+`
+
+export default BuildindDocs

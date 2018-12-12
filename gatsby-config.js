@@ -31,6 +31,27 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `gsoc`,
+        path: `${__dirname}/content/gsoc/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `contribute`,
+        path: `${__dirname}/content/contribute/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `build-docs`,
+        path: `${__dirname}/content/build-docs/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `docs`,
         path: `${__dirname}/content/documentation/`,
       },

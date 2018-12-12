@@ -6,12 +6,7 @@ import PropTypes from 'prop-types'
 import Content, { HTMLContent } from '../components/content'
 import LayoutWithLeftNav from '../components/layoutWithLeftNav'
 
-export const DocumentationPostTemplate = ({
-  content,
-  contentComponent,
-  title,
-  helmet,
-}) => {
+export const GSoCTemplate = ({ content, contentComponent, title, helmet }) => {
   const PostContent = contentComponent || Content
 
   return (
@@ -25,29 +20,27 @@ export const DocumentationPostTemplate = ({
   )
 }
 
-DocumentationPostTemplate.propTypes = {
+GSoCTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
 
-class DocumentationPost extends React.Component {
+class GSoC extends React.Component {
   render() {
     const { markdownRemark: documentation } = this.props.data
     const { edges: navBar } = this.props.data.allMarkdownRemark
     const { siteMetadata: site } = this.props.data.site
 
     return (
-      <LayoutWithLeftNav data={navBar} path="documentation">
-        <DocumentationPostTemplate
+      <LayoutWithLeftNav data={navBar} path="gsoc">
+        <GSoCTemplate
           content={documentation.html}
           contentComponent={HTMLContent}
           title={documentation.frontmatter.title}
           helmet={
-            <Helmet
-              title={` ${site.title} ${site.titleSeparator} Documentation`}
-            >
+            <Helmet title={` ${site.title} ${site.titleSeparator} GsoC`}>
               <meta
                 name="description"
                 content={`${documentation.frontmatter.title}`}
@@ -60,7 +53,7 @@ class DocumentationPost extends React.Component {
   }
 }
 
-DocumentationPost.propTypes = {
+GSoC.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
@@ -85,7 +78,7 @@ export const query = graphql`
 
     allMarkdownRemark(
       limit: 1000
-      filter: { fields: { sourceName: { eq: "docs" } } }
+      filter: { fields: { sourceName: { eq: "gsoc" } } }
       sort: { fields: frontmatter___site_nav_category_order }
     ) {
       edges {
@@ -103,4 +96,4 @@ export const query = graphql`
   }
 `
 
-export default DocumentationPost
+export default GSoC

@@ -2,7 +2,6 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 const MenuItem = props => {
-  //   console.log(props)
   return (
     <Link
       to={props.to}

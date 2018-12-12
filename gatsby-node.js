@@ -9,7 +9,7 @@ const toKebabCase = require('./src/utils/kebabCase')
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(limit: 10000) {
         edges {
           node {
             id
@@ -83,11 +83,11 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  // Documentation pages
   const docs = result.data.allMarkdownRemark.edges.filter(
     single => single.node.fields.sourceName === 'docs'
   )
 
-  // Documentation pages
   docs.forEach(({ node }) => {
     actions.createPage({
       path: `/documentation${node.fields.slug}`,
@@ -95,49 +95,16 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { id: node.id },
     })
   })
+
+  // Gooogle Summer of Code(gsoc) pages
+  const gsoc = result.data.allMarkdownRemark.edges.filter(
+    single => single.node.fields.sourceName === 'gsoc'
+  )
+  gsoc.forEach(({ node }) => {
+    actions.createPage({
+      path: `/gsoc${node.fields.slug}`,
+      component: require.resolve('./src/templates/gsoc-template.js'),
+      context: { id: node.id },
+    })
+  })
 }
-
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
-
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const parentFileNode = getNode(node.parent)
-//     const pathPrefix = pathPrefixes[parentFileNode.sourceName]
-//     createNodeField({
-//       node,
-//       name: `sourceName`,
-//       value: parentFileNode.sourceName,
-//     })
-//   }
-// }
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const result = await graphql(`
-//     {
-//       allMarkdownRemark(
-//         limit: 1000
-//         filter: { frontmatter: { templateKey: { eq: "docs" } } }
-//       ) {
-//         edges {
-//           node {
-//             id
-//             fields {
-//               slug
-//             }
-//             frontmatter {
-//               templateKey
-//             }
-//           }
-//         }
-//       }
-//     }
-//   `)
-
-//   const docs = result.data.allMarkdownRemark.edges
-//   actions.createPage({
-//     component: require.resolve('./src/templates/documentation-post.js'),
-//     context: {
-//       id: docs.id,
-//     },
-//   })
-// }
