@@ -17,10 +17,6 @@ exports.createPages = async ({ graphql, actions }) => {
               slug
               sourceName
             }
-            frontmatter {
-              tags
-              templateKey
-            }
           }
         }
       }
@@ -53,33 +49,6 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/blog${node.fields.slug}`,
       component: require.resolve('./src/templates/blog-post.js'),
       context: { id: node.id },
-    })
-  })
-
-  // Tag pages
-  let tags = []
-  // Iterate through each post, putting all found tags into `tags`
-  // before this, prevent dublicate
-  posts.forEach(({ node }) => {
-    if (node.frontmatter.tags != null) {
-      node.frontmatter.tags.forEach(tag => {
-        if (tags.indexOf(node.frontmatter.tags) === -1) {
-          tags.push(tag)
-        }
-      })
-    }
-  })
-
-  // Make tag pages
-  tags.forEach(tag => {
-    // Transform to kebabCase and make an url with it
-    const tagPath = `/tags/${toKebabCase(tag)}/`
-    actions.createPage({
-      path: tagPath,
-      component: require.resolve(`./src/templates/tag.js`),
-      context: {
-        tag,
-      },
     })
   })
 

@@ -29,6 +29,7 @@ const Layout = ({ children, centered }) => (
           ]}
         >
           <html lang="en" />
+          <link rel="icon" type="image/png" href="img/logo.png" sizes="16x16" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main

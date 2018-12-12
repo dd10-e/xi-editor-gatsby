@@ -1,9 +1,9 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
-import toKebabCase from '../utils/kebabCase'
+// import toKebabCase from '../utils/kebabCase'
 
 import Content, { HTMLContent } from '../components/content'
 import Layout from '../components/layout'
@@ -12,7 +12,6 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
   title,
   helmet,
 }) => {
@@ -29,28 +28,6 @@ export const BlogPostTemplate = ({
         </p>
         <PostContent content={content} className="ml-4 lg:ml-0" />
       </div>
-      {tags && tags.length ? (
-        <div className="lg:w-3/4 xl:w-1/5 mt-8 ml-4">
-          <div className="ml-4 lg:ml-0 mb-2 text-lg font-bold text-purple">
-            Tags:
-          </div>
-          <div className="ml-4 lg:ml-0 flex flex-wrap">
-            {tags.map((tag, i) => (
-              <div
-                className={`w-1/3 mb-4 bg-purple rounded px-2 h-10 flex items-center justify-center mr-4`}
-                key={toKebabCase(tag) + 'tags'}
-              >
-                <Link
-                  to={`/tags/${toKebabCase(tag)}`}
-                  className="text-orange-lightest no-underline"
-                >
-                  {toKebabCase(tag)}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      ) : null}
     </section>
   )
 }
@@ -74,7 +51,6 @@ class Post extends React.Component {
           content={post.html}
           contentComponent={HTMLContent}
           description={post.frontmatter.description}
-          tags={post.frontmatter.tags}
           title={post.frontmatter.title}
           helmet={
             <Helmet title={` ${site.title} ${site.titleSeparator} Blog`}>
@@ -103,7 +79,6 @@ export const query = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        tags
         title
         description
       }
