@@ -38,8 +38,8 @@ class Header extends React.Component {
                     alt="logo"
                     className="w-8"
                   />
+                  <p className="ml-4 font-thin text-xl text-white">Xi-Editor</p>
                 </Link>
-                <p className="ml-4 font-thin text-xl text-white">Xi-Editor</p>
               </div>
               <div>
                 <div className="flex absolute pin-t pin-r mt-4 mr-4 md:mt-0 md:relative">
