@@ -1,0 +1,548 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.0.66"/><style data-emotion-css="mz9jeh">.css-mz9jeh *{color:rgba(0,0,0,0.87);}.css-mz9jeh > p{display:block !important;-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;color:#462a16;margin-top:1rem;margin-bottom:2rem;font-size:1.125rem;line-height:1.5;}.css-mz9jeh > h2{color:#f6993f;}.css-mz9jeh > h2,.css-mz9jeh > h3,.css-mz9jeh > h4{margin-top:2rem;margin-bottom:1rem;color:#34515e;}.css-mz9jeh > p > img{max-width:20rem;}.css-mz9jeh ul{margin-left:2rem;padding:0;}.css-mz9jeh ul > li{margin-top:0.8rem;margin-bottom:0.8rem;}</style><title data-react-helmet="true"> Gatsby Blog Tailwindcss | Documentation</title><link data-react-helmet="true" rel="icon" type="image/png" href="/xi-editor-gatsby/img/logo.png" sizes="16x16"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><meta data-react-helmet="true" name="description" content="The Frontend Protocol"/><link rel="manifest" href="/xi-editor-gatsby/manifest.webmanifest"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/xi-editor-gatsby/sitemap.xml"/><link rel="preload" href="/xi-editor-gatsby/static/d/27/path---documentation-frontend-protocol-440-3e4-UeFVhTSA0s2vOHnnV3DZSDbaE.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="h-full w-full flex flex-col items-stretch font-sans"><header class="flex flex-col flex-no-shrink"><div class="bg-xi-blue-dark"><div class="container mx-auto"><div class="flex justify-between items-center py-4"><div class="flex items-center"><a class="text-white no-underline flex items-center" href="/xi-editor-gatsby/"><img src="/img/logo.png" alt="logo" class="w-8"/></a><p class="ml-4 font-thin text-xl text-white">Xi-Editor</p></div><div><div class="flex absolute pin-t pin-r mt-4 mr-4 md:mt-0 md:relative"><input type="text" id="search" autoComplete="off" class="w-full py-2 text-grey-darkest pl-4 pr-10 rounded focus:border-grey-light" placeholder="Search..."/><div class="flex items-center"><svg class="fill-current text-grey-dark inline-block h-4 w-4 -ml-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></div></div></div></div></div></div><div class="bg-xi-blue"><div class="container mx-auto"><div class="flex justify-between items-center"><div class="-ml-2 pt-2"><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/">home</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/documentation/config">docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/gsoc/gsoc">gsoc</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/contribute">contribute</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/building-docs">buildind docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/blog">blog</a></div></div></div></div></header><main role="main" class="flex-1 "><div class="flex"><div class="w-1/6 h-full flex-no-shrink"><ul class="list-reset p-4 flex flex-col"><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/frontend-notes/">Notes on writing front-ends</a><a aria-current="page" class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm bg-blue-lightest border" href="/xi-editor-gatsby/documentation/frontend-protocol/">The Frontend Protocol</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/plugin/">Plugin architecture</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/config/">Working with the config system</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt/">CRDT - An approach to async plugins and undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt-details/">CRDT - The Xi Text Engine</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/fuchsia-ledger-crdts/">CRDT - Using the Ledger for CRDTs</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-00/">Rope science - Introduction</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-01/">Rope science, part 1 - MapReduce for text</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-02/">Rope science, part 2 - metrics</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-03/">Rope science, part 3 - Grapheme cluster boundaries</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-04/">Rope science, part 4 - parenthesis matching</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-05/">Rope science, part 5 - incremental word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-06/">Rope science, part 6 - parallel and asynchronous word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08/">Rope science, part 8 - CRDTs for concurrent editing</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08a/">Rope science, part 8a - CRDT follow-up</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-09/">Rope science, part 9 - CRDT Approach to Async Plugins and Undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-10/">Rope science, part 10 - designing for a conflict-free world</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-11/">Rope science, part 11 - practical syntax highlighting</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-12/">Rope science, part 12 - minimal invalidation</a></ul></div><div class="flex-1 flex-wrap mb-32"><section class="lg:flex h-full"><div class="lg:w-3/4 xl:w-4/5"><h1 class="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">The Frontend Protocol</h1><div class="ml-4 lg:ml-0 css-mz9jeh ekxoq9d0"><h2 id="table-of-contents"><a href="#table-of-contents" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Table Of Contents</h2>
+<ul>
+<li>
+<p><a href="#methods">API Methods</a></p>
+<ul>
+<li>
+<p><a href="#from-front-end-to-back-end">Backend</a></p>
+<ul>
+<li><a href="#edit-namespace">Edit Commands</a></li>
+<li><a href="#plugin-namespace">Plugin Commands</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#from-back-end-to-front-end">Frontend</a></p>
+<ul>
+<li><a href="#status-bar-commands">Status Bar Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="methods"><a href="#methods" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods</h2>
+<p>These are mostly described by example rather than specified in detail.
+They are given in shorthand, eliding the JSON-RPC boilerplate. For
+example, the actual interaction on the wire for <code>new_view</code> is:</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">to core: {&quot;id&quot;:0,&quot;method&quot;:&quot;new_view&quot;,&quot;params&quot;:{}}
+from core: {&quot;id&quot;:0,&quot;result&quot;: &quot;view-id-1&quot;}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h2 id="from-front-end-to-back-end"><a href="#from-front-end-to-back-end" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>From front-end to back-end</h2>
+<h3 id="client_started"><a href="#client_started" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>client_started</h3>
+<p><code>client_started {"config_dir" "some/path"?, "client_extras_dir": "some/other/path"?}</code></p>
+<p>Sent by the client immediately after establishing the core connection. This is
+used to perform initial setup. The two arguments are optional; the <code>config_dir</code>
+points to a directory where the user's config files and plugins live, and the
+<code>client_extras_dir</code> points to a directory where the frontend can package
+additional resources, such as bundled plugins.</p>
+<h3 id="new_view"><a href="#new_view" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>new_view</h3>
+<p><code>new_view { "file_path": "path.md"? }</code> -> <code>"view-id-1"</code></p>
+<p>Creates a new view, returning the view identifier as a string.
+<code>file_path</code> is optional; if specified, the file is loaded into a new
+buffer; if not a new empty buffer is created. Currently, only a
+single view into a given file can be open at a time.</p>
+<p><strong>Note:</strong>, there is currently no mechanism for reporting errors. Also
+note, the protocol delegates power to load and save arbitrary files.
+Thus, exposing the protocol to any other agent than a front-end in
+direct control should be done with extreme caution.</p>
+<h3 id="close_view"><a href="#close_view" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>close_view</h3>
+<p><code>close_view {"view_id": "view-id-1"}</code></p>
+<p>Closes the view associated with this <code>view_id</code>.</p>
+<h3 id="save"><a href="#save" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>save</h3>
+<p><code>save {"view_id": "view-id-4", "file_path": "save.txt"}</code></p>
+<p>Saves the buffer associated with <code>view_id</code> to <code>file_path</code>. See the
+note for <code>new_view</code>. Errors are not currently reported.</p>
+<h3 id="set_theme"><a href="#set_theme" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>set_theme</h3>
+<p><code>set_theme {"theme_name": "InspiredGitHub"}</code></p>
+<p>Asks core to change the theme. If the change succeeds the client
+will receive a <code>theme_changed</code> notification.</p>
+<h3 id="set_language"><a href="#set_language" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>set_language</h3>
+<p><code>set_language {"view-id":"view-id-1", "language_id":"Rust"}</code></p>
+<p>Asks core to change the language of the buffer associated with the <code>view_id</code>.
+If the change succeeds the client will receive a <code>language_changed</code> notification.</p>
+<h3 id="modifyuserconfig"><a href="#modifyuserconfig" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>modify<em>user</em>config</h3>
+<p><code>modify_user_config { "domain": Domain, "changes": Object }</code></p>
+<p>Modifies the user's config settings for the given domain. <code>Domain</code> should be
+either the string <code>"general"</code> or an object of the form <code>{"syntax": "rust"}</code>, or
+<code>{"user_override": "view-id-1"}</code>, where <code>"rust"</code> is any valid syntax identifier,
+and <code>"view-id-1"</code> is the identifier of any open view.</p>
+<h3 id="get_config"><a href="#get_config" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>get_config</h3>
+<p><code>get_config {"view_id": "view-id-1"} -> Object</code></p>
+<p>Returns the config table for the view associated with this <code>view_id</code>.</p>
+<h3 id="edit-namespace"><a href="#edit-namespace" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>edit namespace</h3>
+<hr>
+<p><code>edit {"method": "insert", "params": {"chars": "A"}, "view_id": "view-id-4"}</code></p>
+<p>Dispatches the inner method to the per-tab handler, with individual
+inner methods described below:</p>
+<h3 id="edit-methods"><a href="#edit-methods" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Edit methods</h3>
+<h4 id="insert"><a href="#insert" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>insert</h4>
+<p><code>insert {"chars":"A"}</code></p>
+<p>Inserts the <code>chars</code> string at the current cursor locations.</p>
+<h4 id="paste"><a href="#paste" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>paste</h4>
+<p><code>paste {"chars": "password"}</code></p>
+<p>Inserts the <code>chars</code> string at the current cursor locations. If there are
+multiple cursors and <code>chars</code> has the same number of lines as there are
+cursors, one line will be inserted at each cursor, in order; otherwise the full
+string will be inserted at each cursor.</p>
+<h4 id="copy"><a href="#copy" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>copy</h4>
+<p><code>copy -> String|Null</code></p>
+<p>Copies the active selection, returning their contents or <code>Null</code> if the selection was empty.</p>
+<h4 id="cut"><a href="#cut" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cut</h4>
+<p><code>cut -> String|Null</code></p>
+<p>Cut the active selection, returning their contents or <code>Null</code> if the selection was empty.</p>
+<h4 id="scroll"><a href="#scroll" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>scroll</h4>
+<p><code>scroll [0,18]</code></p>
+<p>Notifies the back-end of the visible scroll region, defined as the
+first and last (non-inclusive) formatted lines. The visible scroll
+region is used to compute movement distance for page up and page down
+commands, and also controls the size of the fragment sent in the
+<code>update</code> method.</p>
+<h4 id="resize"><a href="#resize" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>resize</h4>
+<p><code>resize {width: 420, height: 400}</code></p>
+<p>Notifies the backend that the size of the view has changed. This is
+used for word wrapping, if enabled. Width and height are specified
+in px units / points, not display pixels.</p>
+<h4 id="click"><a href="#click" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>click</h4>
+<p><code>click [42,31,0,1]</code></p>
+<p>Implements a mouse click. The array arguments are: line and column
+(0-based, utf-8 code units), modifiers (again, 2 is shift), and
+click count.</p>
+<h4 id="drag"><a href="#drag" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>drag</h4>
+<p><code>drag [42,32,0]</code></p>
+<p>Implements dragging (extending a selection). Arguments are line,
+column, and flag as in <code>click</code>.</p>
+<h4 id="gesture"><a href="#gesture" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>gesture</h4>
+<p><code>gesture {"line": 42, "col": 31, "ty": "toggle_sel"}</code></p>
+<p><strong>Note:</strong> both <code>click</code> and <code>drag</code> functionality will be migrated to
+additional <code>ty</code> options for <code>gesture</code>.</p>
+<p>Currently, the following gestures are supported:</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">point_select # moves the cursor to a point
+toggle_sel # adds or removes a selection at a point
+range_select # modifies the selection to include a point (shift+click)
+line_select # sets the selection to a given line
+word_select # sets the selection to a given word
+multi_line_select # adds a line to the selection
+multi_word_select # adds a word to the selection</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="goto_line"><a href="#goto_line" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>goto_line</h4>
+<p><code>goto_line {"line": 1}</code></p>
+<p>Sets the cursor to the beginning of the provided <code>line</code> and scrolls to
+this position.</p>
+<h4 id="other-movement-and-deletion-commands"><a href="#other-movement-and-deletion-commands" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other movement and deletion commands</h4>
+<p>The following edit methods take no parameters, and have similar
+meanings as NSView actions. The pure movement and selection
+modification methods will be migrated to a more general method
+that takes a "movement" enum as a parameter.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">delete_backward
+delete_forward
+insert_newline
+duplicate_line
+move_up
+move_up_and_modify_selection
+move_down
+move_down_and_modify_selection
+move_left
+move_left_and_modify_selection
+move_right
+move_right_and_modify_selection
+scroll_page_up
+page_up_and_modify_selection
+scroll_page_down
+page_down_and_modify_selection
+yank
+transpose
+select_all
+collapse_selections
+add_selection_above
+add_selection_below</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="transformations"><a href="#transformations" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transformations</h4>
+<p>The following methods act by modifying the current selection.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">uppercase
+lowercase
+capitalize
+indent
+outdent</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="number-transformations"><a href="#number-transformations" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Number Transformations</h4>
+<p>The following methods work with a caret or multiple selections. If the beginning of a selection (or the caret) is within a positive or negative number, the number will be transformed accordingly:</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">increase_number
+decrease_number</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<h4 id="recording"><a href="#recording" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recording</h4>
+<p>These methods allow manipulation and playback of event recordings.</p>
+<ul>
+<li>If there is no currently active recording, start recording events under the provided name.</li>
+<li>If there is no provided name, the current recording is saved.</li>
+<li>If the name provided matches the current recording name, the current recording is saved.</li>
+<li>
+<p>If the name provided does not match the current recording name, the events for the current recording are dismissed.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">toggle_recording {
+&quot;recording_name&quot;?: string
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+</li>
+</ul>
+<p>Execute a set of recorded events and modify the document state:</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">play_recording {
+    &quot;recording_name&quot;: string
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<p>Completely remove a specific recording:</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">clear_recording {
+    &quot;recording_name&quot;: string
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span></span></pre></div>
+<h3 id="language-support-oriented-features-in-edit-namespace"><a href="#language-support-oriented-features-in-edit-namespace" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Language Support Oriented features (in Edit Namespace)</h3>
+<h4 id="hover"><a href="#hover" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hover</h4>
+<p>Get Hover for a position in file. The request for <em>hover</em> is made as a notification. The client is forwarded result back via a <code>show_hover</code> rpc</p>
+<p>If position is skipped in the request, current cursor position will be used in core.</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">request_hover {
+    &quot;request_id&quot;: number,
+    &quot;position&quot;?: Position
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<div class="gatsby-highlight" data-language="ts"><pre style="counter-reset: linenumber NaN" class="language-ts line-numbers"><code class="language-ts">interface Position {
+    line: number,
+    column: number,
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span></span></pre></div>
+<h3 id="plugin-namespace"><a href="#plugin-namespace" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plugin namespace</h3>
+<p><strong>Note:</strong> plugin commands are in flux, and may change.</p>
+<p><strong>Example</strong>: The following RPC dispatches the inner method to the plugin manager.</p>
+<p><code>plugin {"method": "start", params: {"view_id": "view-id-1", plugin_name: "syntect"}}</code></p>
+<hr>
+<h3 id="plugin-methods"><a href="#plugin-methods" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plugin methods</h3>
+<h4 id="start"><a href="#start" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>start</h4>
+<p><code>start {"view_id": "view-id-1", "plugin_name": "syntect"}</code></p>
+<p>Starts the named plugin for the given view.</p>
+<h4 id="stop"><a href="#stop" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>stop</h4>
+<p><code>stop {"view_id": "view-id-1", "plugin_name": "syntect"}</code></p>
+<p>Stops the named plugin for the given view.</p>
+<h4 id="plugin_rpc"><a href="#plugin_rpc" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>plugin_rpc</h4>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">plugin_rpc {&quot;view_id&quot;: &quot;view-id-1&quot;, &quot;receiver&quot;: &quot;syntect&quot;,
+            &quot;notification&quot;: {
+                &quot;method&quot;: &quot;custom_method&quot;,
+                &quot;params&quot;: {&quot;foo&quot;: &quot;bar&quot;},
+            }}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Sends a custom rpc command to the named receiver. This may be a notification
+or a request.</p>
+<h3 id="find-and-replace-methods"><a href="#find-and-replace-methods" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Find and replace methods</h3>
+<h4 id="find"><a href="#find" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>find</h4>
+<p><code>find {"chars": "a", "case_sensitive": false, "regex": false, "whole_words": true}</code>
+Parameters <code>regex</code> and <code>whole_words</code> are optional and by default <code>false</code>.</p>
+<p>Sets the current search query and options.</p>
+<h4 id="multi_find"><a href="#multi_find" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>multi_find</h4>
+<p>This find command supports multiple search queries.</p>
+<p><code>multi_find [{"id": 1, "chars": "a", "case_sensitive": false, "regex": false, "whole_words": true}]</code>
+Parameters <code>regex</code> and <code>whole_words</code> are optional and by default <code>false</code>. <code>id</code> is an optional parameter
+used to uniquely identify a search query. If left empty, the query is considered as a new query and
+the backend will generate a new ID.</p>
+<p>Sets the current search queries and options.</p>
+<h4 id="findnext-and-findprevious"><a href="#findnext-and-findprevious" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>find<em>next and find</em>previous</h4>
+<p><code>find_next {"wrap_around": true, "allow_same": false, "modify_selection": "set"}</code>
+<code>find_previous {"wrap_around": true, "allow_same": false, "modify_selection": "set"}</code>
+All parameters are optional. Boolean parameters are by default <code>false</code> and <code>modify_selection</code>
+is <code>set</code> by default. If <code>allow_same</code> is set to <code>true</code> the current selection is considered a
+valid next occurrence. Supported options for <code>modify_selection</code> are:</p>
+<ul>
+<li><code>none</code>: the selection is not modified</li>
+<li><code>set</code>: the next/previous match will be set as the new selection</li>
+<li><code>add</code>: the next/previous match will be added to the current selection</li>
+<li><code>add_remove_current</code>: the previously added selection will be removed and the next/previous
+match will be added to the current selection</li>
+</ul>
+<p>Selects the next/previous occurrence matching the search query.</p>
+<h4 id="find_all"><a href="#find_all" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>find_all</h4>
+<p><code>find_all { }</code></p>
+<p>Selects all occurrences matching the search query.</p>
+<h4 id="highlight_find"><a href="#highlight_find" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>highlight_find</h4>
+<p><code>highlight_find {"visible": true}</code></p>
+<p>Shows/hides active search highlights.</p>
+<h4 id="selectionforfind"><a href="#selectionforfind" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>selection<em>for</em>find</h4>
+<p><code>selection_for_find {"case_sensitive": false}</code>
+The parameter <code>case_sensitive</code> is optional and <code>false</code> if not set.</p>
+<p>Sets the current selection as the search query.</p>
+<h4 id="replace"><a href="#replace" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>replace</h4>
+<p><code>replace {"chars": "a", "preserve_case": false}</code>
+The parameter <code>preserve_case</code> is currently not implemented and ignored.</p>
+<p>Sets the replacement string.</p>
+<h4 id="selectionforreplace"><a href="#selectionforreplace" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>selection<em>for</em>replace</h4>
+<p><code>selection_for_replace {"case_sensitive": false}</code>
+The parameter <code>case_sensitive</code> is optional and <code>false</code> if not set.</p>
+<p>Sets the current selection as the replacement string.</p>
+<h4 id="replace_next"><a href="#replace_next" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>replace_next</h4>
+<p><code>replace_next { }</code></p>
+<p>Replaces the next matching occurrence with the replacement string.</p>
+<h4 id="replace_all"><a href="#replace_all" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>replace_all</h4>
+<p><code>replace_all { }</code></p>
+<p>Replaces all matching occurrences with the replacement string.</p>
+<h4 id="selectionintolines"><a href="#selectionintolines" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>selection<em>into</em>lines</h4>
+<p><code>selection_into_lines { }</code></p>
+<p>Splits all current selections into lines.</p>
+<h2 id="from-back-end-to-front-end"><a href="#from-back-end-to-front-end" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>From back-end to front-end</h2>
+<h3 id="view-update-protocol"><a href="#view-update-protocol" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>View update protocol</h3>
+<p>The following three methods are used to update the view's contents. The design
+of the view update protocol, has a few particular goals in mind:</p>
+<ul>
+<li>Keep everything async.</li>
+<li>Keep network traffic minimal.</li>
+<li>Allow the front-end to retain as much information as possible (including text
+if only cursors are updated).</li>
+<li>Allow the front-end to use small amounts of memory even when document is
+large.</li>
+</ul>
+<p>Conceptually, the core maintains a full view of the document, which can be
+considered an array of lines. Each line consists of the <em>text</em> (a string), a set
+of <em>cursor</em> locations, and a structure representing <em>style</em> information. Many
+operations update this view, at which point the core sends an <code>update</code>
+notification to the front-end.</p>
+<p>The front-end maintains a <em>cache</em> of this view. Some lines will be present,
+others will be missing. A cache is consistent with the true state when all
+present lines match.</p>
+<p>To optimize communication, the core keeps some state about the client. One bit
+of this state is the <em>scroll window;</em> in general, the core tries to proactively
+update all lines within this window (plus a certain amount of slop on top and
+bottom). In addition, the core maintains a set of lines in the client's cache.
+If a line changes, the update need only be communicated if it is in this set.
+This set is conservative; if a line is missing in the actual cache held by the
+front-end (evicted to save memory), no great harm is done updating it. The
+frontend reports this scroll window to the core by using the <code>scroll</code> method of
+the <code>edit</code> notification.</p>
+<h4 id="def_style"><a href="#def_style" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>def_style</h4>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">def_style
+  id: number
+  fg_color?: number // 32-bit ARGB (word-order) value
+  bg_color?: number // 32-bit ARGB (word-order) value, default 0
+  weight?: number // 100..900, default 400
+  italic?: boolean  // default false
+  underline?: boolean // default false</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>(It's not hard to imagine more style properties such as typeface, size, OpenType
+features, etc).</p>
+<p>The guarantee on <code>id</code> is that it is not currently in use in any lines in the
+view. However, in practice, it will probably just count up. It can also be
+assumed to be small, so using it as an index into a dense array is reasonable.</p>
+<p>There are two reserved style IDs, so new style IDs will begin at 2. Style ID 0
+is reserved for selections and ID 1 is reserved for find results.</p>
+<h4 id="scroll_to"><a href="#scroll_to" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>scroll_to</h4>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">scroll_to: [number, number]  // line, column (in utf-8 code units)</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>This notification indicates that the frontend should scroll its cursor to the
+given line and column.</p>
+<h4 id="update"><a href="#update" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>update</h4>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">update
+  rev?: number
+  ops: Op[]
+  view-id: string
+  pristine: bool
+
+interface Op {
+  op: &quot;copy&quot; | &quot;skip&quot; | &quot;invalidate&quot; | &quot;update&quot; | &quot;ins&quot;
+  n: number  // number of lines affected
+  lines?: Line[]  // only present when op is &quot;update&quot; or &quot;ins&quot;
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>The <code>pristine</code> flag indicates whether or not, after this update, this document
+has unsaved changes.</p>
+<p>The <code>rev</code> field is not present in current builds, but will be at some point in
+the future.</p>
+<p>An update request can be seen as a function from the old client cache state to a
+new one. During evaluation, maintain an index (<code>old_ix</code>) into the old <code>lines</code>
+array, initially 0, and a new lines array, initially empty. [Note that this
+document specifies the semantics. The actual implementation will almost
+certainly represent at least initial and trailing sequences of invalid lines by
+their count; and the editing operations may be more efficiently done in-place
+than by copying from the old state to the new].</p>
+<p>The "copy" op appends the <code>n</code> lines <code>[old_ix .. old_ix + n]</code> to the new lines
+array, and increments <code>old_ix</code> by <code>n</code>.</p>
+<p>The "skip" op increments <code>old_ix</code> by <code>n</code>.</p>
+<p>The "invalidate" op appends n invalid lines to the new lines array.</p>
+<p>The "ins" op appends new lines, specified by the "<code>lines</code>" parameter, specified
+in more detail below. For this op, <code>n</code> must equal <code>lines.length</code> (alternative:
+make n optional in this case). It does not update <code>old_ix</code>.</p>
+<p>The "update" op updates the cursor and/or style of n existing lines. As in
+"ins", n must equal lines.length. It also increments <code>old_ix</code> by <code>n</code>.</p>
+<p><strong>Note:</strong> The "update" op is not currently used by core.</p>
+<p>In all cases, n is guaranteed positive and nonzero (as a consequence, any line
+present in the old state is copied at most once to the new state).</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">interface Line {
+  text?: string  // present when op is &quot;update&quot;
+  cursor?: number[]  // utf-8 code point offsets, in increasing order
+  styles?: number[]  // length is a multiple of 3, see below
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>The interpretation of a line is different for "update" or "ins" ops. In an "ins"
+op, text is always present, and missing cursor or styles properties are
+interpreted as empty (no cursors on that line, no styles).</p>
+<p>In an "update" op, then the text property is absent from the line, and text is
+copied from the previous state (or left invalid if the previous state is
+invalid), and the cursor and styles are updated if present. To delete cursors
+from a line, the core sets the cursor property to the empty list.</p>
+<p>The styles property represents style spans, in an efficient encoding. It is
+conceptually an array of triples (though flattened, so triple at is
+<code>styles[i*3]</code>, <code>styles[i*3 + 1]</code>, <code>styles[i*3 + 2]</code>). The first element of the
+triple is the start index (in utf-8 code units), but encoded as a delta relative
+to the <em>end</em> of the last span (or relative to 0 for the first triple). It may be
+negative, if spans overlap. The second element is the length (in utf-8 code
+units). It is guaranteed nonzero and positive. The third element is a style id.
+The core guarantees that any style id sent in a styles property will have
+previously been set in a set_style request.</p>
+<p>The number of lines in the new lines array always matches the view as maintained
+by the core. Another way of saying this is that adding all "<code>n</code>" values except
+for "skip" operations is the number of lines. [Discussion: the last line always
+represents a partial line, so an empty document is one empty line. But I think
+the initial state should be the empty array. Then, the empty array represents
+the state that no updates have been processed].</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">interface Line {
+  text?: string  // present when op is &quot;update&quot;
+  cursor?: number[]  // utf-8 code point offsets, in increasing order
+  styles?: number[]  // length is a multiple of 3, see below
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="measure_width"><a href="#measure_width" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>measure_width</h4>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">measure_width [{&quot;id&quot;: number, &quot;strings&quot;: string[]}] &lt;- {&quot;id&quot;:0, &quot;result&quot;:[[28.0,8.0]]}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>Asks the frontend to measure the display widths (the width when rendered and presented on screen) of a group of strings. The frontend should return an array of arrays, one for each item in the input array, containing the widths of each of that item's strings when rendered with the style indicated by that items id argument.</p>
+<p>These widths are used to determine how to <a href="https://xi-editor.github.io/xi-editor/docs/rope_science_05.html">calculate line breaks</a> and other attributes that depend on the behaviour of the client's text rendering system.</p>
+<hr>
+<h4 id="theme_changed"><a href="#theme_changed" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>theme_changed</h4>
+<p><code>theme_changed {"name": "InspiredGitHub", "theme": Theme}</code></p>
+<p>Notifies the client that the theme has been changed. The client should
+use the new theme to set colors as appropriate. The <code>Theme</code> object is
+directly serialized from a <a href="https://github.com/trishume/syntect/blob/master/src/highlighting/theme.rs#L27"><code>syntect::highlighting::ThemeSettings</code></a>
+instance.</p>
+<h4 id="available_themes"><a href="#available_themes" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>available_themes</h4>
+<p><code>available_themes {"themes": ["InspiredGitHub"]}</code></p>
+<p>Notifies the client of the available themes.</p>
+<h4 id="language_changed"><a href="#language_changed" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>language_changed</h4>
+<p><code>language_changed {"view_id": "view-id-1", "language_id": "Rust"}</code></p>
+<p>Notifies the client that the language used for syntax highlighting has been changed.</p>
+<h4 id="available_languages"><a href="#available_languages" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>available_languages</h4>
+<p><code>available_languages {"languages": ["Rust"]}</code></p>
+<p>Notifies the client of the available languages.</p>
+<h4 id="config_changed"><a href="#config_changed" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>config_changed</h4>
+<p><code>config_changed {"view_id": "view-id-1", "changes": {} }</code></p>
+<p>Notifies the client that the config settings for a view have changed.
+This is called once when a new view is created, with <code>changes</code> containing
+all config settings; afterwards <code>changes</code> only contains the key/value
+pairs that have new values.</p>
+<h4 id="available_plugins"><a href="#available_plugins" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>available_plugins</h4>
+<p><code>available_plugins {"view_id": "view-id-1", "plugins": [{"name": "syntect", "running": true]}</code></p>
+<p>Notifies the client of the plugins available to the given view.</p>
+<h4 id="plugin_started"><a href="#plugin_started" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>plugin_started</h4>
+<p><code>plugin_started {"view_id": "view-id-1", "plugin": "syntect"}</code></p>
+<p>Notifies the client that the named plugin is running.</p>
+<h4 id="plugin_stopped"><a href="#plugin_stopped" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>plugin_stopped</h4>
+<p><code>plugin_stopped {"view_id": "view-id-1", "plugin": "syntect", "code" 101}</code></p>
+<p>Notifies the client that the named plugin has stopped. The <code>code</code> field is an
+integer exit code; currently 0 indicates a user-initiated exit and 1 indicates
+an abnormal exit, i.e. a plugin crash.</p>
+<h4 id="update_cmds"><a href="#update_cmds" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>update_cmds</h4>
+<p><code>update_cmds {"view_id": "view-id-1", "plugin", "syntect", "cmds": [Command]}</code></p>
+<p>Notifies the client of a change in the available commands for a given plugin.
+The <code>cmds</code> field is a list of all commands currently available to this plugin.
+Clients should store commands on a per-plugin basis; when the <code>cmds</code> argument is
+an empty list it means that this plugin is providing no commands; any previously
+available commands should be disabled.</p>
+<p>The format for describing a <code>Command</code> is in flux. The best place to look for
+a working example is in the tests in core-lib/src/plugins/manifest.rs. As of
+this writing, the following is valid json for a <code>Command</code> object:</p>
+<div class="gatsby-highlight" data-language="json"><pre style="counter-reset: linenumber NaN" class="language-json line-numbers"><code class="language-json">    <span class="token punctuation">{</span>
+        <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Test Command"</span><span class="token punctuation">,</span>
+        <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Passes the current test"</span><span class="token punctuation">,</span>
+        <span class="token property">"rpc_cmd"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"rpc_type"</span><span class="token operator">:</span> <span class="token string">"notification"</span><span class="token punctuation">,</span>
+            <span class="token property">"method"</span><span class="token operator">:</span> <span class="token string">"test.cmd"</span><span class="token punctuation">,</span>
+            <span class="token property">"params"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"view"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+                <span class="token property">"non_arg"</span><span class="token operator">:</span> <span class="token string">"plugin supplied value"</span><span class="token punctuation">,</span>
+                <span class="token property">"arg_one"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+                <span class="token property">"arg_two"</span><span class="token operator">:</span> <span class="token string">""</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"First argument"</span><span class="token punctuation">,</span>
+                <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"Indicates something"</span><span class="token punctuation">,</span>
+                <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"arg_one"</span><span class="token punctuation">,</span>
+                <span class="token property">"arg_type"</span><span class="token operator">:</span> <span class="token string">"Bool"</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Favourite Number"</span><span class="token punctuation">,</span>
+                <span class="token property">"description"</span><span class="token operator">:</span> <span class="token string">"A number used in a test."</span><span class="token punctuation">,</span>
+                <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"arg_two"</span><span class="token punctuation">,</span>
+                <span class="token property">"arg_type"</span><span class="token operator">:</span> <span class="token string">"Choice"</span><span class="token punctuation">,</span>
+                <span class="token property">"options"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                    <span class="token punctuation">{</span><span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Five"</span><span class="token punctuation">,</span> <span class="token property">"value"</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">{</span><span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Ten"</span><span class="token punctuation">,</span> <span class="token property">"value"</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">}</span>
+                <span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h3 id="language-support-specific-commands"><a href="#language-support-specific-commands" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Language Support Specific Commands</h3>
+<h4 id="show-hover"><a href="#show-hover" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Show Hover</h4>
+<p><code>show_hover { request_id: number, result: string }</code></p>
+<h3 id="status-bar-commands"><a href="#status-bar-commands" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Status Bar Commands</h3>
+<h4 id="addstatusitem"><a href="#addstatusitem" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>add<em>status</em>item</h4>
+<p><code>add_status_item { "source": "status_example", "key": "my_key", "value": "hello", "alignment": "left" }</code></p>
+<p>Adds a status item, which will be displayed on the frontend's status bar. Status items have a reference to whichever plugin added them. The alignment key dictates whether this item appears on the left side or the right side of the bar. This alignment can only be set when the item is added.</p>
+<h4 id="updatestatusitem"><a href="#updatestatusitem" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>update<em>status</em>item</h4>
+<p><code>update_status_item { "key": "my_key", "value": "hello"}</code></p>
+<p>Update a status item with the specified key with the new value.</p>
+<h4 id="removestatusitem"><a href="#removestatusitem" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>remove<em>status</em>item</h4>
+<p><code>remove_status_item { "key": "my_key" }</code></p>
+<p>Removes a status item from the front end.</p>
+<h3 id="find-and-replace-commands"><a href="#find-and-replace-commands" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Find and replace commands</h3>
+<h4 id="find_status"><a href="#find_status" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>find_status</h4>
+<p>Find supports multiple search queries.</p>
+<p><code>find_status {"view_id": "view-id-1", "queries": [{"id": 1, "chars": "a", "case_sensitive": false, "is_regex": false, "whole_words": true, "matches": 6, "lines": [1, 3, 3, 6]}]}</code></p>
+<p>Notifies the client about the current search queries and search options. <code>lines</code> indicates for each match its line number.</p>
+<h4 id="replace_status"><a href="#replace_status" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>replace_status</h4>
+<p><code>replace_status {"view_id": "view-id-1", "status": {"chars": "a", "preserve_case": false}}</code></p>
+<p>Notifies the client about the current replacement string and replace options.</p>
+<h2 id="other-future-extensions"><a href="#other-future-extensions" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other future extensions</h2>
+<p>Things the protocol will need to cover:</p>
+<ul>
+<li>
+<p>Dirty state (for visual indication and dialog on unsaved changes).</p>
+</li>
+<li>
+<p>Minimal invalidation.</p>
+</li>
+<li>
+<p>General configuration options (word wrap, etc).</p>
+</li>
+<li>
+<p>Display of autocomplete options.</p>
+</li>
+<li>
+<p>...</p>
+</li>
+</ul></div></div></section></div></div></main><footer class="flex-no-shrink border-t pt-4 pb-10 w-full pt-8 px-8"><p class="text-xs text-xi-blue-dark">See the<!-- --> <a href="https://github.com/xi-editor/xi-editor" class="text-xi-blue-dark hover:text-xi-blue font-semibold">GitHub Project</a></p></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-documentation-post-js","jsonName":"documentation-frontend-protocol-440","path":"/documentation/frontend-protocol/"};window.dataPath="27/path---documentation-frontend-protocol-440-3e4-UeFVhTSA0s2vOHnnV3DZSDbaE";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"cms":["/cms.js"]};/*]]>*/</script></body></html>

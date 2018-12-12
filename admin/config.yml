@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: EloD10/gatsby-tailwindcss-netlifycms
+  branch: master
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: Template Key, name: templateKey, widget: hidden, default: blog-post }
+      - { name: title, label: Title }
+      - { name: description, label: Description, widget: text, required: false}
+      - { name: date, label: Date, widget: date }
+      - { name: body, label: Body, widget: markdown }
+      - { name: tags, label: Tags, widget: list, required: false}

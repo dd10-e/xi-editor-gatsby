@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{145:function(n,t,o){"use strict";o.r(t);var c=o(6),e=(o(0),o(22));t.default=function(){return Object(c.jsx)(e.Redirect,{to:"/documentation/config/"})}}}]);
+//# sourceMappingURL=component---src-pages-documentation-js-a17bd4232a80931a9ac1.js.map

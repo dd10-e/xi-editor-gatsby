@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.0.66"/><style data-emotion-css="mz9jeh">.css-mz9jeh *{color:rgba(0,0,0,0.87);}.css-mz9jeh > p{display:block !important;-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;color:#462a16;margin-top:1rem;margin-bottom:2rem;font-size:1.125rem;line-height:1.5;}.css-mz9jeh > h2{color:#f6993f;}.css-mz9jeh > h2,.css-mz9jeh > h3,.css-mz9jeh > h4{margin-top:2rem;margin-bottom:1rem;color:#34515e;}.css-mz9jeh > p > img{max-width:20rem;}.css-mz9jeh ul{margin-left:2rem;padding:0;}.css-mz9jeh ul > li{margin-top:0.8rem;margin-bottom:0.8rem;}</style><title data-react-helmet="true"> Gatsby Blog Tailwindcss | Documentation</title><link data-react-helmet="true" rel="icon" type="image/png" href="/xi-editor-gatsby/img/logo.png" sizes="16x16"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><meta data-react-helmet="true" name="description" content="Working with the config system"/><link rel="manifest" href="/xi-editor-gatsby/manifest.webmanifest"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/xi-editor-gatsby/sitemap.xml"/><link rel="preload" href="/xi-editor-gatsby/static/d/911/path---documentation-config-159-9ed-jYA7HJ71ZV7UIBwTXep7DoGs.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="h-full w-full flex flex-col items-stretch font-sans"><header class="flex flex-col flex-no-shrink"><div class="bg-xi-blue-dark"><div class="container mx-auto"><div class="flex justify-between items-center py-4"><div class="flex items-center"><a class="text-white no-underline flex items-center" href="/xi-editor-gatsby/"><img src="/img/logo.png" alt="logo" class="w-8"/></a><p class="ml-4 font-thin text-xl text-white">Xi-Editor</p></div><div><div class="flex absolute pin-t pin-r mt-4 mr-4 md:mt-0 md:relative"><input type="text" id="search" autoComplete="off" class="w-full py-2 text-grey-darkest pl-4 pr-10 rounded focus:border-grey-light" placeholder="Search..."/><div class="flex items-center"><svg class="fill-current text-grey-dark inline-block h-4 w-4 -ml-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></div></div></div></div></div></div><div class="bg-xi-blue"><div class="container mx-auto"><div class="flex justify-between items-center"><div class="-ml-2 pt-2"><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/">home</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/documentation/config">docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/gsoc/gsoc">gsoc</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/contribute">contribute</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/building-docs">buildind docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/blog">blog</a></div></div></div></div></header><main role="main" class="flex-1 "><div class="flex"><div class="w-1/6 h-full flex-no-shrink"><ul class="list-reset p-4 flex flex-col"><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/frontend-notes/">Notes on writing front-ends</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/frontend-protocol/">The Frontend Protocol</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/plugin/">Plugin architecture</a><a aria-current="page" class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm bg-blue-lightest border" href="/xi-editor-gatsby/documentation/config/">Working with the config system</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt/">CRDT - An approach to async plugins and undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt-details/">CRDT - The Xi Text Engine</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/fuchsia-ledger-crdts/">CRDT - Using the Ledger for CRDTs</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-00/">Rope science - Introduction</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-01/">Rope science, part 1 - MapReduce for text</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-02/">Rope science, part 2 - metrics</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-03/">Rope science, part 3 - Grapheme cluster boundaries</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-04/">Rope science, part 4 - parenthesis matching</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-05/">Rope science, part 5 - incremental word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-06/">Rope science, part 6 - parallel and asynchronous word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08/">Rope science, part 8 - CRDTs for concurrent editing</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08a/">Rope science, part 8a - CRDT follow-up</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-09/">Rope science, part 9 - CRDT Approach to Async Plugins and Undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-10/">Rope science, part 10 - designing for a conflict-free world</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-11/">Rope science, part 11 - practical syntax highlighting</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-12/">Rope science, part 12 - minimal invalidation</a></ul></div><div class="flex-1 flex-wrap mb-32"><section class="lg:flex h-full"><div class="lg:w-3/4 xl:w-4/5"><h1 class="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">Working with the config system</h1><div class="ml-4 lg:ml-0 css-mz9jeh ekxoq9d0"><p>This document is intended for the authors of front-end clients.</p>
+<p><code>xi-core</code> supports two mechanisms for handling persistent user preferences:
+file-based and RPC-based (unmanaged). The file-based system is similar to that employed by
+editors such as vim or Sublime Text; the RPC system is an alternative provided
+for front-ends that wish to manage preferences on their own, or which cannot
+support the file-based approach for platform reasons.</p>
+<p>Clients which wish to use the file-based mechanism must explicitly <strong>opt-in</strong> by
+including <code>"config_dir": "$CONFIG_PATH"</code> in the params of the <code>client_started</code> RPC,
+where <code>$CONFIG_PATH</code> is a path to a directory that will contain config files.</p>
+<p>If using file-based config, <code>xi-core</code> is responsible for watching those files
+for changes, and will reload them appropriately.</p>
+<h3 id="file-based-config"><a href="#file-based-config" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>File based config</h3>
+<p><code>xi-core</code> user config files are <a href="https://github.com/toml-lang/toml">TOML</a> files with
+the <code>.xiconfig</code> file extension. These files should exist in the root of the
+user's config directory. General preferences should be in a file named
+<code>preferences.xiconfig</code>, and language/syntax-specifc preferences should be given
+the lowercase language name and the extension, for instance <code>yaml.xiconfig</code>,
+<code>cpp.xiconfig</code>, and <code>markdown.xiconfig</code>. Each file represents to what we call
+a 'config domain', and the keys &#x26; values in the file constitute a 'config
+table'.</p>
+<h3 id="config-table-format"><a href="#config-table-format" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Config table format</h3>
+<p>Internally, all config tables are represented as JSON objects; all keys must be
+strings, and values must be objects, arrays, strings, or bools. Null values are
+not allowed.</p>
+<p>When we load config files, we convert from TOML to JSON. The TOML 'Datetime'
+type is converted to a string.</p>
+<h3 id="defaults"><a href="#defaults" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Defaults</h3>
+<p><code>xi-core</code> includes a number of default config tables. In the source, these are
+included as <code>TOML</code> files (see
+<a href="https://github.com/xi-editor/xi-editor/blob/master/rust/core-lib/assets/">/rust/core-lib/assets/</a>).
+At compile time these are baked into the binary.</p>
+<h3 id="config-domains"><a href="#config-domains" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Config Domains</h3>
+<p>We refer to a particular group of config settings as a 'config domain'. A domain
+may contain both default and user settings; user settings always override
+default settings for that given domain. Not all domains are persistent; for
+instance there may be a 'user override' domain for each active view, which
+stores settings specific to that view, and which is forgotten when that view
+is closed. This would be used, for instance, if the user has manually changed
+an individual view's indentation settings.</p>
+<h3 id="generating-the-views-config-table"><a href="#generating-the-views-config-table" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Generating the view's config table</h3>
+<p>Each view has its own config table, generated by merging the tables from various
+domains relevant to that view. Those tables are merged in a predetermined order;
+here in order of application (reverse priority):</p>
+<ol>
+<li>General config, including platform-specific overrides</li>
+<li>Syntax config</li>
+<li>User Overrides</li>
+</ol>
+<p>When a config changes, either because a file is modified or an RPC is received,
+then the <code>config_changed</code> notification is sent to the client for each affected
+view. If a change does not affect any views (for instance if <code>rust.xiconfig</code> is
+modified, but no Rust files are open) then no notification is sent.</p>
+<h3 id="rpc-based-config"><a href="#rpc-based-config" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RPC based config</h3>
+<p>Configs can be set or modified with the <code>modify_user_config</code> RPC notification.
+This notification has two paramaters, <code>domain</code> and <code>changes</code>. <code>domain</code> can be
+either the string <code>"general"</code>, for the general user preferences domain, or else
+an object with a single key, which should be either <code>"syntax"</code> or
+<code>"user_override"</code>; the value in this case should be either a syntax name
+(identical to the file names, minus the extension, used for file-based config)
+or a view identifier.</p>
+<p><strong>Note</strong> it is an error to modify one of the 'general' or 'syntax' domains over
+RPC <em>if</em> the client has opted into the file-based config mechanism.</p>
+<h4 id="examples"><a href="#examples" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>If a client is not opting in to file-based config (and is persisting
+preferences through another mechanism) than it should send those
+preferences immediately after launch, and before opening any views:</p>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token comment">// send the user's general preferences</span>
+<span class="token punctuation">{</span>
+    <span class="token string">"method"</span><span class="token punctuation">:</span> <span class="token string">"modify_user_config"</span><span class="token punctuation">,</span>
+    <span class="token string">"params"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"domain"</span><span class="token punctuation">:</span> <span class="token string">"general"</span><span class="token punctuation">,</span>
+        <span class="token string">"changes"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"font_face"</span><span class="token punctuation">:</span> <span class="token string">"Monaco"</span><span class="token punctuation">,</span>
+            <span class="token string">"font_size"</span><span class="token punctuation">:</span> <span class="token number">18.0</span><span class="token punctuation">,</span>
+            <span class="token string">"translate_tabs_to_spaces"</span><span class="token punctuation">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// and their markdown-specific preferences</span>
+<span class="token punctuation">{</span>
+    <span class="token string">"method"</span><span class="token punctuation">:</span> <span class="token string">"modify_user_config"</span><span class="token punctuation">,</span>
+    <span class="token string">"params"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"domain"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">"syntax"</span><span class="token punctuation">:</span> <span class="token string">"markdown"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"changes"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"font_face"</span><span class="token punctuation">:</span> <span class="token string">"Chalkboard"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Regardless of whether the file-based config system is being used,
+<em>non-persistent</em> view-specific settings can only be modified over RPC. For
+instance, if the same user as above wanted to specifically use four-space
+indentation for a view, the client would send the following RPC:</p>
+<div class="gatsby-highlight" data-language="js"><pre style="counter-reset: linenumber NaN" class="language-js line-numbers"><code class="language-js"><span class="token comment">// send the user's general preferences</span>
+<span class="token punctuation">{</span>
+    <span class="token string">"method"</span><span class="token punctuation">:</span> <span class="token string">"modify_user_config"</span><span class="token punctuation">,</span>
+    <span class="token string">"params"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">"domain"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token string">"user_override"</span><span class="token punctuation">:</span> <span class="token string">"view-id-1"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token string">"changes"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+            <span class="token string">"translate_tabs_to_spaces"</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token string">"tab_size"</span><span class="token punctuation">:</span> <span class="token number">4</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<h4 id="null-values"><a href="#null-values" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Null values</h4>
+<p>Null values are allowed in tables sent over RPC; these are interpreted as the
+deletion of any existing value for that key in the given domain.</p>
+<h3 id="validation"><a href="#validation" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validation</h3>
+<p>Whenever a config table is modified, either through the RPC mechanism or by
+editing a file, the updated table is passed through a validator. If the table is
+invalid (for instance if it contains unrecognized keys) then an error is
+reported and the new table is ignored.</p></div></div></section></div></div></main><footer class="flex-no-shrink border-t pt-4 pb-10 w-full pt-8 px-8"><p class="text-xs text-xi-blue-dark">See the<!-- --> <a href="https://github.com/xi-editor/xi-editor" class="text-xi-blue-dark hover:text-xi-blue font-semibold">GitHub Project</a></p></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-documentation-post-js","jsonName":"documentation-config-159","path":"/documentation/config/"};window.dataPath="911/path---documentation-config-159-9ed-jYA7HJ71ZV7UIBwTXep7DoGs";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"cms":["/cms.js"]};/*]]>*/</script></body></html>

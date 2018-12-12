@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.0.66"/><style data-emotion-css="mz9jeh">.css-mz9jeh *{color:rgba(0,0,0,0.87);}.css-mz9jeh > p{display:block !important;-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;color:#462a16;margin-top:1rem;margin-bottom:2rem;font-size:1.125rem;line-height:1.5;}.css-mz9jeh > h2{color:#f6993f;}.css-mz9jeh > h2,.css-mz9jeh > h3,.css-mz9jeh > h4{margin-top:2rem;margin-bottom:1rem;color:#34515e;}.css-mz9jeh > p > img{max-width:20rem;}.css-mz9jeh ul{margin-left:2rem;padding:0;}.css-mz9jeh ul > li{margin-top:0.8rem;margin-bottom:0.8rem;}</style><title data-react-helmet="true"> Gatsby Blog Tailwindcss | Documentation</title><link data-react-helmet="true" rel="icon" type="image/png" href="/xi-editor-gatsby/img/logo.png" sizes="16x16"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><meta data-react-helmet="true" name="description" content="Rope science, part 11 - practical syntax highlighting"/><link rel="manifest" href="/xi-editor-gatsby/manifest.webmanifest"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/xi-editor-gatsby/sitemap.xml"/><link rel="preload" href="/xi-editor-gatsby/static/d/633/path---documentation-rope-science-11-7-da-fa7-4dayCXVjhId3BMn3R5AYGXKzvWQ.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="h-full w-full flex flex-col items-stretch font-sans"><header class="flex flex-col flex-no-shrink"><div class="bg-xi-blue-dark"><div class="container mx-auto"><div class="flex justify-between items-center py-4"><div class="flex items-center"><a class="text-white no-underline flex items-center" href="/xi-editor-gatsby/"><img src="/img/logo.png" alt="logo" class="w-8"/></a><p class="ml-4 font-thin text-xl text-white">Xi-Editor</p></div><div><div class="flex absolute pin-t pin-r mt-4 mr-4 md:mt-0 md:relative"><input type="text" id="search" autoComplete="off" class="w-full py-2 text-grey-darkest pl-4 pr-10 rounded focus:border-grey-light" placeholder="Search..."/><div class="flex items-center"><svg class="fill-current text-grey-dark inline-block h-4 w-4 -ml-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></div></div></div></div></div></div><div class="bg-xi-blue"><div class="container mx-auto"><div class="flex justify-between items-center"><div class="-ml-2 pt-2"><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/">home</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/documentation/config">docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/gsoc/gsoc">gsoc</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/contribute">contribute</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/building-docs">buildind docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/blog">blog</a></div></div></div></div></header><main role="main" class="flex-1 "><div class="flex"><div class="w-1/6 h-full flex-no-shrink"><ul class="list-reset p-4 flex flex-col"><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/frontend-notes/">Notes on writing front-ends</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/frontend-protocol/">The Frontend Protocol</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/plugin/">Plugin architecture</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/config/">Working with the config system</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt/">CRDT - An approach to async plugins and undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt-details/">CRDT - The Xi Text Engine</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/fuchsia-ledger-crdts/">CRDT - Using the Ledger for CRDTs</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-00/">Rope science - Introduction</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-01/">Rope science, part 1 - MapReduce for text</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-02/">Rope science, part 2 - metrics</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-03/">Rope science, part 3 - Grapheme cluster boundaries</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-04/">Rope science, part 4 - parenthesis matching</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-05/">Rope science, part 5 - incremental word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-06/">Rope science, part 6 - parallel and asynchronous word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08/">Rope science, part 8 - CRDTs for concurrent editing</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08a/">Rope science, part 8a - CRDT follow-up</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-09/">Rope science, part 9 - CRDT Approach to Async Plugins and Undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-10/">Rope science, part 10 - designing for a conflict-free world</a><a aria-current="page" class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm bg-blue-lightest border" href="/xi-editor-gatsby/documentation/rope-science-11/">Rope science, part 11 - practical syntax highlighting</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-12/">Rope science, part 12 - minimal invalidation</a></ul></div><div class="flex-1 flex-wrap mb-32"><section class="lg:flex h-full"><div class="lg:w-3/4 xl:w-4/5"><h1 class="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">Rope science, part 11 - practical syntax highlighting</h1><div class="ml-4 lg:ml-0 css-mz9jeh ekxoq9d0"><p><em>23 Apr 2017</em></p>
+<p>In this post, we present an incremental algorithm for syntax
+highlighting. It has very good performance, measured primarily by
+latency but also memory usage and power consumption. It does not
+require a large amount of code, but the analysis is subtle and
+sophisticated. Your favorite code editor would almost certainly
+benefit from adopting it.</p>
+<p>Pedagogically, this post also gives a case study in systematically
+transforming a simple functional program into an incremental
+algorithm, meaning an algorithm that takes a delta on input and
+produces a delta on output, so that applying that delta gives the same
+result as running the entire function from scratch, beginning to end.
+Such algorithms are the backbone of xi editor, the basis of
+near-instant response even for very large files.</p>
+<h2 id="the-syntax-highlighting-function"><a href="#the-syntax-highlighting-function" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The syntax highlighting function</h2>
+<p>Most syntax highlighting schemes (including the TextMate/Sublime/Atom
+format) follow this function signature for the basic syntax
+highlighting operation (code is in pseudo-rust):</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">fn syntax (previous_state, line) -&gt; (next_state, spans);</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
+<p>Typically this "state" is a stack of finite states, i.e. this is a
+<a href="https://en.wikipedia.org/wiki/Pushdown_automaton">pushdown
+automaton</a>. Such
+automata can express a large family of grammars. In fact, the
+incredibly general class of <a href="https://en.wikipedia.org/wiki/LR_parser">LR
+parsers</a> could be accomodated
+by adding one additional token of lookahead in addition to the line,
+a fairly straightforward extension to this algorithm.</p>
+<p>I won't go into more detail about the syntax function itself; within
+this framework, the algorithms described in this post are entirely
+generic.</p>
+<h2 id="a-batch-algorithm"><a href="#a-batch-algorithm" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A batch algorithm</h2>
+<p>The simplest algorithm to apply syntax highlighting to a file is to
+run the function on each line from beginning to end:</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">let mut state = State::initial();
+for line in input_file.lines() {
+    let (new_state, spans) = syntax(state, line);
+    output.render(line, spans);
+    state = new_state;
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>This algorithm has some appealing properties. In addition to being
+quite simple, it also has minimal memory requirements: one line of
+text, plus whatever state is required by the syntax function. It's
+useful for highlighting a file on initial load, and also for
+applications such as statically generating documentation files.</p>
+<p>For this post, it's also something of a correctness spec; all the
+fancy stuff we do has to give the same answer in the end.</p>
+<h2 id="random-access-caching"><a href="#random-access-caching" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Random access; caching</h2>
+<p>Let's say we're not processing the file in batch mode, but will be
+displaying it in a window with ability to scroll to a random point,
+and want to be able to compute the highlighting on the fly. In
+particular, let's say we don't want to store all the spans for the
+whole file. Even in a compact representation, such spans are
+comparable to the size of the input text, potentially much more.</p>
+<p>We can write the following functional program:</p>
+<div class="gatsby-highlight" data-language="text"><pre style="counter-reset: linenumber NaN" class="language-text line-numbers"><code class="language-text">fn get_state(file, line_number) -&gt; state {
+    file.iter_lines(0, line_number).fold(
+        State::initial(),
+        |state, line| syntax(state, line).state
+    )
+}
+
+fn get_spans(file, line_number) -&gt; spans {
+    let state = get_state(file, line_number);
+    syntax(state, file.get_line(line_number)).spans
+}</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>This will work very well for lines near the beginning of the file,
+but has a serious performance problem; it is O(n) to retrieve one
+line's worth of spans, so O(n^2) to process the file.</p>
+<p>Fortunately, <a href="https://en.wikipedia.org/wiki/Memoization">memoization</a>,
+a traditional technique for optimizing functional programs, can come
+to the rescue. Storing the intermediate results of <code>get_state</code> reduces
+the runtime back to O(n). We also see the algorithm start to become
+incremental, in that it's possible to render the first screen of the
+file quickly, without having to process the whole thing.</p>
+<p>However, these benefits come at a cost, namely the memory required
+to store the intermediate results. In this case, we only need store
+the state per line (which, in a compact representation, need only be
+one machine word), so it might be acceptable. But to handle extremely
+large files, we might want to do better.</p>
+<p>One good compromise would be to use a <em>cache</em> with only partial
+coverage of the <code>get_state</code> function; when the cache overflows, we
+evict some entry in the cache to make room. Then, to compute
+<code>get_state</code> for an arbitrary line, we find closest previous cache
+entry, and run the fold forward from there.</p>
+<p>This cache is a classic speed/space tradeoff. The amount of time to
+compute a query is essentially proportional to the <em>gap length</em>
+between one entry and the next. For random access patterns, it follows
+that the optimal pattern would be evenly spaced entries. Then the
+time required for a query is O(n/m), where m is the cache size.</p>
+<p>Tuning such a cache, in particular choosing a cache replacement
+strategy, is tricky. We'll defer discussion of that for later.</p>
+<h2 id="handling-mutation"><a href="#handling-mutation" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Handling mutation</h2>
+<p>Of course, we <em>really</em> want to be able to do interactive syntax
+highlighting on a file being edited. Fortunately, the above cache can
+be extended to handle this use case as well.</p>
+<p>As the file is mutated, existing cache entries might become <em>invalid.</em>
+We define a cache entry (line<em>number, state) as being _valid</em> if that
+state is actually equal to computing <code>get_state(line_number)</code> from
+scratch. Editing a line need not only change the spans for that line;
+it might cause state changes that ripple down from there. A classic
+example would be inserting <code>/*</code> to open a comment; then the entire
+rest of the file would be rendered as a comment. So, unlike a typical
+cache, changing one line might invalidate an arbitrary fraction of the
+cache contents.</p>
+<p>We augment the cache with a <em>frontier,</em> a set of cache entries. All
+operations maintain the following invariant:</p>
+<p><em>If a cache entry is valid and it is not in the frontier, then the
+next entry in the cache is also valid.</em></p>
+<p>From this invariant immediately follows a number of useful properties.
+All lines up to the first element of the frontier are valid. Thus, if
+the frontier is empty, the entire cache is valid.</p>
+<p>This invariant is carefully designed so that it can be easily restored
+after an editing operation, specifically that all operations take
+minimal time (I <em>think</em> it's O(1) amortized, but establishing that
+would take careful analysis).</p>
+<p>Specifically, after changing the contents of a single line, it
+suffices to add the closest previous cache entry to the frontier.
+Other editing operations are similarly easy; to replace an arbitrary
+region of text, also delete cache entries for which the starts of the
+lines are in strictly in the interior of the region. For inserts and
+deletes, the line numbers after the edit will also need to be fixed
+up.</p>
+<p>Of course, it's not enough to properly invalidate the cache, it's also
+important to make progress towards re-validating it. Here is the
+algorithm to do one granule of work:</p>
+<ul>
+<li>Take the first element of the frontier. It refers to a cache entry:
+<code>(line_number, state)</code>.</li>
+<li>Evaluate <code>syntax(state, file.get_line(line_number))</code>, resulting in a
+new_state.</li>
+<li>If <code>line_number + 1</code> does not have an entry in the cache, or if it
+does and the entry's state != new<em>state, then insert
+`(line</em>number + 1, new_state)` into the cache, and move this element
+of the frontier to that entry.</li>
+<li>Otherwise, just delete this element from the frontier.</li>
+</ul>
+<p>The only other subtle operation is deleting an entry from the cache
+(especially evictions). If that entry is in the frontier, then the
+element of the frontier must be moved to the previous entry.</p>
+<h2 id="on-the-representation-of-the-frontier"><a href="#on-the-representation-of-the-frontier" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>On the representation of the frontier</h2>
+<p>It's tempting to truncate the frontier, rather than storing it as a
+set. In particular, it's perfectly correct to just store it as a
+reference to the first entry. Then, the operation of adding an element
+to the frontier reduces to just taking the minimum.</p>
+<p>However, this temptation should be resisted. Let's say the user opens
+a comment at the beginning of a large file. The frontier slowly
+ripples through the file, recomputing highlighting so that all lines
+are in a "commented" state. Then say the user closes the comment when
+the frontier is about halfway through the file. This edit will cause
+a new frontier to ripple down, restoring the uncommented state. With
+the full set representation of the frontier, the old position halfway
+through the file will be retained, and when the new frontier reaches
+it, states will match, so processing can stop.</p>
+<p>If that old position were not retained, then the frontier would need
+to ripple all the way to the end of the file before there would be
+confidence the entire cache was valid. So, for a relatively small cost
+of maintaining the frontier as a set, we get a pretty nice
+optimization, which will improve power consumption and also latency
+(the editor can respond more quickly when it has quiesced as opposed
+to doing computation in the background).</p>
+<h2 id="tuning-the-cache"><a href="#tuning-the-cache" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tuning the cache</h2>
+<p>This is where the rocket science starts. Please check your flight
+harnesses.</p>
+<h3 id="access-patterns"><a href="#access-patterns" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Access patterns</h3>
+<p>Before we can start tuning the cache, we have to characterize the
+access patterns. In an interactive editing session, the workload will
+consist of a mix of three fundamental patterns: sequential, local, and
+random.</p>
+<p>Sequential is familiar from the first algorithm we presented. It's an
+important case when first loading a file. It will also happen when
+edits (such as changing comment balance) cause state changes to ripple
+through the file. The cache is basically irrelevant to this access
+pattern; the computation has to happen in any case, so the only
+purpose of the cache is not to have significant overhead.</p>
+<p>By "local," we mean edits within a small region of the file, typically
+around one screenful. Most such edits <em>won't</em> cause extensive state
+changes, in fact should result in re-highlighting of just a line or
+two. In this access pattern, we want our algorithm to recompute tiny
+deltas, so the cache should be <em>dense,</em> meaning that the gap between
+the closest previous cache entry and the line being edited be zero or
+very small.</p>
+<p>The random access pattern is the most difficult for a cache to deal
+with. The best we can possibly do is O(n/m), as above. We expect these
+cases to be rare compared with the other two, but it is still
+important to have reasonable worst-case behavior.</p>
+<p>Any given editing session will consist of all three of these patterns,
+interleaved, in some relative proportions. This is significant for
+designing a well-tuned cache, especially because processing some work
+from one pattern may leave the cache in poor condition for the next.</p>
+<h3 id="analyzing-the-cache-performance"><a href="#analyzing-the-cache-performance" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Analyzing the cache performance</h3>
+<p>In most applications, cache performance is characterized almost
+entirely by its <em>hit rate,</em> meaning the probability that any given
+query will be present in the cache. Most <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies">cache eviction
+policies</a>
+are chosen to optimize this quantity.</p>
+<p>However, for this algorithm, the cost of a cache miss is highly
+dependent on the <em>gap</em> between entries, and the goal should be to
+minimize this gap.</p>
+<p>From this viewpoint, we can see that the LRU (least recently used)
+policy, while fine for local access patterns, is absolutely worst case
+when mixing sequential with anything else; after sequential procesing,
+the cache will consist of a dense block (often at the end of the
+file), with a huge gap between the beginning of the file and that
+block. As Dan Luu's excellent <a href="http://danluu.com/2choices-eviction/">case
+study</a> points out, LRU can also
+have this kind of pathological performance in more traditional
+applications such as memory hierarchies.</p>
+<p>For the "random" access pattern, the metric we care about is maximum
+gap; this establishes a worst case. For LRU, it is O(n), which is
+terrible. We want to do better.</p>
+<p>The obvious next eviction policy candidate to consider is randomized.
+In traditional cache applications, random eviction fixes the pathology
+with perfectly sequential workloads, and performs reasonably well
+overall (in Dan's analysis, it is better than LRU for some real-world
+workloads, worse in others, and in no case has a hit rate more than
+about 10% different).</p>
+<p>I tried simulating it [TODO: a more polished version of this document</p>
+<p>would contain lots of beautiful visualizations, plus a cleaned up</p>
+<p>version of the simulation code], and the maximum-gap metric was
+horrible, almost as bad as it can get. In scanning the file from
+beginning to end, in the final state the entries near the beginning
+are decimated; a typical result is that the first entry remaining in
+the cache is about halfway through the file.</p>
+<p>For a purely random workload, an ideal replacement policy would be to
+choose the entry with the smallest gap between previous and next
+entries. A bit of analysis shows that this policy would yield a
+maximum gap of 2n/m in the worst case. However, it won't perform well
+for local access patterns - basically, the state of the cache will
+become stuck, as lines most recently added are likely to also have the
+smallest gap. Thus, local edits will still have a cost around n/m
+lines re-highlighted. It doesn't make sense to optimize for the random
+case at the expense of the local one.</p>
+<p>Inspired by Dan's post, I sought a hybrid. My proposed cache eviction
+policy is to probe some small number k of random candidates, and of
+those choose the one with the smallest gap as defined above. In my
+simulations [TODO: I know, this really needs graphs; what I have now</p>
+<p>is too rough], it performs <em>excellently.</em></p>
+<p>There's no obvious best choice of k, it's a tradeoff between the
+expected mix of local (where smaller is better) and random (where
+larger is better). However, there seems to be a magic threshold of 5;
+for any smaller value, the maximum gap grows very quickly with the
+file size, but for 5 or larger it levels off. In a simulation of an
+8k entry cache and a sequential scan through an 8M line file, k=5
+yielded a maximum gap of ~9k lines (keep in mind that 2k is the best
+possible result here). Beyond that, increasing k doesn't have dramatic
+consequences, even at k=10 this metric improves only to ~3600, and
+that's at the expense of degrading local access patterns.</p>
+<p>Obviously it's possible to do a more rigorous analysis and more
+fine-tuning, but my gut feeling is that this very simple policy will
+perform within a small factor of anything more sophisticated; I'd be
+shocked if any policy could improve performance more than a doubling
+of the cache size, and with the cache sizes I have in mind, that
+should be well affordable. And a larger cache size always has the
+advantage that any file with a number of lines that fits entirely
+within the cache will have perfect effectiveness.</p>
+<h3 id="cache-size-and-representation"><a href="#cache-size-and-representation" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cache size and representation</h3>
+<p>Choosing cache size is always a tradeoff between cache effectiveness
+(whether hit rate or maximum-gap) and the cost of the cache itself.
+A larger cache should increase effectiveness, but how much?</p>
+<p>This is an empirical question, but we can try to analyze it. Cache
+effectiveness is irrelevant for sequential access. For the local case,
+it would be reasonable to expect that the "working set" is quite
+small, typically on the order of 1000 lines or so.</p>
+<p>And for the random case, the cache only has to perform reasonably
+well; we expect these cases to be rare.</p>
+<p>From this, we can guess that the cache doesn't have to be very large
+to be effective. Thus, a very simple representation is a dense vector
+of entries. Some operations (such as deletion and fixup of line
+numbers) are O(m) in the size of the cache, but with a very good
+constant factor due to the vector representation. So, while it's
+tempting to use a fancy O(log m) data structure such as a B-tree, this
+is probably a case where simpler is better.</p>
+<p>My gut feeling is that a fixed maximum size of 10k entries will yield
+near-optimal results in all cases.</p>
+<h3 id="implementation-state-and-summary"><a href="#implementation-state-and-summary" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implementation state and summary</h3>
+<p>I haven't implemented this yet (beyond the simulations), but really
+look forward to it.</p>
+<p>Based on my analysis, this algorithm should provide truly excellent
+performance, producing minimal deltas with very modest memory
+requirements. I'm also pleased that the code and data structures are
+relatively easy; I have considered <em>much</em> more sophisticated
+approaches (including of course my beloved balanced-tree
+representation for the cache), which in analysis wouldn't perform
+nearly as well.</p>
+<p>I think it would be interesting to do a more rigorous analysis. It's
+possible this technique has already been investigated somewhere, but
+I'm not aware of it; I'd <em>love</em> to find such a literature.</p>
+<p>Thanks to <a href="https://github.com/cmyr">Colin Rofls</a> for stimulating
+discussions about caching in plugins that inspired many of these
+ideas.</p></div></div></section></div></div></main><footer class="flex-no-shrink border-t pt-4 pb-10 w-full pt-8 px-8"><p class="text-xs text-xi-blue-dark">See the<!-- --> <a href="https://github.com/xi-editor/xi-editor" class="text-xi-blue-dark hover:text-xi-blue font-semibold">GitHub Project</a></p></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-documentation-post-js","jsonName":"documentation-rope-science-11-7da","path":"/documentation/rope-science-11/"};window.dataPath="633/path---documentation-rope-science-11-7-da-fa7-4dayCXVjhId3BMn3R5AYGXKzvWQ";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"cms":["/cms.js"]};/*]]>*/</script></body></html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.0.66"/><style data-emotion-css="mz9jeh">.css-mz9jeh *{color:rgba(0,0,0,0.87);}.css-mz9jeh > p{display:block !important;-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;color:#462a16;margin-top:1rem;margin-bottom:2rem;font-size:1.125rem;line-height:1.5;}.css-mz9jeh > h2{color:#f6993f;}.css-mz9jeh > h2,.css-mz9jeh > h3,.css-mz9jeh > h4{margin-top:2rem;margin-bottom:1rem;color:#34515e;}.css-mz9jeh > p > img{max-width:20rem;}.css-mz9jeh ul{margin-left:2rem;padding:0;}.css-mz9jeh ul > li{margin-top:0.8rem;margin-bottom:0.8rem;}</style><title data-react-helmet="true"> Gatsby Blog Tailwindcss | Documentation</title><link data-react-helmet="true" rel="icon" type="image/png" href="/xi-editor-gatsby/img/logo.png" sizes="16x16"/><meta data-react-helmet="true" name="keywords" content="sample, something"/><meta data-react-helmet="true" name="description" content="Rope science, part 12 - minimal invalidation"/><link rel="manifest" href="/xi-editor-gatsby/manifest.webmanifest"/><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/xi-editor-gatsby/sitemap.xml"/><link rel="preload" href="/xi-editor-gatsby/static/d/80/path---documentation-rope-science-12-b-33-be5-0XFFNpr9ciUbphN0rMatFFr6Gw.json" as="fetch" crossOrigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="h-full w-full flex flex-col items-stretch font-sans"><header class="flex flex-col flex-no-shrink"><div class="bg-xi-blue-dark"><div class="container mx-auto"><div class="flex justify-between items-center py-4"><div class="flex items-center"><a class="text-white no-underline flex items-center" href="/xi-editor-gatsby/"><img src="/img/logo.png" alt="logo" class="w-8"/></a><p class="ml-4 font-thin text-xl text-white">Xi-Editor</p></div><div><div class="flex absolute pin-t pin-r mt-4 mr-4 md:mt-0 md:relative"><input type="text" id="search" autoComplete="off" class="w-full py-2 text-grey-darkest pl-4 pr-10 rounded focus:border-grey-light" placeholder="Search..."/><div class="flex items-center"><svg class="fill-current text-grey-dark inline-block h-4 w-4 -ml-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path></svg></div></div></div></div></div></div><div class="bg-xi-blue"><div class="container mx-auto"><div class="flex justify-between items-center"><div class="-ml-2 pt-2"><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/">home</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/documentation/config">docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/gsoc/gsoc">gsoc</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/contribute">contribute</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/building-docs">buildind docs</a><a class="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green" href="/xi-editor-gatsby/blog">blog</a></div></div></div></div></header><main role="main" class="flex-1 "><div class="flex"><div class="w-1/6 h-full flex-no-shrink"><ul class="list-reset p-4 flex flex-col"><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/frontend-notes/">Notes on writing front-ends</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/frontend-protocol/">The Frontend Protocol</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/plugin/">Plugin architecture</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/config/">Working with the config system</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt/">CRDT - An approach to async plugins and undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/crdt-details/">CRDT - The Xi Text Engine</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/fuchsia-ledger-crdts/">CRDT - Using the Ledger for CRDTs</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-00/">Rope science - Introduction</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-01/">Rope science, part 1 - MapReduce for text</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-02/">Rope science, part 2 - metrics</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-03/">Rope science, part 3 - Grapheme cluster boundaries</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-04/">Rope science, part 4 - parenthesis matching</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-05/">Rope science, part 5 - incremental word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-06/">Rope science, part 6 - parallel and asynchronous word wrapping</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08/">Rope science, part 8 - CRDTs for concurrent editing</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-08a/">Rope science, part 8a - CRDT follow-up</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-09/">Rope science, part 9 - CRDT Approach to Async Plugins and Undo</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-10/">Rope science, part 10 - designing for a conflict-free world</a><a class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm" href="/xi-editor-gatsby/documentation/rope-science-11/">Rope science, part 11 - practical syntax highlighting</a><a aria-current="page" class="no-underline text-xi-blue-dark p-2 hover:bg-blue-lightest text-sm bg-blue-lightest border" href="/xi-editor-gatsby/documentation/rope-science-12/">Rope science, part 12 - minimal invalidation</a></ul></div><div class="flex-1 flex-wrap mb-32"><section class="lg:flex h-full"><div class="lg:w-3/4 xl:w-4/5"><h1 class="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">Rope science, part 12 - minimal invalidation</h1><div class="ml-4 lg:ml-0 css-mz9jeh ekxoq9d0"><p><em>24 Nov 2017</em></p>
+<p>This post describes some of the motivations, theory, and implementation behind
+"minimal invalidation" (also tracked in issue #317).</p>
+<p>A major part of the philosophy of performance in xi is that as much of the processing
+as possible is <em>incremental.</em> Basically, this means that a change to the document
+is represented as an explicit <em>delta,</em> then this delta propagates through the
+rendering pipeline. Ideally, the code touches only a tiny part of the document.</p>
+<p>Here we will talk mostly about the implementation in the core, but getting small
+deltas to the front-end is also important. In an incremental style the front-end
+can re-render only what's in the delta, and then ideally use graphics hardware to
+re-composite the document view, resulting in much improved latency and power
+consumption, among other things.</p>
+<p>Note that an incremental style is not the only way to write a performant editor.
+If rendering is fast, then it's much simpler to just re-render the entire document
+window on every update. That is very much the style of video games, for example,
+where they have to re-draw the world on every frame in any case.</p>
+<h2 id="the-render-function"><a href="#the-render-function" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The render function</h2>
+<p>Here, we'll consider rendering the document as a purely functional program. The
+core's responsibility is to produce a sequence of <em>rendered lines,</em> which are
+basically strings with attributes for syntax highlighting and selection carets.
+Obviously, further stages in the pipeline (all in the front-end) convert this
+representation into pixels displayed on a screen.</p>
+<p>The input to the render function consists of the text (conceptually just a string),
+style spans, the selection, and the line breaks (when word wrapping is in effect).
+There's also some other stuff, like the results of a "find" command, but let's keep
+it simple for now. In fact, to keep things really simple, let's just focus on the
+text, as the concepts are similar, it's just more merging of more inputs.</p>
+<p>The line breaks structure is conceptually just a sequence of offsets corresponding
+to the end of each line. (See the rope science posts on <a href="rope_science_02.md">Metrics</a>
+and <a href="rope_science_06.md">Word Wrapping</a> for more on how these breaks are determined
+and represented).</p>
+<p>Thus, as an imperative program, the simplified render function is almost trivial:</p>
+<div class="gatsby-highlight" data-language="(python)"><pre style="counter-reset: linenumber NaN" class="language-(python) line-numbers"><code class="language-(python)">def render(text, breaks):
+    rendered = []
+    last = 0
+    for break in breaks:
+        rendered.append(text[last:break])
+        last = break
+    return rendered</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<p>Obviously, adding styles and selections makes it more complicated, but the basic
+structure is the same. However, if the document is very large, then recomputing
+this on every keystroke is wasteful, much less serializing it and sending it over
+an RPC channel.</p>
+<p>Can we systematically transform this into an incremental algorithm? Why yes, we can.</p>
+<p>The first thing to notice is that every line is independent of every other line.
+In addition, to actually draw pixels, we don't need all the lines, just the ones
+that appear inside the viewport. When changes happen outside this viewport, ideally
+we'd like to avoid sending an update at all (one way this can happen in practice is
+when making a <a href="rope_science_11.md">syntax highlighting</a> change that ripples to the
+end of the document). Thus, we want to go beyond making it incremental and also make
+it <em>lazy</em> in a way, only spending the work to compute the slice or view that's
+actually needed. The front-end then holds not the entire result of the render
+function, but a cache of it, with each line either valid (and thus guaranteed to
+match the result of the render function), or invalid. When the front-end needs
+a line not in the cache (for example, when scrolling), it requests it from the core.</p>
+<p>The version of the render function designed to compute a single rendered line at
+a time is in a way even simpler:</p>
+<div class="gatsby-highlight" data-language="(python)"><pre style="counter-reset: linenumber NaN" class="language-(python) line-numbers"><code class="language-(python)">def render_line(text, breaks, line_num):
+    return text[breaks[line_num - 1] : breaks[line_num]]</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span></span></pre></div>
+<p>(Assume here that <code>breaks</code> is a fancy object that's designed to return 0 when
+indexed with -1.)</p>
+<h2 id="the-update-protocol"><a href="#the-update-protocol" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The update protocol</h2>
+<p>Given that the output of our incremental render algorithm is a delta, we need a way
+to represent it explicitly. We then serialize the delta and send it from the core
+to the front-end as an asyncronous (but in-order) notification.</p>
+<p>The delta can be interpreted as a function from the previous value of the render
+function (a sequence of lines) to the next value. It's also worth being able to
+introspect into this function, for example to know what's changed so only some
+layers need to be re-rendered in a compositing UI pipeline.</p>
+<p>A slight complication is that lines in the front-end's cache might be invalid.
+In our architecture, the core is in charge of which lines are valid (see #280 for
+discussion of this decision).</p>
+<p>The representation of deltas of this kind is reasonably well understood. The output
+of Unix <a href="https://en.wikipedia.org/wiki/Diff_utility">diff</a>, for example, is a
+sequence of insert and delete operations interspersed with unmodified runs. The
+details of representation are not terribly important. In xi, we ended up with a
+sequence of <code>invalidate</code>, <code>skip</code>, <code>copy</code>, <code>ins</code>, and <code>update</code> operations (this last
+is for updating only styles and cursors when the text is otherwise unchanged). The
+<code>ins</code> operation is the same as diff, while deletion is represented as two <code>copy</code>
+operations with a <code>skip</code> in the middle. See <a href="frontend-protocol.md#xi-view-update-protocol">Xi view update protocol</a> for detailed
+documentation on the update method.</p>
+<h2 id="the-render-plan"><a href="#the-render-plan" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The render plan</h2>
+<p>In the current architecture, the core is in charge of the cache state,
+especially which lines are valid and which lines are invalid. The core tracks
+the scrolled viewport (through the <code>scroll</code> notification) but might lag behind.
+All lines inside the viewport must be valid, in order to draw correctly. For
+lines outside the viewport, either choice is reasonable. Keeping a line valid
+can be helpful on scrolling, as it then doesn't need to be requested from the
+core, but it comes at a storage cost, so should be bounded (especially for large
+documents). In addition, when updating, actually visible lines <em>must</em> be the
+priority, as re-validating additional lines takes extra time to compute,
+serialize, and process.</p>
+<p>Thus, at every opportunity to update, xi produces a <em>render plan.</em> For every
+line, one of three things can happen: it can be discarded even if it was valid,
+it can be preserved if valid, or it can be rendered if invalid. The render plan
+chooses rendering for the visible viewport (plus a very small "slop" for
+scrolling), preserving for a range extending 1000 lines from the viewport, and
+discards the rest. The theory is that preserving existing valid lines comes at
+a very small cost; no additional computation or communication is needed, just
+the storage in the cache.</p>
+<p>Changing the viewport (for example, when scrolling) updates the render plan. In
+addition, the front-end can explicitly request additional lines, and those are
+added to the render plan as well. For any given render plan, it's possible that
+an update would be a no-op, in which case it's not sent at all.</p>
+<p>The render plan is stored in the <code>RenderPlan</code> struct, in <code>line_cache_shadow.rs</code>.</p>
+<h2 id="computing-minimal-deltas"><a href="#computing-minimal-deltas" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Computing minimal deltas</h2>
+<p>With these requirements, we can start looking at how to actually produce the
+deltas. For any given editing operation, it would be possible to directly work
+out the corresponding delta to the render, but that is potentially a large
+number of cases, and also doesn't smoothly handle aggregating a sequence of
+changes into a single render. There is a more systematic way.</p>
+<p>We propose a data structure here called the <em>line cache shadow.</em> It is
+essentially the skeleton of the render result, but stored in extremely
+lightweight form, and easy to update. Then, to actually produce the delta, we
+traverse the render plan and the line cache shadow. Along with producing the
+delta is a new line cache shadow, which, before any additional edits,
+just tracks which lines are valid.</p>
+<p>Conceptually, each line in the line cache shadow is either a reference to a
+line in the front-end's line cache, or an indication it is invalid. Updating
+the shadow is straightforward: to insert a line, insert "invalid", and to delete
+a line, delete it in the shadow. Note that in the delete case, a gap occurs in the
+references to the existing valid lines; when synthesizing the delta, this is
+the cue to issue a <code>skip</code> command.</p>
+<p>Similarly, to rewrap a paragraph (changing line breaks in it), just replace
+the range of lines of the paragraph with a new range, all invalid. And, using
+the <a href="rope_science_06.md">incremental re-wrap technique</a>, possibly the entire
+paragraph need not be invalidated.</p>
+<p>Synthesizing the delta from the shadow and render plan is then straightforward.
+When the plan calls for discarding, issue <code>skip</code>. When it calls for preserving,
+issue <code>invalid</code> for invalid lines in the shadow, or <code>copy</code> for valid lines.
+And when it calls for rendering, re-render and issue <code>ins</code> for invalid lines,
+and <code>copy</code> for valid lines. And for each <code>copy</code>, add a <code>skip</code> if the line number
+is not sequential.</p>
+<p>As a further refinement in practice, a line may be partially valid. A common
+and important case is that the text and styles are valid, but the cursor has
+changed. We use a bitset to keep track of partial validity, and then when
+rendering partially valid lines send an <code>update</code> rather than an <code>ins</code>. For
+cursor movement, a sophisticated front-end might then just update the cursor
+layer without needing to re-render any of the text.</p>
+<p>The line cache shadow data structure itself (<code>LineCacheShadow</code>) is extremely
+small and lightweight to compute, as it's stored in run-length form. In the
+absolute worst case, upon edit the cache can just be replaced with a single
+span indicating all lines are invalid.</p>
+<h2 id="conclusion"><a href="#conclusion" aria-hidden class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conclusion</h2>
+<p>The mechanisms described here are fairly elaborate, but they all flow from a
+clear specification of the problem as a functional program, and from that we
+can systematically derive the incremental algorithm. Further, the correctness
+criterion is clear (applying the resulting delta should yield the same result
+as recomputing from scratch), and we hope to use property testing to ensure
+that.</p>
+<p>Producing minimal deltas is key to xi delivering on its promised performance
+goals, and should result in best-in-class latency and editing smoothness, all
+at minimal power costs.</p></div></div></section></div></div></main><footer class="flex-no-shrink border-t pt-4 pb-10 w-full pt-8 px-8"><p class="text-xs text-xi-blue-dark">See the<!-- --> <a href="https://github.com/xi-editor/xi-editor" class="text-xi-blue-dark hover:text-xi-blue font-semibold">GitHub Project</a></p></footer></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-documentation-post-js","jsonName":"documentation-rope-science-12-b33","path":"/documentation/rope-science-12/"};window.dataPath="80/path---documentation-rope-science-12-b-33-be5-0XFFNpr9ciUbphN0rMatFFr6Gw";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"cms":["/cms.js"]};/*]]>*/</script></body></html>
