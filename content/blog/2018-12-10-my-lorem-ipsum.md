@@ -31,7 +31,7 @@ Proin at laoreet nisi. Pellentesque id sagittis neque. Fusce ac suscipit felis, 
 
 _Lorem Ipsum Descriptum Img_
 
-![Lorem Ipsum](/img/homepng)
+![Lorem Ipsum](/img/home.png)
 
 _Lorem Ipsum Descriptum Img_
 
