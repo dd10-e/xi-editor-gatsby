@@ -54,7 +54,7 @@ const IndexPage = () => (
         </p>
       </div>
       <div className="w-2/5 mt-4">
-        <Image className="max-w-sm" />
+        <Image className="max-w-sm" alt="xi-editor-incrustation" />
       </div>
     </div>
   </Layout>

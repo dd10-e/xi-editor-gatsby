@@ -3,7 +3,7 @@ import '../../output.css'
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, withPrefix, graphql } from 'gatsby'
 
 import Header from './Header/index'
 import Footer from './footer'
@@ -29,7 +29,12 @@ const Layout = ({ children, centered }) => (
           ]}
         >
           <html lang="en" />
-          <link rel="icon" type="image/png" href="img/logo.png" sizes="16x16" />
+          <link
+            rel="icon"
+            type="image/png"
+            href={withPrefix('/img/logo.png')}
+            sizes="16x16"
+          />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main
