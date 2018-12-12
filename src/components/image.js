@@ -17,6 +17,7 @@ const Image = ({ className, alt }) => (
   <StaticQuery
     // https://github.com/gatsbyjs/gatsby/issues/9047
     // It probably can be useful for that case!
+    //! PathPrefix is required ofr github-page deployement
     query={graphql`
       query {
         placeholderImage: file(relativePath: { eq: "home.png" }) {
@@ -26,11 +27,17 @@ const Image = ({ className, alt }) => (
             }
           }
         }
+
+        site {
+          pathPrefix
+        }
       }
     `}
     render={data => (
       <Img
-        fluid={data.placeholderImage.childImageSharp.fluid}
+        fluid={`${data.site.pathPrefix}${
+          data.placeholderImage.childImageSharp.fluid
+        }`}
         className={className}
         alt={alt}
       />
