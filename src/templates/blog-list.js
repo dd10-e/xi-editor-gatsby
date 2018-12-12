@@ -44,12 +44,12 @@ class BlogList extends React.Component {
         </ul>
         {numPages !== 1 && (
           <div class="mx-4 md:mx-0 absolute pin-b inline-flex mb-32">
-            <div class="bg-purple-light hover:bg-purple font-bold py-2 px-4 rounded-l">
+            <div class="bg-blue-lightest hover:bg-blue-lighter font-bold py-2 px-4 rounded-l">
               {!isFirst && (
                 <Link
                   to={'/blog/' + prevPage}
                   rel="prev"
-                  className="no-underline text-sm text-orange-lightest hover:text-orange-lighter active:text-indigo-dark"
+                  className="no-underline text-sm text-blue-darker active:text-indigo-dark"
                 >
                   ← Previous Page
                 </Link>
@@ -59,19 +59,19 @@ class BlogList extends React.Component {
               <Link
                 key={`pagination-number${i + 1}`}
                 to={`/blog/${i === 0 ? '' : i + 1}`}
-                className={`text-orange-lightest p-2 no-underline font-bold hover:text-orange-lighter ${
-                  i + 1 === currentPage ? 'bg-orange' : 'bg-purple'
+                className={`text-blue-darker p-2 no-underline border font-bold hover:text-blue-dark hover:bg-blue-lighter ${
+                  i + 1 === currentPage ? 'bg-blue-light ' : 'bg-blue-lightest'
                 }`}
               >
                 {i + 1}
               </Link>
             ))}
-            <div class="bg-purple-light hover:bg-purple text-purple-darkest font-bold py-2 px-4 rounded-r">
+            <div class="bg-blue-lightest hover:bg-blue-lighter border text-blue-darkest font-bold py-2 px-4 rounded-r">
               {!isLast && (
                 <Link
                   to={'/blog/' + nextPage}
                   rel="next"
-                  className="no-underline text-sm text-orange-lightest hover:text-orange-lighter active:text-indigo-dark"
+                  className="no-underline text-sm text-blue-darker active:text-indigo-dark"
                 >
                   Next Page →
                 </Link>

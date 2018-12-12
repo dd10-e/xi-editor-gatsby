@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const posts = result.data.allMarkdownRemark.edges.filter(
     single => single.node.fields.sourceName === 'blog'
   )
-  const postsPerPage = 10
+  const postsPerPage = 1
   const numPages = Math.ceil(posts.length / postsPerPage)
 
   // blog-list pages
