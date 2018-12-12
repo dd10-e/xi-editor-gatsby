@@ -16,7 +16,7 @@ export const BuildindDocsTemplate = ({
   return (
     <section>
       {helmet || ''}
-      <h1 className="mx-4 md:mx-0 mt-4 font-medium text-4xl">{title}</h1>
+      <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
       <PostContent content={content} className="ml-4 lg:ml-0" />
     </section>
   )
