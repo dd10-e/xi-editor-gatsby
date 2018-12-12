@@ -1,7 +1,7 @@
 module.exports = {
   pathPrefix: '/xi-editor-gatsby',
   siteMetadata: {
-    title: 'Gatsby Blog Tailwindcss',
+    title: 'Xi-Editor',
     titleSeparator: '|',
     siteUrl: `https://www.example.com`,
   },

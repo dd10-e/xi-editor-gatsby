@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -33,7 +33,11 @@ class Header extends React.Component {
                   to="/"
                   className="text-white no-underline flex items-center"
                 >
-                  <img src="/img/logo.png" alt="logo" className="w-8" />
+                  <img
+                    src={withPrefix('/img/logo.png')}
+                    alt="logo"
+                    className="w-8"
+                  />
                 </Link>
                 <p className="ml-4 font-thin text-xl text-white">Xi-Editor</p>
               </div>
