@@ -20,6 +20,7 @@
     "gatsby-plugin-sitemap": "^2.0.3",
     "gatsby-plugin-slug": "^1.0.1",
     "gatsby-remark-autolink-headers": "^2.0.12",
+    "gatsby-remark-design-system": "^2.0.0",
     "gatsby-remark-prismjs": "^3.1.4",
     "gatsby-remark-source-name": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.10",
