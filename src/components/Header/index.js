@@ -56,7 +56,7 @@ class Header extends React.Component {
             <div className="flex justify-between items-center">
               <div className="-ml-2 pt-2">
                 <MenuItem to="/" title="home" />
-                <MenuItem to="/documentation/config/" title="docs" />
+                <MenuItem to="/documentation/frontend-notes/" title="docs" />
                 <MenuItem to="/gsoc/gsoc/" title="gsoc" />
                 <MenuItem to="/contribute/" title="contribute" />
                 <MenuItem to="/building-docs/" title="buildind docs" />
