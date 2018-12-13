@@ -2,46 +2,71 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
+/**
+ * Ideally we would like use Tailwind inside Emotion
+ *  but for the moment, actual tools doesn't works
+ */
 const Wrapper = styled.div`
-  * {
-    color: rgba(0, 0, 0, 0.87);
-  }
-  & > ${'p'} {
-    display: block !important;
-    justify-content: start;
-    color: #462a16;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    font-size: 1.125rem;
+  p {
+    color: #12283a;
     line-height: 1.5;
-  }
-  & > ${'h2'} {
-    color: #f6993f;
+    max-width: 40rem;
+
+    margin-bottom: 1rem;
+
+    font-size: 1rem;
+
+    /* md */
+    @media (min-width: 768px) {
+      font-size: 1.1rem;
+    }
+
+    /* lg */
+    @media (min-width: 992px) {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
   }
 
-  & > ${'h2'}, & > ${'h3'}, & > ${'h4'} {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  a {
     color: #34515e;
   }
-
-  & > ${'p'} > ${'img'} {
-    max-width: 20rem;
+  a:hover {
+    color: #607d8b;
   }
 
-  ul {
-    margin-left: 2rem;
-    padding: 0;
+  h2 {
+    color: #607d8b;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
-  ul > li {
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
+  h1,
+  h3 {
+    color: #34515e;
+    margin-top: 2rem;
+    margin-bottom: 0.7rem;
   }
 
-  /* img {
-    display: block !important;
-  } */
+  h4 {
+    color: #607d8b;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  pre,
+  code {
+    background-color: #eff8ff;
+  }
+
+  pre {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .anchor > svg {
+    color: red !important;
+  }
 `
 
 export const HTMLContent = ({ content, className }) => (

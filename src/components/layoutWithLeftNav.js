@@ -8,7 +8,7 @@ const LayoutWithLeftNav = ({ children, data, path }) => {
   return (
     <Layout centered={false}>
       <div className="flex">
-        <div className="w-1/6 h-full flex-no-shrink">
+        <div className="w-1/6 h-full flex-no-shrink mr-8">
           <ul className="list-reset p-4 flex flex-col">
             {data.map(({ node: item }) => (
               <Link

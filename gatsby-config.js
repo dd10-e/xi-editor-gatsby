@@ -70,20 +70,19 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      // Style Markdown content
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          `gatsby-remark-autolink-headers`,
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-external-links',
             options: {
-              classPrefix: 'language-',
-              inlineCodeMarker: null,
-              aliases: {},
-              showLineNumbers: true,
-              noInlineHighlight: true,
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
             },
           },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-autolink-headers',
         ],
       },
     },
