@@ -7,7 +7,7 @@ import styled from '@emotion/styled'
  *  but for the moment, actual tools doesn't works
  */
 const Wrapper = styled.div`
-  p {
+  & > p {
     color: #12283a;
     line-height: 1.5;
     max-width: 40rem;
@@ -28,6 +28,11 @@ const Wrapper = styled.div`
     }
   }
 
+  p > li {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   a {
     color: #34515e;
   }
@@ -45,7 +50,7 @@ const Wrapper = styled.div`
   h3 {
     color: #34515e;
     margin-top: 2rem;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.5rem;
   }
 
   h4 {
@@ -62,10 +67,6 @@ const Wrapper = styled.div`
   pre {
     margin-bottom: 1rem;
     margin-top: 1rem;
-  }
-
-  .anchor > svg {
-    color: red !important;
   }
 `
 
