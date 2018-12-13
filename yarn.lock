@@ -47,7 +47,7 @@
     source-map "^0.5.0"
     trim-right "^1.0.1"
 
-"@babel/generator@^7.0.0", "@babel/generator@^7.1.6", "@babel/generator@^7.2.0":
+"@babel/generator@^7.1.6", "@babel/generator@^7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.2.0.tgz#eaf3821fa0301d9d4aef88e63d4bcc19b73ba16c"
   integrity sha512-BA75MVfRlFQG2EZgFYIwyT1r6xSkwfP2bdkY/kLZusEYWiJs4xCowab/alaEaT0wSvmVuXGqiefeBlP+7V1yKg==
@@ -1858,7 +1858,7 @@ babel-plugin-emotion@^9.2.11:
     source-map "^0.5.7"
     touch "^2.0.1"
 
-babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.1.0, babel-plugin-macros@^2.4.2:
+babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.4.2:
   version "2.4.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.4.2.tgz#21b1a2e82e2130403c5ff785cba6548e9b644b28"
   integrity sha512-NBVpEWN4OQ/bHnu1fyDaAaTPAjnhXCEPqr1RwqxrU7b6tZ2hypp+zX4hlNfmVGfClD5c3Sl6Hfj5TJNF5VG5aA==
@@ -1900,15 +1900,6 @@ babel-plugin-syntax-trailing-function-commas@^6.8.0:
   version "6.22.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-trailing-function-commas/-/babel-plugin-syntax-trailing-function-commas-6.22.0.tgz#ba0360937f8d06e40180a43fe0d5616fff532cf3"
   integrity sha1-ugNgk3+NBuQBgKQ/4NVhb/9TLPM=
-
-babel-plugin-tailwind-components@0.5.10, babel-plugin-tailwind-components@^0.5.10:
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/babel-plugin-tailwind-components/-/babel-plugin-tailwind-components-0.5.10.tgz#33e3574e7a5ec80d108c7d3d7c424ccd018e390c"
-  integrity sha512-AVZuc+ts2FtTUKJgHb0GyIA89xYeczqTDAM9qjxtEVKgz4gWmqs7HtsC4DPXg0telTZWobwLK1Jw1Cimik1CgA==
-  dependencies:
-    "@babel/generator" "^7.0.0"
-    "@babel/parser" "^7.0.0"
-    babel-plugin-macros "^2.1.0"
 
 babel-plugin-transform-class-properties@^6.8.0:
   version "6.24.1"
@@ -5891,13 +5882,6 @@ gatsby-plugin-slug@^1.0.1:
   integrity sha512-JAaeZ2On7CK11C7hsJRDXtBPgQIgf47L7QkuQsjNlZPkDKwsTLN8Ojqq2TTiMuDbYEZQ6Gh+g0RyDDHyoa03xQ==
   dependencies:
     parse-filepath "^1.0.2"
-
-gatsby-plugin-tailwindcss@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-tailwindcss/-/gatsby-plugin-tailwindcss-1.0.3.tgz#12ebde7422ec5ae5c6a40f1f8d6c18fa5ffe1a7e"
-  integrity sha512-aWwZZR4eboMl0T3c4+XEE/MbOL4w6JPM8QBMl5dSXmBwEVofzXvOFP6P+dJAEnSy9fHi1WKw/fTojDN6xgAG2A==
-  dependencies:
-    babel-plugin-tailwind-components "^0.5.10"
 
 gatsby-react-router-scroll@^2.0.2:
   version "2.0.2"
@@ -13655,17 +13639,10 @@ table@4.0.2:
     slice-ansi "1.0.0"
     string-width "^2.1.1"
 
-tailwind.macro@^0.5.10:
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/tailwind.macro/-/tailwind.macro-0.5.10.tgz#17e4ca07bcdeaa50cc4fdc011a9c5c966b9351c8"
-  integrity sha512-ZV2rbd5Q3W7j1HJYzK1I9Q6wkkRVe0J//EprN/XHLKs8bImXkYv1ZcpMM030iSdO/ZBc19YW3CfkRpA25gBg5A==
-  dependencies:
-    babel-plugin-tailwind-components "0.5.10"
-
 tailwindcss@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-0.7.2.tgz#a81e0c532911ec665a749c03d821a17b49e30165"
-  integrity sha512-mpDe9BBgdnvHatmdQ2GF/QVNQ/0nMX7lfmL3hV6D7r1NLVqYZIwFB4Z0vuIO2TIdVobdwwtLKPYOZ+MECv6vhw==
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-0.7.3.tgz#7b58605dd7857507c4dbc6edaccab4c14d30c054"
+  integrity sha512-YbIa8lrngcObqaJEjza8/jwmx3F6L0TQ3vWTf6KD/EHWjRTVlcExDhtWbTwEUnX0fxuK5UvfSl2gfW0mP3Skzg==
   dependencies:
     autoprefixer "^9.3.1"
     bytes "^3.0.0"
