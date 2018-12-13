@@ -1,12 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-
-// import toKebabCase from '../utils/kebabCase'
 
 import Content, { HTMLContent } from '../components/content'
 import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 export const BlogPostTemplate = ({
   content,
@@ -43,7 +41,6 @@ BlogPostTemplate.propTypes = {
 class Post extends React.Component {
   render() {
     const { markdownRemark: post } = this.props.data
-    const { siteMetadata: site } = this.props.data.site
 
     return (
       <Layout>
@@ -53,12 +50,10 @@ class Post extends React.Component {
           description={post.frontmatter.description}
           title={post.frontmatter.title}
           helmet={
-            <Helmet title={` ${site.title} ${site.titleSeparator} Blog`}>
-              <meta
-                name="description"
-                content={`${post.frontmatter.description}`}
-              />
-            </Helmet>
+            <SEO
+              categorieTitle={post.frontmatter.title}
+              description={`${post.excerpt}`}
+            />
           }
         />
       </Layout>
@@ -77,17 +72,11 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      excerpt(pruneLength: 300)
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
         description
-      }
-    }
-
-    site {
-      siteMetadata {
-        title
-        titleSeparator
       }
     }
   }

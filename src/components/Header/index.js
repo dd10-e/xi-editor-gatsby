@@ -1,9 +1,9 @@
 import { Link, withPrefix } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
 
 import SearchBar from './searchBar'
 import MenuItem from './menuItem'
+import config from '../../../config/site'
 
 class Header extends React.Component {
   constructor() {
@@ -38,7 +38,9 @@ class Header extends React.Component {
                     alt="logo"
                     className="w-8"
                   />
-                  <p className="ml-4 font-thin text-xl text-white">Xi-Editor</p>
+                  <p className="ml-4 font-thin text-xl text-white">
+                    {config.siteTitle}
+                  </p>
                 </Link>
               </div>
               <div>
@@ -66,14 +68,6 @@ class Header extends React.Component {
       </header>
     )
   }
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: '',
 }
 
 export default Header

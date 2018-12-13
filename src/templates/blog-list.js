@@ -1,8 +1,8 @@
 import React from 'react'
-import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 class BlogList extends React.Component {
   render() {
@@ -17,7 +17,7 @@ class BlogList extends React.Component {
 
     return (
       <Layout>
-        <Helmet title={` ${data.site.siteMetadata.title} | Blog`} />
+        <SEO categorieTitle="Blog" />
         <h1 className="ml-4 md:ml-0 mt-4 text-xi-blue-dark">
           Latest Blog Post
         </h1>
@@ -105,12 +105,6 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
           }
         }
-      }
-    }
-
-    site {
-      siteMetadata {
-        title
       }
     }
   }

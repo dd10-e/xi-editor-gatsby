@@ -1,9 +1,11 @@
+const config = require('./config/site')
+
+const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
+
 module.exports = {
-  pathPrefix: '/xi-editor-gatsby',
+  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    title: 'Xi-Editor',
-    titleSeparator: '|',
-    siteUrl: `https://www.example.com`,
+    siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Content, { HTMLContent } from '../components/content'
 import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 export const ContributeTemplate = ({
   title,
@@ -31,7 +31,6 @@ ContributeTemplate.propTypes = {
 }
 
 const Contribute = ({ data }) => {
-  const site = data.site.siteMetadata
   return (
     <Layout>
       <ContributeTemplate
@@ -39,12 +38,10 @@ const Contribute = ({ data }) => {
         title={data.markdownRemark.frontmatter.title}
         content={data.markdownRemark.html}
         helmet={
-          <Helmet title={` ${site.title} ${site.titleSeparator} Contribute`}>
-            <meta
-              name="description"
-              content={`${data.markdownRemark.frontmatter.description}`}
-            />
-          </Helmet>
+          <SEO
+            categorieTitle="Contribute"
+            description={data.markdownRemark.excerpt}
+          />
         }
       />
     </Layout>
@@ -54,16 +51,10 @@ export const query = graphql`
   query {
     markdownRemark(fields: { sourceName: { eq: "contribute" } }) {
       html
+      excerpt(pruneLength: 300)
       frontmatter {
         title
         description
-      }
-    }
-
-    site {
-      siteMetadata {
-        title
-        titleSeparator
       }
     }
   }

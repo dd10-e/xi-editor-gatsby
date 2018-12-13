@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Content, { HTMLContent } from '../components/content'
 import Layout from '../components/layout'
+import SEO from '../components/SEO'
 
 export const BuildindDocsTemplate = ({
   title,
@@ -31,21 +31,13 @@ BuildindDocsTemplate.propTypes = {
 }
 
 const BuildindDocs = ({ data }) => {
-  const site = data.site.siteMetadata
   return (
     <Layout>
       <BuildindDocsTemplate
         contentComponent={HTMLContent}
         title={data.markdownRemark.frontmatter.title}
         content={data.markdownRemark.html}
-        helmet={
-          <Helmet title={` ${site.title} ${site.titleSeparator} Contribute`}>
-            <meta
-              name="description"
-              content={`${data.markdownRemark.frontmatter.description}`}
-            />
-          </Helmet>
-        }
+        helmet={<SEO categorieTitle="Building Docs" />}
       />
     </Layout>
   )
@@ -57,13 +49,6 @@ export const query = graphql`
       frontmatter {
         title
         description
-      }
-    }
-
-    site {
-      siteMetadata {
-        title
-        titleSeparator
       }
     }
   }

@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 
 import Content, { HTMLContent } from '../components/content'
 import LayoutWithLeftNav from '../components/layoutWithLeftNav'
+import SEO from '../components/SEO'
 
 export const DocumentationPostTemplate = ({
   content,
@@ -36,7 +36,6 @@ class DocumentationPost extends React.Component {
   render() {
     const { markdownRemark: documentation } = this.props.data
     const { edges: navBar } = this.props.data.allMarkdownRemark
-    const { siteMetadata: site } = this.props.data.site
 
     return (
       <LayoutWithLeftNav data={navBar} path="documentation">
@@ -45,14 +44,10 @@ class DocumentationPost extends React.Component {
           contentComponent={HTMLContent}
           title={documentation.frontmatter.title}
           helmet={
-            <Helmet
-              title={` ${site.title} ${site.titleSeparator} Documentation`}
-            >
-              <meta
-                name="description"
-                content={`${documentation.frontmatter.title}`}
-              />
-            </Helmet>
+            <SEO
+              categorieTitle={`${documentation.frontmatter.title}`}
+              description={`${documentation.excerpt}`}
+            />
           }
         />
       </LayoutWithLeftNav>
@@ -71,15 +66,9 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      excerpt(pruneLength: 300)
       frontmatter {
         title
-      }
-    }
-
-    site {
-      siteMetadata {
-        title
-        titleSeparator
       }
     }
 
