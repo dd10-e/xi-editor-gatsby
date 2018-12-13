@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const toKebabCase = require('./src/utils/kebabCase')
-
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
