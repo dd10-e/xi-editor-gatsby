@@ -8,17 +8,29 @@ import Header from './Header/index'
 import Footer from './footer'
 import SEO from './SEO'
 
-const Layout = ({ children, title, data, path, documentationMode }) => (
+const Layout = ({ children }) => (
   <div className="h-full w-full flex flex-col items-stretch font-sans">
     <SEO />
     <Header />
-    <main
-      role="main"
-      className={`flex-1 ${!documentationMode ? 'container mx-auto' : ''}`}
-    >
-      {documentationMode ? (
+    <main role="main" className={`flex-1 container mx-auto`}>
+      {children}
+    </main>
+    <Footer />
+  </div>
+)
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export const LayoutWithLeftNav = ({ children, data, title, path }) => {
+  return (
+    <div className="h-full w-full flex flex-col items-stretch font-sans">
+      <SEO />
+      <Header />
+      <main role="main" className={`flex-1`}>
         <div className="flex">
-          <nav className={`pt-6 border-r-2 border-blue-lightest max-w-xs`}>
+          <nav className={`pt-6 border-r-2 border-blue-lightest max-w-sm w-64`}>
             {!title === undefined && (
               <p className="mb-3 uppercase tracking-wide font-bold leading-tight px-6 text-blue">
                 {title}
@@ -42,15 +54,13 @@ const Layout = ({ children, title, data, path, documentationMode }) => (
             {children}
           </div>
         </div>
-      ) : (
-        { children }
-      )}
-    </main>
-    <Footer />
-  </div>
-)
+      </main>
+      <Footer />
+    </div>
+  )
+}
 
-Layout.propTypes = {
+LayoutWithLeftNav.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.string,
   data: PropTypes.array,

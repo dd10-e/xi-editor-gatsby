@@ -3,8 +3,7 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Content, { HTMLContent } from '../components/content'
-import LayoutWithLeftNav from '../components/layoutWithLeftNav'
-import Layout from '../components/layout'
+import { LayoutWithLeftNav } from '../components/layout'
 import SEO from '../components/SEO'
 
 export const DocumentationPostTemplate = ({
@@ -39,7 +38,7 @@ class DocumentationPost extends React.Component {
     const { edges: navBar } = this.props.data.allMarkdownRemark
 
     return (
-      <Layout data={navBar} path="documentation" documentationMode={true}>
+      <LayoutWithLeftNav data={navBar} path="documentation">
         <DocumentationPostTemplate
           content={documentation.html}
           contentComponent={HTMLContent}
@@ -51,7 +50,7 @@ class DocumentationPost extends React.Component {
             />
           }
         />
-      </Layout>
+      </LayoutWithLeftNav>
     )
   }
 }

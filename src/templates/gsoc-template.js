@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Content, { HTMLContent } from '../components/content'
-import LayoutWithLeftNav from '../components/layoutWithLeftNav'
+import { LayoutWithLeftNav } from '../components/layout'
 import SEO from '../components/SEO'
 
 export const GSoCTemplate = ({ content, contentComponent, title, helmet }) => {
@@ -33,7 +33,7 @@ class GSoC extends React.Component {
     const { edges: navBar } = this.props.data.allMarkdownRemark
 
     return (
-      <LayoutWithLeftNav data={navBar} path="gsoc">
+      <LayoutWithLeftNav data={navBar} path="gsoc" documentationMode={true}>
         <GSoCTemplate
           content={documentation.html}
           contentComponent={HTMLContent}
