@@ -33,8 +33,35 @@ const Wrapper = styled.div`
     margin-bottom: 0px;
   }
 
+  li > p {
+    display: inline;
+  }
+
   a {
+    display: inline-block;
+  }
+
+  a,
+  li > p {
     color: #34515e;
+
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+
+    /* md */
+    @media (min-width: 768px) {
+      font-size: 1.1rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* lg */
+    @media (min-width: 992px) {
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
   }
   a:hover {
     color: #607d8b;
