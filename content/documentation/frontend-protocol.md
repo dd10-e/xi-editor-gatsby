@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: The Frontend Protocol
 site_nav_category_order: 2
 

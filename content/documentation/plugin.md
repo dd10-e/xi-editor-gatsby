@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Plugin architecture
 site_nav_category_order: 3
 ---

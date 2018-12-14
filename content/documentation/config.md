@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Working with the config system
 site_nav_category_order: 4
 ---

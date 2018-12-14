@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: CRDT - The Xi Text Engine
 site_nav_category_order: 5
 ---

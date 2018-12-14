@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 8 - CRDTs for concurrent editing
 site_nav_category_order: 14
 ---

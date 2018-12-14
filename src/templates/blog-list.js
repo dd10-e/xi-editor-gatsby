@@ -94,7 +94,7 @@ export const query = graphql`
   query($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      filter: { fields: { sourceName: { eq: "blog" } } }
       limit: $limit
       skip: $skip
     ) {
@@ -107,7 +107,6 @@ export const query = graphql`
           }
           frontmatter {
             title
-            templateKey
             date(formatString: "MMMM DD, YYYY")
           }
         }

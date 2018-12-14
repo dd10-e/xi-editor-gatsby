@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: CRDT - Using the Ledger for CRDTs
 site_nav_category_order: 6
 ---

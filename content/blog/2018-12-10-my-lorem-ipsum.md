@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 date: 2018-12-07T15:04:11.000Z
 title: My lorem ipsum
 description: Description go to meta, it is important for SEO

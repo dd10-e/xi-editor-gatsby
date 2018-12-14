@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 1 - MapReduce for text
 site_nav_category_order: 8
 ---

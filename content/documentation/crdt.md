@@ -1,5 +1,4 @@
 ---
-layout: docs
 title: CRDT - An approach to async plugins and undo
 site_nav_category_order: 4
 ---

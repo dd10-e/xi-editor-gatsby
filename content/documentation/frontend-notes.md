@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Notes on writing front-ends
 site_nav_category_order: 1
 ---

@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 11 - practical syntax highlighting
 site_nav_category_order: 18
 ---

@@ -1,5 +1,4 @@
 ---
-pagetemplateKey: docs
 title: Rope science, part 5 - incremental word wrapping
 site_nav_category_order: 12
 ---

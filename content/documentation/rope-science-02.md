@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 2 - metrics
 site_nav_category_order: 8
 ---

@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 4 - parenthesis matching
 site_nav_category_order: 11
 ---

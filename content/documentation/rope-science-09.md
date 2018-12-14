@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 9 - CRDT Approach to Async Plugins and Undo
 site_nav_category_order: 16
 ---

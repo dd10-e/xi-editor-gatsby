@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 12 - minimal invalidation
 site_nav_category_order: 19
 ---

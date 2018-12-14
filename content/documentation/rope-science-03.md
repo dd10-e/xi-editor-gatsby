@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 3 - Grapheme cluster boundaries
 site_nav_category_order: 10
 ---

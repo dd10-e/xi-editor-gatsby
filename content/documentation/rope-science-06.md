@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 6 - parallel and asynchronous word wrapping
 site_nav_category_order: 13
 ---

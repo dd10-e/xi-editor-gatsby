@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science, part 10 - designing for a conflict-free world
 site_nav_category_order: 17
 ---

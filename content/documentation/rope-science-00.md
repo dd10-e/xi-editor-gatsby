@@ -1,5 +1,4 @@
 ---
-templateKey: docs
 title: Rope science - Introduction
 site_nav_category_order: 7
 ---
