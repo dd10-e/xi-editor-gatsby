@@ -12,7 +12,7 @@ module.exports = {
       // Add static assets before markdown files
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/upload/`,
+        path: `${__dirname}/static/upload`,
         name: 'upload',
       },
     },
@@ -20,42 +20,42 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/img/`,
+        path: `${__dirname}/static/img`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `blog`,
-        path: `${__dirname}/content/blog/`,
+        path: `${__dirname}/content/blog`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `gsoc`,
-        path: `${__dirname}/content/gsoc/`,
+        path: `${__dirname}/content/gsoc`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `contribute`,
-        path: `${__dirname}/content/contribute/`,
+        path: `${__dirname}/content/contribute`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `build-docs`,
-        path: `${__dirname}/content/build-docs/`,
+        path: `${__dirname}/content/build-docs`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `docs`,
-        path: `${__dirname}/content/documentation/`,
+        path: `${__dirname}/content/documentation`,
       },
     },
     'gatsby-transformer-sharp',
