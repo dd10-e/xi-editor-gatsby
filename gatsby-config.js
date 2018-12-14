@@ -89,7 +89,6 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-postcss',
-    'gatsby-plugin-slug',
     'gatsby-remark-source-name',
     'gatsby-plugin-netlify-cms', // make sure to keep it last in the array
 
