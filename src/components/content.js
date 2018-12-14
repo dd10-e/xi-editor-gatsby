@@ -98,6 +98,7 @@ const Wrapper = styled.div`
   }
 `
 
+// Require for handle NetlifyCMS live previewing
 export const HTMLContent = ({ content, className }) => (
   <Wrapper
     className={className}
