@@ -40,7 +40,7 @@ exports.createPages = async ({ graphql, actions }) => {
   Array.from({ length: numPages }).forEach((_, i) => {
     actions.createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-      component: require.resolve('./src/templates/blog-list.js'),
+      component: require.resolve('src/templates/blog-list.js'),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
@@ -58,7 +58,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     actions.createPage({
       path: `/blog/post${node.fields.slug}`,
-      component: require.resolve('./src/templates/blog-post.js'),
+      component: require.resolve('src/templates/blog-post.js'),
       context: {
         id: node.id,
         previous,
@@ -87,7 +87,7 @@ exports.createPages = async ({ graphql, actions }) => {
   gsoc.forEach(({ node }) => {
     actions.createPage({
       path: `/gsoc${node.fields.slug}`,
-      component: require.resolve('./src/templates/gsoc.js'),
+      component: require.resolve('src/templates/gsoc.js'),
       context: { id: node.id },
     })
   })
