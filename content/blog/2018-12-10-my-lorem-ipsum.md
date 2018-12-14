@@ -27,11 +27,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla sapi
 
 Proin at laoreet nisi. Pellentesque id sagittis neque. Fusce ac suscipit felis, vel elementum erat. Praesent hendrerit quis ante vel condimentum. Fusce volutpat neque id justo hendrerit eleifend. Integer condimentum nibh non purus pharetra, eu ultricies arcu ornare. Sed elementum, lacus ut laoreet sodales, nulla leo rutrum felis, in consectetur mi nisi et ipsum. Suspendisse tellus nibh, ullamcorper eu urna id, elementum porttitor nisl. Aenean ullamcorper nibh magna, eu vestibulum arcu euismod id. Quisque ac sodales est. Pellentesque tincidunt suscipit eros dignissim pulvinar. Vivamus a ligula neque. Ut porta nibh sed leo euismod porttitor. Pellentesque neque velit, volutpat non ornare nec, laoreet quis lacus. Donec rhoncus egestas vehicula.
 
-![Lorem Ipsum](/xi-editor-gatsby/img/logo.png)
+![Lorem Ipsum](/img/logo.png)
 
 _Lorem Ipsum Descriptum Img_
 
-![Lorem Ipsum](/xi-editor-gatsby/img/home.png)
+![Lorem Ipsum](/img/home.png)
 
 _Lorem Ipsum Descriptum Img_
 

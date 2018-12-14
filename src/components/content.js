@@ -42,7 +42,8 @@ const Wrapper = styled.div`
     display: inline-block;
   }
 
-  a,
+  p > a,
+  li > a,
   li > p {
     color: #34515e;
 
@@ -93,6 +94,7 @@ const Wrapper = styled.div`
   }
 
   pre {
+    overflow-x: auto;
     margin-bottom: 1rem;
     margin-top: 1rem;
   }

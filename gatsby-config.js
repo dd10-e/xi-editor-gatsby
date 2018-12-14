@@ -85,6 +85,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-remark-copy-linked-files', //handle prefixUrl on markdown links
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-postcss',

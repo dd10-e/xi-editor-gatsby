@@ -6,7 +6,7 @@ import Content, { HTMLContent } from '../components/content'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 
-export const ContributeTemplate = ({
+export const ContributeLayout = ({
   title,
   contentComponent,
   content,
@@ -22,7 +22,7 @@ export const ContributeTemplate = ({
   )
 }
 
-ContributeTemplate.propTypes = {
+ContributeLayout.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
@@ -33,7 +33,7 @@ ContributeTemplate.propTypes = {
 const Contribute = ({ data }) => {
   return (
     <Layout>
-      <ContributeTemplate
+      <ContributeLayout
         contentComponent={HTMLContent}
         title={data.markdownRemark.frontmatter.title}
         content={data.markdownRemark.html}

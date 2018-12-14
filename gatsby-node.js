@@ -7,7 +7,7 @@
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 10000) {
+      allMarkdownRemark(limit: 1000) {
         edges {
           node {
             id
@@ -70,7 +70,7 @@ exports.createPages = async ({ graphql, actions }) => {
   gsoc.forEach(({ node }) => {
     actions.createPage({
       path: `/gsoc${node.fields.slug}`,
-      component: require.resolve('./src/templates/gsoc-template.js'),
+      component: require.resolve('./src/templates/gsoc.js'),
       context: { id: node.id },
     })
   })
