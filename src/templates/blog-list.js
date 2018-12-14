@@ -27,7 +27,7 @@ class BlogList extends React.Component {
             <li key={post.id} className="border p-4 my-4 py-4 text-lg">
               <div className="flex justify-between items-center">
                 <Link
-                  to={`blog/${post.fields.slug}`}
+                  to={`blog/post${post.fields.slug}`}
                   className="flex items-center no-underline text-xi-blue-dark hover:text-blue-light hover:underline"
                 >
                   <h2>{post.frontmatter.title}</h2>

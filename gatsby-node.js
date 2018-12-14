@@ -9,13 +9,19 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 1000
+      ) {
         edges {
           node {
             id
             fields {
               slug
               sourceName
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -24,7 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   const posts = result.data.allMarkdownRemark.edges.filter(
-    single => single.node.fields.sourceName === 'blog'
+    type => type.node.fields.sourceName === 'blog'
   )
   const postsPerPage = 1
   const numPages = Math.ceil(posts.length / postsPerPage)
@@ -44,18 +50,26 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // Each blog post pages
-  posts.forEach(({ node }) => {
+  // blog-post pages
+  posts.forEach(({ node }, index) => {
+    // `posts[]` is ordring DESC
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+
     actions.createPage({
-      path: `/blog${node.fields.slug}`,
+      path: `/blog/post${node.fields.slug}`,
       component: require.resolve('./src/templates/blog-post.js'),
-      context: { id: node.id },
+      context: {
+        id: node.id,
+        previous,
+        next,
+      },
     })
   })
 
   // Documentation pages
   const docs = result.data.allMarkdownRemark.edges.filter(
-    single => single.node.fields.sourceName === 'docs'
+    type => type.node.fields.sourceName === 'docs'
   )
 
   docs.forEach(({ node }) => {
@@ -68,7 +82,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Gooogle Summer of Code(gsoc) pages
   const gsoc = result.data.allMarkdownRemark.edges.filter(
-    single => single.node.fields.sourceName === 'gsoc'
+    type => type.node.fields.sourceName === 'gsoc'
   )
   gsoc.forEach(({ node }) => {
     actions.createPage({
