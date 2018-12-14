@@ -34,7 +34,7 @@ class Header extends React.Component {
                   className="text-white no-underline flex items-center"
                 >
                   <img
-                    src={withPrefix('/img/logo.png')}
+                    src={withPrefix(config.siteLogo)}
                     alt="logo"
                     className="w-8"
                   />
