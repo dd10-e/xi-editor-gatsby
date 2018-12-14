@@ -13,8 +13,8 @@ module.exports = {
       // Add static assets before markdown files
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/upload/img`,
-        name: 'upload-img',
+        path: `${__dirname}/static/upload`,
+        name: 'upload',
       },
     },
     {
