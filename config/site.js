@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/xi-editor-gatsby', // Example: `/xi-editor-gatsby`
   siteTitle: 'Xi-Editor',
   sitetitleSeparator: '|',
-  siteUrl: '', // Example: `https://gatsby-netlify-cms.netlify.com`
+  siteUrl: 'https://elod10.github.io', // Example: `https://gatsby-netlify-cms.netlify.com`
   siteLanguage: 'en', // Language tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
   siteDescription: 'Xi-Editor website',
