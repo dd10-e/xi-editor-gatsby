@@ -17,6 +17,9 @@ const Image = ({ className, alt }) => (
   <StaticQuery
     // https://github.com/gatsbyjs/gatsby/issues/9047
     // It probably can be useful for that case!
+    // Example:
+    // let image = "example.png"
+    // `file(relativePath: { eq: image })`
     query={graphql`
       query {
         placeholderImage: file(relativePath: { eq: "home.png" }) {

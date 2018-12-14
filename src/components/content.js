@@ -5,6 +5,7 @@ import styled from '@emotion/styled'
 /**
  * Ideally we would like use Tailwind inside Emotion
  *  but for the moment actual tools doesn't works
+ *  probably cause by Emotion 10?
  */
 const Wrapper = styled.div`
   & > p {
