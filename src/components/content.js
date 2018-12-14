@@ -44,7 +44,8 @@ const Wrapper = styled.div`
 
   p > a,
   li > a,
-  li > p {
+  li > p,
+  li {
     color: #34515e;
 
     font-size: 1rem;
@@ -70,12 +71,11 @@ const Wrapper = styled.div`
   }
 
   h2 {
-    color: #607d8b;
-    margin-top: 1rem;
+    color: #12283a;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
   }
 
-  h1,
   h3 {
     color: #34515e;
     margin-top: 2rem;

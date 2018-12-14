@@ -18,7 +18,7 @@ export const DocumentationPostTemplate = ({
     <React.Fragment>
       {helmet || ''}
       <div className="lg:w-3/4 xl:w-4/5">
-        <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
+        <h1 className="ml-4 lg:ml-0 text-blue-darker mt-8 mb-4">{title}</h1>
         <PostContent content={content} className="ml-4 lg:ml-0" />
       </div>
     </React.Fragment>
