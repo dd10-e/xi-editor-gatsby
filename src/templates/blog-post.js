@@ -14,7 +14,6 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content
-
   return (
     <section className="lg:flex h-full">
       {helmet || ''}
@@ -41,7 +40,6 @@ BlogPostTemplate.propTypes = {
 class Post extends React.Component {
   render() {
     const { markdownRemark: post } = this.props.data
-
     return (
       <Layout>
         <BlogPostTemplate

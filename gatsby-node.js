@@ -3,6 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
@@ -28,6 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const numPages = Math.ceil(posts.length / postsPerPage)
 
   // blog-list pages
+  // https://twitter.com/wesbos/status/993883756162404354
   Array.from({ length: numPages }).forEach((_, i) => {
     actions.createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
@@ -74,4 +77,19 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { id: node.id },
     })
   })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  fmImagesToRelative(node) // convert image paths for gatsby images
+
+  if (node.internal.type === `MarkdownRemark`) {
+    // Create or custom node graphql queries:
+    // `fields { slug }`
+    const value = createFilePath({ node, getNode })
+    actions.createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
 }

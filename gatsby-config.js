@@ -10,7 +10,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      // Add static assets before markdown files
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/upload/img`,
@@ -70,10 +70,32 @@ module.exports = {
       },
     },
     {
-      // Style Markdown content
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1440,
+              linkImagesToOriginal: false,
+              backgroundColor: 'transparent',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
           {
             resolve: 'gatsby-remark-external-links',
             options: {
@@ -89,8 +111,13 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-postcss',
-    'gatsby-remark-source-name',
-    'gatsby-plugin-netlify-cms', // make sure to keep it last in the array
+    'gatsby-remark-source-name', // allow to filter data with `fields { sourceName }`
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    }, // make sure to keep it last in the array
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
