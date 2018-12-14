@@ -9,14 +9,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    // {
-    //   // Add static assets before markdown files
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     path: `${__dirname}/static/upload/img`,
-    //     name: 'uploads-img',
-    //   },
-    // },
+    {
+      // Add static assets before markdown files
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/upload/img`,
+        name: 'uploads-img',
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
