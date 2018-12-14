@@ -8,12 +8,11 @@ module.exports = {
     siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       // Add static assets before markdown files
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/upload`,
+        path: `${__dirname}/static/upload/`,
         name: 'upload',
       },
     },
@@ -21,7 +20,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/img/`,
       },
     },
     {
@@ -107,6 +106,7 @@ module.exports = {
         ],
       },
     },
+    'gatsby-plugin-react-helmet',
     'gatsby-remark-copy-linked-files', //handle prefixUrl on markdown links
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
