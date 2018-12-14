@@ -12,7 +12,7 @@ const Layout = ({ children }) => (
   <div className="h-full w-full flex flex-col items-stretch font-sans">
     <SEO />
     <Header />
-    <main role="main" className={`flex-1 container mx-auto`}>
+    <main role="main" className={`flex-1 container mx-auto px-8 md:px-0`}>
       {children}
     </main>
     <Footer />

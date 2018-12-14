@@ -18,12 +18,10 @@ export const BlogPostTemplate = ({
     <section className="lg:flex h-full">
       {helmet || ''}
       <div className="lg:w-3/4 xl:w-4/5">
-        <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8">{title}</h1>
-        <div className="ml-4 lg:ml-0 border-t-4 border-xi-blue-dark w-24 mt-4 mb-8" />
-        <p className="ml-4 lg:ml-0 mb-8 text-xi-blue font-bold">
-          {description}
-        </p>
-        <PostContent content={content} className="ml-4 lg:ml-0" />
+        <h1 className="text-xi-blue-dark mt-8">{title}</h1>
+        <div className="border-t-4 border-xi-blue-dark w-24 mt-4 mb-8" />
+        <p className="mb-8 text-xi-blue font-bold">{description}</p>
+        <PostContent content={content} />
       </div>
     </section>
   )
