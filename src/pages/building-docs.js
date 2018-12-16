@@ -65,4 +65,5 @@ export const pageQuery = graphql`
 `
 // MDXProvider is useless here, it should not
 // MDXTag should be remove when it will be useful
+// Maybe use MDX with a default layout in config file
 export default withMDXScope(BuildindDocs)

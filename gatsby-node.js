@@ -102,6 +102,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: { id: node.id },
     })
   })
+}
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
