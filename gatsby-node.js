@@ -30,7 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  // Blog post pages
+  // Blog
   const blogPosts = result.data.allMdx.edges.filter(
     type => type.node.fields.sourceName === 'blog'
   )
@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
   Array.from({ length: numPages }).forEach((_, i) => {
     actions.createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-      component: require.resolve('./src/templates/blog-list-mdx.js'),
+      component: require.resolve('./src/templates/blog-list.js'),
       context: {
         limit: blogPostsPerPage,
         skip: i * blogPostsPerPage,
@@ -52,6 +52,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  // blog-post pages
   blogPosts.forEach(({ node: post }, index) => {
     // `posts[]` is ordring DESC
     const previous = index === 0 ? null : blogPosts[index - 1].node
@@ -61,7 +62,7 @@ exports.createPages = async ({ graphql, actions }) => {
     actions.createPage({
       path: `/blog/post${post.fields.slug}`,
       component: componentWithMDXScope(
-        require.resolve('./src/templates/blog-post-mdx.js'),
+        require.resolve('./src/templates/blog-post.js'),
         post.code.scope,
         __dirname
       ),
@@ -69,115 +70,38 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  // const result = await graphql(`
-  //   {
-  //     allMarkdownRemark(
-  //       sort: { fields: [frontmatter___date], order: DESC }
-  //       limit: 1000
-  //     ) {
-  //       edges {
-  //         node {
-  //           id
-  //           fields {
-  //             slug
-  //             sourceName
-  //           }
-  //           frontmatter {
-  //             title
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  // Documentation pages
+  const documentations = result.data.allMdx.edges.filter(
+    type => type.node.fields.sourceName === 'documentation'
+  )
 
-  // const posts = result.data.allMarkdownRemark.edges.filter(
-  //   type => type.node.fields.sourceName === 'blog'
-  // )
-  // const postsPerPage = 20
-  // const numPages = Math.ceil(posts.length / postsPerPage)
+  documentations.forEach(({ node: doc }) => {
+    actions.createPage({
+      path: `/documentation${doc.fields.slug}`,
+      component: componentWithMDXScope(
+        require.resolve('./src/templates/documentation-post.js'),
+        doc.code.scope,
+        __dirname
+      ),
+      context: { id: doc.id },
+    })
+  })
 
-  // // blog-list pages
-  // // https://twitter.com/wesbos/status/993883756162404354
-  // Array.from({ length: numPages }).forEach((_, i) => {
-  //   actions.createPage({
-  //     path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-  //     component: require.resolve('./src/templates/blog-list.js'),
-  //     context: {
-  //       limit: postsPerPage,
-  //       skip: i * postsPerPage,
-  //       numPages,
-  //       currentPage: i + 1,
-  //     },
-  //   })
-  // })
-
-  // // blog-post pages
-  // posts.forEach(({ node }, index) => {
-  // // `posts[]` is ordring DESC
-  // const previous = index === posts.length - 1 ? null : posts[index + 1].node
-  // const next = index === 0 ? null : posts[index - 1].node
-
-  //   actions.createPage({
-  //     path: `/blog/post${node.fields.slug}`,
-  //     component: require.resolve('./src/templates/blog-post.js'),
-  //     context: {
-  //       id: node.id,
-  //       previous,
-  //       next,
-  //     },
-  //   })
-  // })
-
-  // // Documentation pages
-  // const docs = result.data.allMarkdownRemark.edges.filter(
-  //   type => type.node.fields.sourceName === 'docs'
-  // )
-
-  // docs.forEach(({ node }) => {
-  //   actions.createPage({
-  //     path: `/documentation${node.fields.slug}`,
-  //     component: require.resolve('./src/templates/documentation-post.js'),
-  //     context: { id: node.id },
-  //   })
-  // })
-
-  // // Gooogle Summer of Code(gsoc) pages
-  // const gsoc = result.data.allMarkdownRemark.edges.filter(
-  //   type => type.node.fields.sourceName === 'gsoc'
-  // )
-  // gsoc.forEach(({ node }) => {
-  //   actions.createPage({
-  //     path: `/gsoc${node.fields.slug}`,
-  //     component: require.resolve('./src/templates/gsoc.js'),
-  //     context: { id: node.id },
-  //   })
-  // })
-}
-
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   fmImagesToRelative(node) // convert image paths for gatsby images
-
-//   if (node.internal.type === `MarkdownRemark`) {
-//     // Create or custom node graphql queries:
-//     // `fields { slug }`
-//     const value = createFilePath({ node, getNode })
-//     actions.createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
-// }
+  // Gooogle Summer of Code(gsoc) pages
+  const gsoc = result.data.allMdx.edges.filter(
+    type => type.node.fields.sourceName === 'gsoc'
+  )
+  gsoc.forEach(({ node }) => {
+    actions.createPage({
+      path: `/gsoc${node.fields.slug}`,
+      component: componentWithMDXScope(
+        require.resolve('./src/templates/gsoc.js'),
+        node.code.scope,
+        __dirname
+      ),
+      context: { id: node.id },
+    })
+  })
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions

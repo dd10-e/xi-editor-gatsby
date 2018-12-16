@@ -2,50 +2,60 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Content, { HTMLContent } from '../components/content'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { withMDXScope } from 'gatsby-mdx/context'
+import { MDXProvider, MDXTag } from '@mdx-js/tag'
 
 export const BuildindDocsTemplate = ({
   title,
-  contentComponent,
   content,
   helmet,
+  components,
 }) => {
-  const PostContent = contentComponent || Content
   return (
-    <section>
-      {helmet || ''}
-      <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
-      <PostContent content={content} className="ml-4 lg:ml-0" />
-    </section>
+    <MDXProvider
+      components={{
+        ...components,
+      }}
+    >
+      <section>
+        {helmet || ''}
+        <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
+        <MDXRenderer scope={{ React, MDXTag }} className="ml-4 lg:ml-0">
+          {content}
+        </MDXRenderer>
+      </section>
+    </MDXProvider>
   )
 }
 
 BuildindDocsTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string.isRequired,
   helmet: PropTypes.object,
 }
 
-const BuildindDocs = ({ data }) => {
+const BuildindDocs = ({ data, components }) => {
   return (
     <Layout>
       <BuildindDocsTemplate
-        contentComponent={HTMLContent}
-        title={data.markdownRemark.frontmatter.title}
-        content={data.markdownRemark.html}
+        title={data.mdx.frontmatter.title}
+        content={data.mdx.code.body}
+        components={components}
         helmet={<SEO categorieTitle="Building Docs" />}
       />
     </Layout>
   )
 }
-export const query = graphql`
+export const pageQuery = graphql`
   query {
-    markdownRemark(fields: { sourceName: { eq: "build-docs" } }) {
-      html
+    mdx(fields: { sourceName: { eq: "build-docs" } }) {
+      code {
+        body
+      }
       frontmatter {
         title
         description
@@ -53,5 +63,6 @@ export const query = graphql`
     }
   }
 `
-
-export default BuildindDocs
+// MDXProvider is useless here, it should not
+// MDXTag should be remove when it will be useful
+export default withMDXScope(BuildindDocs)

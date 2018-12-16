@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `docs`,
+        name: `documentation`,
         path: `${__dirname}/content/documentation`,
       },
     },
@@ -68,50 +68,54 @@ module.exports = {
         stripMetadata: true,
       },
     },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 1440,
-              linkImagesToOriginal: false,
-              backgroundColor: 'transparent',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-            },
-          },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-autolink-headers',
-        ],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-transformer-remark',
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: 'gatsby-remark-relative-images',
+    //         options: {
+    //           name: 'uploads',
+    //         },
+    //       },
+    //       {
+    //         resolve: 'gatsby-remark-images',
+    //         options: {
+    //           // It's important to specify the maxWidth (in pixels) of
+    //           // the content container as this plugin uses this as the
+    //           // base for generating different widths of each image.
+    //           maxWidth: 1440,
+    //           linkImagesToOriginal: false,
+    //           backgroundColor: 'transparent',
+    //         },
+    //       },
+    //       {
+    //         resolve: 'gatsby-remark-copy-linked-files',
+    //         options: {
+    //           destinationDir: 'static',
+    //         },
+    //       },
+    //       {
+    //         resolve: 'gatsby-remark-external-links',
+    //         options: {
+    //           target: '_blank',
+    //         },
+    //       },
+    //       'gatsby-remark-prismjs',
+    //       'gatsby-remark-autolink-headers',
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-mdx`,
       options: {
+        extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          default: require.resolve('./src/templates/blog-post-mdx.js'),
-          // docs: require.resolve('./src/components/layout.js').LayoutWithLeftNav,
+          blog: require.resolve('./src/templates/blog-post.js'),
+          documentation: require.resolve(
+            './src/templates/documentation-post.js'
+          ),
+          gsoc: require.resolve('./src/templates/gsoc.js'),
         },
       },
     },

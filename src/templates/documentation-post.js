@@ -1,89 +1,97 @@
-// import React from 'react'
-// import { graphql } from 'gatsby'
-// import PropTypes from 'prop-types'
+import React from 'react'
+import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 
-// import Content, { HTMLContent } from '../components/content'
-// import { LayoutWithLeftNav } from '../components/layout'
-// import SEO from '../components/SEO'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { withMDXScope } from 'gatsby-mdx/context'
+import { MDXProvider } from '@mdx-js/tag'
 
-// export const DocumentationPostTemplate = ({
-//   content,
-//   contentComponent,
-//   title,
-//   helmet,
-// }) => {
-//   const PostContent = contentComponent || Content
+import { LayoutWithLeftNav } from '../components/layout'
+import SEO from '../components/SEO'
 
-//   return (
-//     <React.Fragment>
-//       {helmet || ''}
-//       <div className="lg:w-3/4 xl:w-4/5">
-//         <h1 className="ml-4 lg:ml-0 text-blue-darker mt-8 mb-4">{title}</h1>
-//         <PostContent content={content} className="ml-4 lg:ml-0" />
-//       </div>
-//     </React.Fragment>
-//   )
-// }
+export const DocumentationPostTemplate = ({
+  content,
+  title,
+  helmet,
+  components,
+}) => {
+  return (
+    <MDXProvider
+      components={{
+        ...components,
+      }}
+    >
+      {helmet || ''}
+      <div className="lg:w-3/4 xl:w-4/5">
+        <h1 className="ml-4 lg:ml-0 text-blue-darker mt-8 mb-4">{title}</h1>
+        <MDXRenderer>{content}</MDXRenderer>
+      </div>
+    </MDXProvider>
+  )
+}
 
-// DocumentationPostTemplate.propTypes = {
-//   content: PropTypes.node.isRequired,
-//   contentComponent: PropTypes.func,
-//   title: PropTypes.string,
-//   helmet: PropTypes.object,
-// }
+DocumentationPostTemplate.propTypes = {
+  content: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  helmet: PropTypes.object,
+}
 
-// class DocumentationPost extends React.Component {
-//   render() {
-//     const { markdownRemark: documentation } = this.props.data
-//     const { edges: navBar } = this.props.data.allMarkdownRemark
+class DocumentationPost extends React.Component {
+  render() {
+    const documentationPost = this.props.data.mdx
+    const navBar = this.props.data.allMdx.edges
+    const components = this.props.components
+    console.log(documentationPost.code.body)
 
-//     return (
-//       <LayoutWithLeftNav data={navBar} path="documentation">
-//         <DocumentationPostTemplate
-//           content={documentation.html}
-//           contentComponent={HTMLContent}
-//           title={documentation.frontmatter.title}
-//           helmet={
-//             <SEO
-//               categorieTitle={`${documentation.frontmatter.title}`}
-//               description={`${documentation.excerpt}`}
-//             />
-//           }
-//         />
-//       </LayoutWithLeftNav>
-//     )
-//   }
-// }
+    return (
+      <LayoutWithLeftNav data={navBar} path="documentation">
+        <DocumentationPostTemplate
+          content={documentationPost.code.body}
+          title={documentationPost.frontmatter.title}
+          components={components}
+          helmet={
+            <SEO
+              categorieTitle={`${documentationPost.frontmatter.title}`}
+              description={`${documentationPost.excerpt}`}
+            />
+          }
+        />
+      </LayoutWithLeftNav>
+    )
+  }
+}
 
-// export const query = graphql`
-//   query($id: String!) {
-//     markdownRemark(id: { eq: $id }) {
-//       id
-//       html
-//       excerpt(pruneLength: 300)
-//       frontmatter {
-//         title
-//       }
-//     }
+export const pageQuery = graphql`
+  query($id: String!) {
+    mdx(id: { eq: $id }) {
+      id
+      code {
+        body
+      }
+      excerpt(pruneLength: 300)
+      frontmatter {
+        title
+      }
+    }
 
-//     allMarkdownRemark(
-//       limit: 1000
-//       filter: { fields: { sourceName: { eq: "docs" } } }
-//       sort: { fields: frontmatter___site_nav_category_order }
-//     ) {
-//       edges {
-//         node {
-//           id
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             title
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
+    allMdx(
+      limit: 1000
+      filter: { fields: { sourceName: { eq: "documentation" } } }
+      sort: { fields: frontmatter___site_nav_category_order }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`
 
-// export default DocumentationPost
+export default withMDXScope(DocumentationPost)
