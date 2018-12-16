@@ -106,6 +106,15 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/templates/blog-post-mdx.js'),
+          // docs: require.resolve('./src/components/layout.js').LayoutWithLeftNav,
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     'gatsby-remark-copy-linked-files', //handle prefixUrl on markdown links
     `gatsby-plugin-emotion`,

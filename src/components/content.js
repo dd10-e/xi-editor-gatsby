@@ -2,6 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
+export const HTMLContent = ({ content, className }) => (
+  <Wrapper
+    className={className}
+    dangerouslySetInnerHTML={{ __html: content }}
+  />
+)
+
+// Require for handle NetlifyCMS live previewing
+const Content = ({ content, className }) => (
+  <div className={className}>{content}</div>
+)
+
+Content.propTypes = {
+  content: PropTypes.node,
+  className: PropTypes.string,
+}
+
+HTMLContent.propTypes = Content.propTypes
+
+export default Content
+
 /**
  * Ideally we would like use Tailwind inside Emotion
  *  but for the moment actual tools doesn't works
@@ -194,24 +215,3 @@ const Wrapper = styled.div`
     cursor: help;
   }
 `
-
-// Require for handle NetlifyCMS live previewing
-export const HTMLContent = ({ content, className }) => (
-  <Wrapper
-    className={className}
-    dangerouslySetInnerHTML={{ __html: content }}
-  />
-)
-
-const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
-)
-
-Content.propTypes = {
-  content: PropTypes.node,
-  className: PropTypes.string,
-}
-
-HTMLContent.propTypes = Content.propTypes
-
-export default Content

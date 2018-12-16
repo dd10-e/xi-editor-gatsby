@@ -65,7 +65,6 @@ LayoutWithLeftNav.propTypes = {
   title: PropTypes.string,
   data: PropTypes.array,
   path: PropTypes.string,
-  documentationMode: PropTypes.bool,
 }
 
 export default Layout
