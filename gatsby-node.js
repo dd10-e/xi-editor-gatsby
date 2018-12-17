@@ -3,7 +3,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
 const { createFilePath } = require('gatsby-source-filesystem')
 const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
 
@@ -63,8 +62,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/blog/post${post.fields.slug}`,
       component: componentWithMDXScope(
         require.resolve('./src/templates/blog-post.js'),
-        post.code.scope,
-        __dirname
+        post.code.scope
       ),
       context: { id: post.id, previous, next },
     })
@@ -80,8 +78,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/documentation${doc.fields.slug}`,
       component: componentWithMDXScope(
         require.resolve('./src/templates/documentation-post.js'),
-        doc.code.scope,
-        __dirname
+        doc.code.scope
       ),
       context: { id: doc.id },
     })
@@ -96,8 +93,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/gsoc${node.fields.slug}`,
       component: componentWithMDXScope(
         require.resolve('./src/templates/gsoc.js'),
-        node.code.scope,
-        __dirname
+        node.code.scope
       ),
       context: { id: node.id },
     })

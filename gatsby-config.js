@@ -68,6 +68,39 @@ module.exports = {
         stripMetadata: true,
       },
     },
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        defaultLayouts: {
+          blog: require.resolve('./src/templates/blog-post.js'),
+          documentation: require.resolve(
+            './src/templates/documentation-post.js'
+          ),
+          gsoc: require.resolve('./src/templates/gsoc.js'),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+            },
+          },
+          { resolve: 'gatsby-remark-autolink-headers' },
+        ],
+      },
+    },
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-postcss',
     // {
     //   resolve: 'gatsby-transformer-remark',
     //   options: {
@@ -95,42 +128,23 @@ module.exports = {
     //           destinationDir: 'static',
     //         },
     //       },
-    //       {
-    //         resolve: 'gatsby-remark-external-links',
-    //         options: {
-    //           target: '_blank',
-    //         },
-    //       },
+    // {
+    //   resolve: 'gatsby-remark-external-links',
+    //   options: {
+    //     target: '_blank',
+    //   },
+    // },
     //       'gatsby-remark-prismjs',
     //       'gatsby-remark-autolink-headers',
     //     ],
     //   },
     // },
-    {
-      resolve: `gatsby-mdx`,
-      options: {
-        extensions: ['.mdx', '.md'],
-        defaultLayouts: {
-          blog: require.resolve('./src/templates/blog-post.js'),
-          documentation: require.resolve(
-            './src/templates/documentation-post.js'
-          ),
-          gsoc: require.resolve('./src/templates/gsoc.js'),
-        },
-      },
-    },
-    'gatsby-plugin-react-helmet',
-    'gatsby-remark-copy-linked-files', //handle prefixUrl on markdown links
-    `gatsby-plugin-emotion`,
-    `gatsby-plugin-sitemap`,
-    'gatsby-plugin-postcss',
-    'gatsby-remark-source-name', // allow to filter data with `fields { sourceName }`
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    }, // make sure to keep it last in the array
+    // {
+    //   resolve: 'gatsby-plugin-netlify-cms',
+    //   options: {
+    //     modulePath: `${__dirname}/src/cms/cms.js`,
+    //   },
+    // }, // make sure to keep it last in the array
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
