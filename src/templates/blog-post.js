@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
 import { MDXProvider } from '@mdx-js/tag'
 
+import Content from '../components/content'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
 
@@ -30,7 +30,7 @@ export const BlogPostTemplate = ({
           <h1 className="text-xi-blue-dark mt-8">{title}</h1>
           <div className="border-t-4 border-xi-blue-dark w-24 mt-4 mb-8" />
           <p className="mb-8 text-xi-blue font-bold">{description}</p>
-          <MDXRenderer>{content}</MDXRenderer>
+          <Content content={content} />
         </section>
         <div
           className={`flex ${

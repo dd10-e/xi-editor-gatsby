@@ -5,6 +5,7 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
 import { MDXProvider } from '@mdx-js/tag'
 
+import Content from '../components/content'
 import { LayoutWithLeftNav } from '../components/layout'
 import SEO from '../components/SEO'
 
@@ -20,6 +21,7 @@ export const GSoCTemplate = ({ content, title, helmet, components }) => {
         <div className="lg:w-3/4 xl:w-4/5">
           <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
           <MDXRenderer className="ml-4 lg:ml-0">{content}</MDXRenderer>
+          <Content content={content} />
         </div>
       </section>
     </MDXProvider>

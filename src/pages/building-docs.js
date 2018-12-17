@@ -2,25 +2,28 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
+import Content from '../components/content'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+// import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
 import { MDXProvider, MDXTag } from '@mdx-js/tag'
 
-// Warning: React does not recognize the `metaString` prop on a DOM element.
+//! Know Warning: React does not recognize the `metaString` prop on a DOM element.
 // If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase
 // `metastring` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
-// https://github.com/zeit/next-plugins/issues/307
+//! Fixed in @mdx-16, waiting for gatsby-mdx be upgraded
 
 export const BuildindDocsTemplate = ({ title, content, helmet }) => {
   return (
     <section>
       {helmet || ''}
       <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
-      <MDXRenderer scope={{ React, MDXTag }} className="ml-4 lg:ml-0">
-        {content}
-      </MDXRenderer>
+      <Content
+        scope={{ React, MDXTag }}
+        className="ml-4 lg:ml-0"
+        content={content}
+      />
     </section>
   )
 }

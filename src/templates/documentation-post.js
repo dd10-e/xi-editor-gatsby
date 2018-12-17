@@ -2,10 +2,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
 import { MDXProvider } from '@mdx-js/tag'
 
+import Content from '../components/content'
 import { LayoutWithLeftNav } from '../components/layout'
 import SEO from '../components/SEO'
 
@@ -15,7 +15,7 @@ export const DocumentationPostTemplate = ({ content, title, helmet }) => {
       {helmet || ''}
       <div className="lg:w-3/4 xl:w-4/5">
         <h1 className="ml-4 lg:ml-0 text-blue-darker mt-8 mb-4">{title}</h1>
-        <MDXRenderer>{content}</MDXRenderer>
+        <Content content={content} />
       </div>
     </React.Fragment>
   )

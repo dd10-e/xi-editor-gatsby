@@ -2,24 +2,21 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
-export const HTMLContent = ({ content, className }) => (
-  <Wrapper
-    className={className}
-    dangerouslySetInnerHTML={{ __html: content }}
-  />
-)
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { MDXTag } from '@mdx-js/tag'
 
-// Require for handle NetlifyCMS live previewing
 const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
+  <Wrapper>
+    <MDXRenderer className={className} scope={{ React, MDXTag }}>
+      {content}
+    </MDXRenderer>
+  </Wrapper>
 )
 
 Content.propTypes = {
   content: PropTypes.node,
   className: PropTypes.string,
 }
-
-HTMLContent.propTypes = Content.propTypes
 
 export default Content
 
