@@ -9,29 +9,20 @@ import { MDXProvider } from '@mdx-js/tag'
 import { LayoutWithLeftNav } from '../components/layout'
 import SEO from '../components/SEO'
 
-export const DocumentationPostTemplate = ({
-  content,
-  title,
-  helmet,
-  components,
-}) => {
+export const DocumentationPostTemplate = ({ content, title, helmet }) => {
   return (
-    <MDXProvider
-      components={{
-        ...components,
-      }}
-    >
+    <React.Fragment>
       {helmet || ''}
       <div className="lg:w-3/4 xl:w-4/5">
         <h1 className="ml-4 lg:ml-0 text-blue-darker mt-8 mb-4">{title}</h1>
         <MDXRenderer>{content}</MDXRenderer>
       </div>
-    </MDXProvider>
+    </React.Fragment>
   )
 }
 
 DocumentationPostTemplate.propTypes = {
-  content: PropTypes.func.isRequired,
+  content: PropTypes.string.isRequired,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -41,24 +32,35 @@ class DocumentationPost extends React.Component {
     const documentationPost = this.props.data.mdx
     const navBar = this.props.data.allMdx.edges
     const components = this.props.components
-    console.log(documentationPost.code.body)
-
+    console.log(typeof components)
     return (
       <LayoutWithLeftNav data={navBar} path="documentation">
-        <DocumentationPostTemplate
-          content={documentationPost.code.body}
-          title={documentationPost.frontmatter.title}
-          components={components}
-          helmet={
-            <SEO
-              categorieTitle={`${documentationPost.frontmatter.title}`}
-              description={`${documentationPost.excerpt}`}
-            />
-          }
-        />
+        <MDXProvider
+          components={{
+            ...components,
+          }}
+        >
+          <DocumentationPostTemplate
+            content={documentationPost.code.body}
+            title={documentationPost.frontmatter.title}
+            components={components}
+            helmet={
+              <SEO
+                categorieTitle={`${documentationPost.frontmatter.title}`}
+                description={`${documentationPost.excerpt}`}
+              />
+            }
+          />
+        </MDXProvider>
       </LayoutWithLeftNav>
     )
   }
+}
+
+DocumentationPostTemplate.propTypes = {
+  content: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  helmet: PropTypes.object,
 }
 
 export const pageQuery = graphql`

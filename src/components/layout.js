@@ -61,7 +61,7 @@ export const LayoutWithLeftNav = ({ children, data, title, path }) => {
 }
 
 LayoutWithLeftNav.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.object.isRequired,
   title: PropTypes.string,
   data: PropTypes.array,
   path: PropTypes.string,

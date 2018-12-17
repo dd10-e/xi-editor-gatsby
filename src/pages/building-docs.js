@@ -8,32 +8,25 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
 import { MDXProvider, MDXTag } from '@mdx-js/tag'
 
-export const BuildindDocsTemplate = ({
-  title,
-  content,
-  helmet,
-  components,
-}) => {
+// Warning: React does not recognize the `metaString` prop on a DOM element.
+// If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase
+// `metastring` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+// https://github.com/zeit/next-plugins/issues/307
+
+export const BuildindDocsTemplate = ({ title, content, helmet }) => {
   return (
-    <MDXProvider
-      components={{
-        ...components,
-      }}
-    >
-      <section>
-        {helmet || ''}
-        <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
-        <MDXRenderer scope={{ React, MDXTag }} className="ml-4 lg:ml-0">
-          {content}
-        </MDXRenderer>
-      </section>
-    </MDXProvider>
+    <section>
+      {helmet || ''}
+      <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
+      <MDXRenderer scope={{ React, MDXTag }} className="ml-4 lg:ml-0">
+        {content}
+      </MDXRenderer>
+    </section>
   )
 }
 
 BuildindDocsTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  description: PropTypes.string,
   title: PropTypes.string.isRequired,
   helmet: PropTypes.object,
 }
@@ -41,12 +34,22 @@ BuildindDocsTemplate.propTypes = {
 const BuildindDocs = ({ data, components }) => {
   return (
     <Layout>
-      <BuildindDocsTemplate
-        title={data.mdx.frontmatter.title}
-        content={data.mdx.code.body}
-        components={components}
-        helmet={<SEO categorieTitle="Building Docs" />}
-      />
+      <MDXProvider
+        components={{
+          ...components,
+        }}
+      >
+        <BuildindDocsTemplate
+          title={data.mdx.frontmatter.title}
+          content={data.mdx.code.body}
+          helmet={
+            <SEO
+              categorieTitle="Building Documentation"
+              description={data.mdx.excerpt}
+            />
+          }
+        />
+      </MDXProvider>
     </Layout>
   )
 }
@@ -56,9 +59,9 @@ export const pageQuery = graphql`
       code {
         body
       }
+      excerpt(pruneLength: 300)
       frontmatter {
         title
-        description
       }
     }
   }

@@ -8,43 +8,40 @@ import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
 import { MDXProvider, MDXTag } from '@mdx-js/tag'
 
-export const ContributeLayout = ({ title, content, helmet, components }) => {
+export const ContributeTemplate = ({ title, content, helmet }) => {
   return (
-    <MDXProvider
-      components={{
-        ...components,
-      }}
-    >
-      <section>
-        {helmet || ''}
-        <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
-        <MDXRenderer scope={{ React, MDXTag }} className="ml-4 lg:ml-0">
-          {content}
-        </MDXRenderer>
-      </section>
-    </MDXProvider>
+    <section>
+      {helmet || ''}
+      <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
+      <MDXRenderer scope={{ React, MDXTag }} className="ml-4 lg:ml-0">
+        {content}
+      </MDXRenderer>
+    </section>
   )
 }
 
-ContributeLayout.propTypes = {
+ContributeTemplate.propTypes = {
   content: PropTypes.node.isRequired,
-  description: PropTypes.string,
   title: PropTypes.string.isRequired,
   helmet: PropTypes.object,
 }
 
 const Contribute = ({ data, components }) => {
-  console.log(data)
   return (
     <Layout>
-      <ContributeLayout
-        title={data.mdx.frontmatter.title}
-        content={data.mdx.code.body}
-        components={components}
-        helmet={
-          <SEO categorieTitle="Contribute" description={data.mdx.excerpt} />
-        }
-      />
+      <MDXProvider
+        components={{
+          ...components,
+        }}
+      >
+        <ContributeTemplate
+          title={data.mdx.frontmatter.title}
+          content={data.mdx.code.body}
+          helmet={
+            <SEO categorieTitle="Contribute" description={data.mdx.excerpt} />
+          }
+        />
+      </MDXProvider>
     </Layout>
   )
 }
@@ -57,7 +54,6 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 300)
       frontmatter {
         title
-        description
       }
     }
   }

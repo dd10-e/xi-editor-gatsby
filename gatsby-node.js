@@ -39,7 +39,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // blog-list pages
   // https://twitter.com/wesbos/status/993883756162404354
-  Array.from({ length: numPages }).forEach((_, i) => {
+  Array.from({ length: numPages }, (_, i) => {
     actions.createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
       component: require.resolve('./src/templates/blog-list.js'),

@@ -1,17 +1,21 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
+
 import config from '../../config/site'
 
 const SEO = ({ categorieTitle, description }) => {
   const realPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix
   const image = config.siteUrl + realPrefix + config.siteLogo
   const title =
-    categorieTitle === undefined
+    categorieTitle === undefined || null
       ? config.siteTitle
       : `${categorieTitle} ${config.sitetitleSeparator} ${config.siteTitle}`
 
   const descriptionMeta =
-    description === undefined ? config.siteDescription : `${description}`
+    description === undefined || null
+      ? config.siteDescription
+      : `${description}`
   return (
     <Helmet>
       {/* Site */}
@@ -48,6 +52,11 @@ const SEO = ({ categorieTitle, description }) => {
       <meta name="twitter:image" content={image} />
     </Helmet>
   )
+}
+
+SEO.propTypes = {
+  categorieTitle: PropTypes.string,
+  description: PropTypes.string,
 }
 
 export default SEO
