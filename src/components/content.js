@@ -3,11 +3,10 @@ import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
-import { MDXTag } from '@mdx-js/tag'
 
-const Content = ({ content, className }) => (
+const Content = ({ content, className, scope }) => (
   <Wrapper>
-    <MDXRenderer className={className} scope={{ React, MDXTag }}>
+    <MDXRenderer className={className} scope={{ ...scope }}>
       {content}
     </MDXRenderer>
   </Wrapper>
@@ -16,6 +15,7 @@ const Content = ({ content, className }) => (
 Content.propTypes = {
   content: PropTypes.node,
   className: PropTypes.string,
+  scope: PropTypes.object,
 }
 
 export default Content

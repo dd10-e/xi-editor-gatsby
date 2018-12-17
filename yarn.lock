@@ -564,7 +564,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-jsx" "^7.2.0"
 
-"@babel/plugin-transform-react-jsx@^7.0.0":
+"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.1.6":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.2.0.tgz#ca36b6561c4d3b45524f8efb6f0fbc9a0d1d622f"
   integrity sha512-h/fZRel5wAfCqcKgq3OhbmYaReo7KkoJBpt8XnvpS7wqaNMqtw5xhxutzcm35iMUWucfAdT/nvGTsWln0JTg2Q==
@@ -787,7 +787,7 @@
     "@emotion/utils" "0.11.1"
     "@emotion/weak-memoize" "0.2.2"
 
-"@emotion/core@^10.0.4":
+"@emotion/core@^10.0.5":
   version "10.0.5"
   resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.5.tgz#fda655bb040deb69090faf2fa9d66d39b2bbe4bf"
   integrity sha512-kCw+JNXy5DmtS4qbCklz8hEobdJ0m9q0tAVzpAjHDAsbRwfSL/Kj3ObMG0DiLhbUPXOGAHSWCVXa4DmXvgup+Q==
@@ -850,7 +850,7 @@
     "@emotion/utils" "0.11.1"
     object-assign "^4.1.1"
 
-"@emotion/styled@^10.0.4":
+"@emotion/styled@^10.0.5":
   version "10.0.5"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.5.tgz#f742dd6f9f5f4b2fde275534771f69419a7549bd"
   integrity sha512-aCBYANdi57jG0Zqk1EfbpHkOTvl9iftd1uGc4GyFaBzviWfWSsKu7pdkJ6vNwhpSn7TEj32WM1D4Z4SRk3GHfQ==
@@ -1812,7 +1812,7 @@ babel-plugin-dynamic-import-node@^1.2.0:
   dependencies:
     babel-plugin-syntax-dynamic-import "^6.18.0"
 
-babel-plugin-emotion@^10.0.5:
+babel-plugin-emotion@^10.0.0, babel-plugin-emotion@^10.0.5:
   version "10.0.5"
   resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-10.0.5.tgz#05ec47cde94f984b0b2aebdd41f81876cf9cbb24"
   integrity sha512-ezct2vKACg4juSV0/A/4QIDJu2+5Sjna/8rX/LXY8D0qG8YEP3fu8pe5FqZ9yFGa8WOJ1sivf3/QKM/5C8naIg==
@@ -1834,6 +1834,13 @@ babel-plugin-gather-exports@^0.0.1:
   integrity sha512-t4gbfvKBQd2PrE8uaxkXlUyz/n/1DvcXZ5KTCL7jzAyCWva7PpQllE3RjFYlYSsS/7FAw7diE1dTerCwgKLeMw==
   dependencies:
     json5 "^2.0.1"
+
+babel-plugin-jsx-pragmatic@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/babel-plugin-jsx-pragmatic/-/babel-plugin-jsx-pragmatic-1.0.2.tgz#41e2beb8642235f34b2a7ab12ca39e07201b8e59"
+  integrity sha1-QeK+uGQiNfNLKnqxLKOeByAbjlk=
+  dependencies:
+    babel-plugin-syntax-jsx "^6.0.0"
 
 babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.4.2:
   version "2.4.2"
@@ -1873,7 +1880,7 @@ babel-plugin-syntax-flow@^6.18.0, babel-plugin-syntax-flow@^6.8.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-flow/-/babel-plugin-syntax-flow-6.18.0.tgz#4c3ab20a2af26aa20cd25995c398c4eb70310c8d"
   integrity sha1-TDqyCiryaqIM0lmVw5jE63AxDI0=
 
-babel-plugin-syntax-jsx@^6.18.0, babel-plugin-syntax-jsx@^6.8.0:
+babel-plugin-syntax-jsx@^6.0.0, babel-plugin-syntax-jsx@^6.18.0, babel-plugin-syntax-jsx@^6.8.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
   integrity sha1-CvMqmm4Tyno/1QaeYtew9Y0NiUY=
@@ -4529,14 +4536,14 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-emotion-server@^10.0.4:
+emotion-server@^10.0.5:
   version "10.0.5"
   resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-10.0.5.tgz#85f24ba5dd95c37be44a0709ca71f27210f9ba9b"
   integrity sha512-REh/Q1xnzzTUxHHR4BXhlptcAG/G+s8AKdRzvrWw1/JDpHpJ6mKxnNxYvRqes3yyWsqaZORHomEuOkqG4I5W4g==
   dependencies:
     create-emotion-server "10.0.0"
 
-emotion@^10.0.4:
+emotion@^10.0.5:
   version "10.0.5"
   resolved "https://registry.yarnpkg.com/emotion/-/emotion-10.0.5.tgz#9b22cee820de0a45bc102e4750553c1b81098b00"
   integrity sha512-bYti4oM6k1oDm/qZ3w/AcJNJDitTt++/EWy9TqYu2Th7YEJw2H5hesihynHszsfn4TAf5TS43y+51/KWHFnuBA==
@@ -5789,12 +5796,15 @@ gatsby-link@^2.0.7:
     unist-util-remove "^1.0.1"
     unist-util-visit "^1.4.0"
 
-gatsby-plugin-emotion@^2.0.5:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-2.0.7.tgz#c89a1e3eef8ae4654d3dee8bd89875f651c6743c"
-  integrity sha512-UTw2cltGH5e9vWvU4XskXrvRgrFiFOTUzFG6yrPwQiNoLM0FFVvvz2/mwD3waugbxBqSxb5wLoimZECOC2KNtw==
+gatsby-plugin-emotion@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-3.0.1.tgz#9236418599848fc70639e7a00e9a42bb62e00bba"
+  integrity sha512-90ZyO9MZvnj5HVGsK1TrE6q2gEnQ7xdQFxjQxC8rtmiQ35HXYXyO/orFwcGZH4k0H2vJACtcrJKfc0P+rQ4fwg==
   dependencies:
+    "@babel/plugin-transform-react-jsx" "^7.1.6"
     "@babel/runtime" "^7.0.0"
+    babel-plugin-emotion "^10.0.0"
+    babel-plugin-jsx-pragmatic "^1.0.2"
 
 gatsby-plugin-manifest@^2.0.9:
   version "2.0.12"

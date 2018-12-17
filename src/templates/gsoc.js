@@ -3,28 +3,23 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
-import { MDXProvider } from '@mdx-js/tag'
 
 import Content from '../components/content'
 import { LayoutWithLeftNav } from '../components/layout'
 import SEO from '../components/SEO'
 
-export const GSoCTemplate = ({ content, title, helmet, components }) => {
+export const GSoCTemplate = ({ content, title, helmet, scope }) => {
   return (
-    <MDXProvider
-      components={{
-        ...components,
-      }}
-    >
-      <section className="lg:flex h-full">
-        {helmet || ''}
-        <div className="lg:w-3/4 xl:w-4/5">
-          <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
-          <MDXRenderer className="ml-4 lg:ml-0">{content}</MDXRenderer>
-          <Content content={content} />
-        </div>
-      </section>
-    </MDXProvider>
+    <section className="lg:flex h-full">
+      {helmet || ''}
+      <div className="lg:w-3/4 xl:w-4/5">
+        <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
+        <MDXRenderer className="ml-4 lg:ml-0" scope={scope}>
+          {content}
+        </MDXRenderer>
+        <Content content={content} />
+      </div>
+    </section>
   )
 }
 
@@ -33,6 +28,7 @@ GSoCTemplate.propTypes = {
   contentComponent: PropTypes.func,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  scope: PropTypes.object,
 }
 
 class GSoC extends React.Component {
@@ -40,6 +36,7 @@ class GSoC extends React.Component {
     const documentation = this.props.data.mdx
     const navBar = this.props.data.allMdx.edges
     const components = this.props.components
+    const scope = {}
 
     return (
       <LayoutWithLeftNav data={navBar} path="gsoc" documentationMode={true}>
@@ -47,6 +44,7 @@ class GSoC extends React.Component {
           content={documentation.code.body}
           title={documentation.frontmatter.title}
           components={components}
+          scope={scope}
           helmet={
             <SEO
               categorieTitle={documentation.frontmatter.title}

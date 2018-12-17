@@ -32,7 +32,6 @@ class DocumentationPost extends React.Component {
     const documentationPost = this.props.data.mdx
     const navBar = this.props.data.allMdx.edges
     const components = this.props.components
-    console.log(typeof components)
     return (
       <LayoutWithLeftNav data={navBar} path="documentation">
         <MDXProvider
