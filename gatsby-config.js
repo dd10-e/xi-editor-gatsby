@@ -81,6 +81,12 @@ module.exports = {
         },
         gatsbyRemarkPlugins: [
           {
+            resolve: 'gatsby-remark-relative-images',
+            options: {
+              name: 'uploads',
+            },
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1035,
@@ -93,6 +99,12 @@ module.exports = {
               target: '_blank',
             },
           },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
           { resolve: 'gatsby-remark-autolink-headers' },
         ],
       },
@@ -101,44 +113,6 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
     'gatsby-plugin-postcss',
-    // {
-    //   resolve: 'gatsby-transformer-remark',
-    //   options: {
-    //     plugins: [
-    //       {
-    //         resolve: 'gatsby-remark-relative-images',
-    //         options: {
-    //           name: 'uploads',
-    //         },
-    //       },
-    //       {
-    //         resolve: 'gatsby-remark-images',
-    //         options: {
-    //           // It's important to specify the maxWidth (in pixels) of
-    //           // the content container as this plugin uses this as the
-    //           // base for generating different widths of each image.
-    //           maxWidth: 1440,
-    //           linkImagesToOriginal: false,
-    //           backgroundColor: 'transparent',
-    //         },
-    //       },
-    //       {
-    //         resolve: 'gatsby-remark-copy-linked-files',
-    //         options: {
-    //           destinationDir: 'static',
-    //         },
-    //       },
-    // {
-    //   resolve: 'gatsby-remark-external-links',
-    //   options: {
-    //     target: '_blank',
-    //   },
-    // },
-    //       'gatsby-remark-prismjs',
-    //       'gatsby-remark-autolink-headers',
-    //     ],
-    //   },
-    // },
     // {
     //   resolve: 'gatsby-plugin-netlify-cms',
     //   options: {
