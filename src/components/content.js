@@ -3,14 +3,12 @@ import PropTypes from 'prop-types'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withMDXScope } from 'gatsby-mdx/context'
 
-import Image from './image'
+import Image from './images/image'
 
-const Content = ({ content, className, scope }) => {
+const Content = ({ content, className }) => {
   return (
-    <div>
-      <MDXRenderer className={className} scope={{ Image }}>
-        {content}
-      </MDXRenderer>
+    <div className={className}>
+      <MDXRenderer scope={{ Image }}>{content}</MDXRenderer>
     </div>
   )
 }

@@ -1,7 +1,6 @@
-import { Link, withPrefix } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
 
-import SearchBar from './searchBar'
 import MenuItem from './menuItem'
 import config from '../../../config/site'
 

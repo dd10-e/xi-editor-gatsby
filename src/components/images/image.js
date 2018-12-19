@@ -13,7 +13,7 @@ import Img from 'gatsby-image'
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Image = ({ className, alt }) => (
+const Image = ({ classNameImg, alt }) => (
   <StaticQuery
     // https://github.com/gatsbyjs/gatsby/issues/9047
     // It probably can be useful for that case!
@@ -34,7 +34,7 @@ const Image = ({ className, alt }) => (
     render={data => (
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        className={className}
+        className={classNameImg}
         alt={alt}
       />
     )}

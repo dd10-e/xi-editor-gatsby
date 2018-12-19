@@ -90,7 +90,7 @@ let colors = {
   'green': '#24D06B', // modified from upstream
   'green-light': '#51d88a',
   'green-lighter': '#D9F1E3', // modified from upstream
-  'green-lightest': '#e3fcec',
+  'green-lightest': '#3EFC9C', // modified from upstream
 
   'teal-darkest': '#0d3331',
   'teal-darker': '#20504f',

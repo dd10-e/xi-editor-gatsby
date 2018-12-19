@@ -21,14 +21,41 @@ const SEO = ({ categorieTitle, description }) => {
       {/* Site */}
       <html lang={config.siteLanguage} />
       <title>{title}</title>
-      <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href={config.siteLogo} />
-      <link rel="icon" type="image/png" sizes="16x16" href={config.siteLogo} />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href={realPrefix + '/logos/favicon-32x32.png'}
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href={realPrefix + '/logos/favicon-16x16.png'}
+      />
+      <link
+        rel="mask-icon"
+        href={realPrefix + '/logos/safari-pinned-tab.svg'}
+        color="#24d06b"
+      />
       <link rel="shortcut icon" href="favicon.ico" />
       <meta name="msapplication-TileColor" content={config.backgroundColor} />
       <meta name="msapplication-config" content="browserconfig.xml" />
       <meta name="description" content={descriptionMeta} />
       <meta name="image" content={image} />
+      {/* Android */}
+      <meta
+        property="al:ios:url"
+        content="nflx://www.netflix.com/?locale=fr-FR"
+      />
+      <meta property="al:android:app_name" content={config.siteTitle} />
+      <meta property="al:android:url" content={config.siteUrl} />
+      {/* Apple */}
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <link
+        rel="apple-touch-icon"
+        href={realPrefix + '/logos/apple-touch-icon.png'}
+      />
       {/* Facebook */}
       {!config.ogLanguage === '' && (
         <meta property="og:locale" content={config.ogLanguage} />

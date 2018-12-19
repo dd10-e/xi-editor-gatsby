@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/xi-editor-gatsby', // Example: `/xi-editor-gatsby`
+  pathPrefix: '/', // Example: `/xi-editor-gatsby`
   siteTitle: 'Xi',
   sitetitleSeparator: '|',
   siteUrl: 'https://elod10.github.io', // Example: `https://gatsby-netlify-cms.netlify.com`

@@ -1,8 +1,7 @@
 import React from 'react'
-import styled from '@emotion/styled'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+import Image from '../components/images/image'
 import ShowcaseFrontend from '../components/showcaseFrontend'
 
 const gradient = {
@@ -47,8 +46,8 @@ const IndexPage = () => (
               </p>
             </div>
           </div>
-          <div className="flex-1 flex content-center">
-            <Image alt="xi-mac" className="" />
+          <div className="flex-1">
+            <Image alt="xi-mac" className="w-full h-full" />
           </div>
         </div>
       </div>
@@ -68,6 +67,7 @@ const IndexPage = () => (
               commodo lectus. Sed massa ex, volutpat quis dui in, condimentum
               scelerisque nibh. Proin eu nisi eu libero semper laoreet. Cras eu
               molestie neque, ut auctor purus."
+          srcImg="/uploads/xi-mac-preview.png"
         />
         <ShowcaseFrontend
           title="GTK Frontend."
@@ -82,6 +82,7 @@ const IndexPage = () => (
               scelerisque nibh. Proin eu nisi eu libero semper laoreet. Cras eu
               molestie neque, ut auctor purus."
           isImgLeft={true}
+          srcImg="/uploads/xi-gtk-preview.png"
         />
       </div>
     </div>

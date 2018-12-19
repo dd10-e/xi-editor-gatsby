@@ -2,7 +2,14 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-const ShowcaseFrontend = ({ title, content, isImgLeft, className, alt }) => (
+const ShowcaseFrontend = ({
+  title,
+  content,
+  isImgLeft,
+  className,
+  alt,
+  srcImg,
+}) => (
   <section
     className={`flex flex-col lg:flex-row ${
       isImgLeft ? 'lg:flex-row-reverse' : ''
@@ -21,7 +28,7 @@ const ShowcaseFrontend = ({ title, content, isImgLeft, className, alt }) => (
         isImgLeft ? 'lg:-ml-32' : 'lg:-mr-32'
       }`}
     >
-      <StaticQuery
+      {/* <StaticQuery
         query={graphql`
           query {
             placeholderImage: file(relativePath: { eq: "xi-mac-preview.png" }) {
@@ -40,7 +47,8 @@ const ShowcaseFrontend = ({ title, content, isImgLeft, className, alt }) => (
             alt={alt}
           />
         )}
-      />
+      /> */}
+      <img src={srcImg} alt={alt} className={className} />
     </div>
   </section>
 )

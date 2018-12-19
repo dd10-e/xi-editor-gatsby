@@ -15,37 +15,43 @@ export const BlogPostTemplate = ({
   next,
 }) => {
   return (
-    <div className="max-w-md">
-      <section>
-        {helmet || ''}
-        <h1 className="text-xi-blue-dark mt-8">{title}</h1>
-        <div className="border-t-4 border-xi-blue-dark w-24 mt-4 mb-8" />
-        <p className="mb-8 text-xi-blue font-bold">{description}</p>
-        <Content content={content} />
-      </section>
-      <div
-        className={`flex ${
-          previous === null ? 'justify-end' : 'justify-between'
-        }`}
-      >
-        {previous && (
-          <Link
-            to={'/blog/post' + previous.fields.slug}
-            rel="prev"
-            className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8"
+    <div className="bg-white h-full">
+      <div className="flex justify-center container mx-auto">
+        <div className="flex flex-col">
+          <section>
+            {helmet || ''}
+            <div className="-ml-32">
+              <h1 className="text-blue-darker text-5xl">{title}</h1>
+              <p className="mt-4 text-blue-darker font-bold">{description}</p>
+              <div className="border-t-4 border-green-lighter w-24 mt-4 mb-8" />
+            </div>
+            <Content content={content} className="max-w-md mt-16" />
+          </section>
+          <div
+            className={`flex ${
+              previous === null ? 'justify-end' : 'justify-between'
+            }`}
           >
-            ← {previous.frontmatter.title}
-          </Link>
-        )}
-        {next && (
-          <Link
-            to={'/blog/post' + next.fields.slug}
-            rel="next"
-            className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8"
-          >
-            {next.frontmatter.title} →
-          </Link>
-        )}
+            {previous && (
+              <Link
+                to={'/blog/post' + previous.fields.slug}
+                rel="prev"
+                className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8"
+              >
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+            {next && (
+              <Link
+                to={'/blog/post' + next.fields.slug}
+                rel="next"
+                className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8"
+              >
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   )
