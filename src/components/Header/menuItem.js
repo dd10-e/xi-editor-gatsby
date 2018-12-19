@@ -5,7 +5,7 @@ const MenuItem = props => {
   return (
     <Link
       to={props.to}
-      className="inline-block no-underline text-base uppercase text-white font-semibold py-4 px-6 border-b-4 border-transparent hover:border-green"
+      className="flex items-center no-underline text-base uppercase text-blue-darker mx-5 font-semibold witespace-no-wrap"
       activeClassName="border-green"
     >
       {props.title}

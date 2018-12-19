@@ -3,21 +3,27 @@ import '../../output.css'
 import { Link } from 'gatsby'
 import React from 'react'
 import PropTypes from 'prop-types'
+import { MDXProvider } from '@mdx-js/tag'
 
+import mdxComponents from './mdxComponents'
 import Header from './Header/index'
 import Footer from './footer'
 import SEO from './SEO'
 
-const Layout = ({ children }) => (
-  <div className="h-full w-full flex flex-col items-stretch font-sans">
-    <SEO />
-    <Header />
-    <main role="main" className={`flex-1 container mx-auto px-8 md:px-0`}>
-      {children}
-    </main>
-    <Footer />
-  </div>
-)
+const Layout = ({ children }) => {
+  return (
+    <MDXProvider components={mdxComponents}>
+      <div className="h-full w-full flex flex-col items-stretch font-sans">
+        <SEO />
+        <Header />
+        <main role="main" className={`flex-1 bg-green-lighter`}>
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </MDXProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

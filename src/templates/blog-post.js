@@ -2,8 +2,6 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import { withMDXScope } from 'gatsby-mdx/context'
-
 import Content from '../components/content'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
@@ -15,7 +13,6 @@ export const BlogPostTemplate = ({
   helmet,
   previous,
   next,
-  scope,
 }) => {
   return (
     <div className="max-w-md">
@@ -24,7 +21,7 @@ export const BlogPostTemplate = ({
         <h1 className="text-xi-blue-dark mt-8">{title}</h1>
         <div className="border-t-4 border-xi-blue-dark w-24 mt-4 mb-8" />
         <p className="mb-8 text-xi-blue font-bold">{description}</p>
-        <Content content={content} scope={scope} />
+        <Content content={content} />
       </section>
       <div
         className={`flex ${
@@ -61,7 +58,6 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
   previous: PropTypes.object,
   next: PropTypes.object,
-  scope: PropTypes.object,
 }
 
 class Post extends React.Component {
@@ -69,7 +65,6 @@ class Post extends React.Component {
     const post = this.props.data.mdx
     const previous = this.props.pageContext.previous
     const next = this.props.pageContext.next
-    const scope = {}
     return (
       <Layout>
         <BlogPostTemplate
@@ -78,7 +73,6 @@ class Post extends React.Component {
           title={post.frontmatter.title}
           previous={previous}
           next={next}
-          scope={scope}
           helmet={
             <SEO
               categorieTitle={post.frontmatter.title}
@@ -103,7 +97,6 @@ export const pageQuery = graphql`
       id
       code {
         body
-        scope
       }
       excerpt(pruneLength: 300)
       frontmatter {
@@ -115,4 +108,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default withMDXScope(Post)
+export default Post

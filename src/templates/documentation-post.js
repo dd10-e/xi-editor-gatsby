@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import { withMDXScope } from 'gatsby-mdx/context'
 import { MDXProvider } from '@mdx-js/tag'
 
 import Content from '../components/content'
@@ -95,4 +94,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default withMDXScope(DocumentationPost)
+export default DocumentationPost

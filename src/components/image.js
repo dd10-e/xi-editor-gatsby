@@ -22,9 +22,9 @@ const Image = ({ className, alt }) => (
     // `file(relativePath: { eq: image })`
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "home.png" }) {
+        placeholderImage: file(relativePath: { eq: "xi-mac.png" }) {
           childImageSharp {
-            fluid(maxWidth: 400) {
+            fluid(maxWidth: 600) {
               ...GatsbyImageSharpFluid
             }
           }

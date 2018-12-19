@@ -5,15 +5,13 @@ import PropTypes from 'prop-types'
 import Content from '../components/content'
 import Layout from '../components/layout'
 import SEO from '../components/SEO'
-import { withMDXScope } from 'gatsby-mdx/context'
-import { MDXProvider } from '@mdx-js/tag'
 
-export const ContributeTemplate = ({ title, content, helmet, scope }) => {
+export const ContributeTemplate = ({ title, content, helmet }) => {
   return (
     <section>
       {helmet || ''}
       <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
-      <Content className="ml-4 lg:ml-0" content={content} scope={scope} />
+      <Content className="ml-4 lg:ml-0" content={content} />
     </section>
   )
 }
@@ -22,27 +20,18 @@ ContributeTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   helmet: PropTypes.object,
-  scope: PropTypes.object,
 }
 
-const Contribute = ({ data, components }) => {
-  const scope = {}
+const Contribute = ({ data }) => {
   return (
     <Layout>
-      <MDXProvider
-        components={{
-          ...components,
-        }}
-      >
-        <ContributeTemplate
-          title={data.mdx.frontmatter.title}
-          content={data.mdx.code.body}
-          scope={scope}
-          helmet={
-            <SEO categorieTitle="Contribute" description={data.mdx.excerpt} />
-          }
-        />
-      </MDXProvider>
+      <ContributeTemplate
+        title={data.mdx.frontmatter.title}
+        content={data.mdx.code.body}
+        helmet={
+          <SEO categorieTitle="Contribute" description={data.mdx.excerpt} />
+        }
+      />
     </Layout>
   )
 }
@@ -60,4 +49,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default withMDXScope(Contribute)
+export default Contribute

@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Footer = () => (
-  <footer className="flex-no-shrink border-t pt-4 pb-10 w-full pt-8 px-8">
-    <p className="text-xs text-xi-blue-dark">
+  <footer className="flex-no-shrink h-32 w-full bg-green-lighter relative">
+    <p className="text-xs text-blue-darker absolute pin-b pin-l mb-4 ml-8">
       See the{' '}
       <a
         href="https://github.com/xi-editor/xi-editor"
-        className="text-xi-blue-dark hover:text-xi-blue font-semibold"
+        className="text-blue-darker hover:text-green font-semibold"
       >
         GitHub Project
       </a>

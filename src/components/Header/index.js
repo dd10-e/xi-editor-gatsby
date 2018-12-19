@@ -24,44 +24,28 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="flex flex-col flex-no-shrink">
-        <div className="bg-xi-blue-dark">
+      <header className="flex flex-col flex-no-shrink border-t-4 border-green h-16 mb-32">
+        <div className="bg-white">
           <div className="container mx-auto">
             <div className="flex justify-between items-center py-4">
               <div className="flex items-center">
                 <Link
                   to="/"
-                  className="text-white no-underline flex items-center"
+                  className="text-white no-underline flex items-center ml-2 md:ml-0"
                 >
-                  <img
-                    src={withPrefix(config.siteLogo)}
-                    alt="logo"
-                    className="w-8"
-                  />
-                  <p className="ml-4 font-thin text-xl text-white">
+                  <p className="font-bold text-4xl text-blue-darker">
                     {config.siteTitle}
                   </p>
                 </Link>
               </div>
-              <div>
-                <div className="flex absolute pin-t pin-r mt-4 mr-4 md:mt-0 md:relative">
-                  <SearchBar />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bg-xi-blue">
-          <div className="container mx-auto">
-            <div className="flex justify-between items-center">
-              <nav className="-ml-2 pt-2">
+              <div className="flex justify-between overflow-x-auto overflow-y-hidden mx-4 md:mx-0">
                 <MenuItem to="/" title="home" />
                 <MenuItem to="/documentation/frontend-notes/" title="docs" />
                 <MenuItem to="/gsoc/gsoc/" title="gsoc" />
                 <MenuItem to="/contribute/" title="contribute" />
                 <MenuItem to="/building-docs/" title="buildind docs" />
                 <MenuItem to="/blog" title="blog" />
-              </nav>
+              </div>
             </div>
           </div>
         </div>
