@@ -47,7 +47,7 @@ export const LayoutWithLeftNav = ({ children, data, title, path }) => {
                 <li className="leading-tight max-x-xs" key={item.id}>
                   <Link
                     to={`/${path}${item.fields.slug}`}
-                    className="break-words block no-underline hover:underline text-xi-blue-dark px-2 px-6 py-4 hover:bg-blue-lightest text-sm"
+                    className="break-words block no-underline hover:underline text-blue-darker px-2 px-6 py-4 hover:bg-blue-lightest text-sm"
                     activeClassName="bg-blue-lightest font-bold underline"
                   >
                     {item.frontmatter.title}

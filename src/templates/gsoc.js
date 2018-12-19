@@ -12,7 +12,7 @@ export const GSoCTemplate = ({ content, title, helmet }) => {
     <section className="lg:flex h-full">
       {helmet || ''}
       <div className="lg:w-3/4 xl:w-4/5">
-        <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
+        <h1 className="ml-4 lg:ml-0 text-blue-darker mt-8 mb-4">{title}</h1>
         <MDXRenderer className="ml-4 lg:ml-0">{content}</MDXRenderer>
         <Content content={content} />
       </div>

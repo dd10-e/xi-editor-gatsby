@@ -8,9 +8,9 @@ import SEO from '../components/SEO'
 
 export const BuildindDocsTemplate = ({ title, content, helmet }) => {
   return (
-    <section>
+    <section className="bg-white">
       {helmet || ''}
-      <h1 className="ml-4 lg:ml-0 text-xi-blue-dark mt-8 mb-4">{title}</h1>
+      <h1 className="ml-4 lg:ml-0 text-blue-darker mb-4">{title}</h1>
       <Content className="ml-4 lg:ml-0" content={content} />
     </section>
   )
