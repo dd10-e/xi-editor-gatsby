@@ -26,7 +26,7 @@ class BlogList extends React.Component {
               {posts.map(({ node: post }) => (
                 <li
                   key={post.id}
-                  className="rounded-lg bg-white p-4 text-lg shadow-md"
+                  className="rounded-lg bg-white p-4 text-lg shadow-md mb-5"
                 >
                   <div className="flex items-center">
                     <Link
@@ -69,7 +69,9 @@ class BlogList extends React.Component {
                     key={`pagination-number${i + 1}`}
                     to={`/blog/${i === 0 ? '' : i + 1}`}
                     className={`inline-flex text-base text-green-lighter p-2 ${
-                      i + 1 === currentPage ? 'bg-black' : 'bg-blue-darker'
+                      i + 1 === currentPage
+                        ? 'bg-black border'
+                        : 'bg-blue-darker'
                     }`}
                   >
                     {i + 1}

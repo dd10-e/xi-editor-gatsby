@@ -23,7 +23,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <header className="flex flex-col flex-no-shrink border-t-4 border-green h-16 mb-32">
+      <header className="flex flex-col flex-no-shrink border-t-2 border-green h-16 mb-32">
         <div className="bg-white">
           <div className="container mx-auto">
             <div className="flex justify-between items-center py-4">

@@ -2,8 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import { MDXProvider } from '@mdx-js/tag'
-
 import Content from '../components/content'
 import { LayoutWithLeftNav } from '../components/layout'
 import SEO from '../components/SEO'
@@ -33,23 +31,17 @@ class DocumentationPost extends React.Component {
     const components = this.props.components
     return (
       <LayoutWithLeftNav data={navBar} path="documentation">
-        <MDXProvider
-          components={{
-            ...components,
-          }}
-        >
-          <DocumentationPostTemplate
-            content={documentationPost.code.body}
-            title={documentationPost.frontmatter.title}
-            components={components}
-            helmet={
-              <SEO
-                categorieTitle={`${documentationPost.frontmatter.title}`}
-                description={`${documentationPost.excerpt}`}
-              />
-            }
-          />
-        </MDXProvider>
+        <DocumentationPostTemplate
+          content={documentationPost.code.body}
+          title={documentationPost.frontmatter.title}
+          components={components}
+          helmet={
+            <SEO
+              categorieTitle={`${documentationPost.frontmatter.title}`}
+              description={`${documentationPost.excerpt}`}
+            />
+          }
+        />
       </LayoutWithLeftNav>
     )
   }

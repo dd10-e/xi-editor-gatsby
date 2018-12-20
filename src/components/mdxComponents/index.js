@@ -1,8 +1,14 @@
 import React from 'react'
-import Title from './titles'
+import { H1, H2, H3, H4 } from './titles'
+import Ul from './ul'
+import Li from './li'
+import Em from './em'
 
 export default {
-  h1: props => <Title level="h1" className="uppercase text-red" {...props} />,
+  h1: props => <H1 {...props} />,
+  h2: props => <H2 {...props} />,
+  h3: props => <H3 {...props} />,
+  h4: props => <H4 {...props} />,
   // TODO add `h2`
   // TODO add `h3`
   // TODO add `h4`
@@ -14,6 +20,8 @@ export default {
   // TODO add `a`
   // TODO add `img`
   // TODO add `blockquote`
-  // TODO add `ul`
-  // TODO add `li`
+  // TODO add `em`
+  em: props => <Em {...props} />,
+  ul: props => <Ul {...props} />,
+  li: props => <Li {...props} />,
 }

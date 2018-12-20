@@ -20,12 +20,15 @@ export const BlogPostTemplate = ({
         <div className="flex flex-col">
           <section>
             {helmet || ''}
-            <div className="-ml-32">
-              <h1 className="text-blue-darker text-5xl">{title}</h1>
+            <div className="md:-ml-16 lg:-ml-32 px-4 md:px-0">
+              <h1 className="text-blue-darker text-3xl md:text-5xl">{title}</h1>
               <p className="mt-4 text-blue-darker font-bold">{description}</p>
               <div className="border-t-4 border-green-lighter w-24 mt-4 mb-8" />
             </div>
-            <Content content={content} className="max-w-md mt-16" />
+            <Content
+              content={content}
+              className="max-w-md mt-4 md:mt-16 px-4 md:px-0"
+            />
           </section>
           <div
             className={`flex ${
@@ -36,7 +39,7 @@ export const BlogPostTemplate = ({
               <Link
                 to={'/blog/post' + previous.fields.slug}
                 rel="prev"
-                className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8"
+                className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8 ml-4 ml-0"
               >
                 ← {previous.frontmatter.title}
               </Link>
@@ -45,7 +48,7 @@ export const BlogPostTemplate = ({
               <Link
                 to={'/blog/post' + next.fields.slug}
                 rel="next"
-                className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8"
+                className="no-underline text-sm text-blue-darker active:text-indigo-dark my-8 mr-4 md:mr-0"
               >
                 {next.frontmatter.title} →
               </Link>

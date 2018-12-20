@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const blogPosts = result.data.allMdx.edges.filter(
     type => type.node.fields.sourceName === 'blog'
   )
-  const blogPostsPerPage = 1
+  const blogPostsPerPage = 10
   const numPages = Math.ceil(blogPosts.length / blogPostsPerPage)
 
   // blog-list pages

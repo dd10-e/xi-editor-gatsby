@@ -1,4 +1,6 @@
 import React from 'react'
+import 'styled-components/macro'
+
 // import { StaticQuery, graphql } from 'gatsby'
 // import Img from 'gatsby-image'
 
@@ -19,7 +21,7 @@ const ShowcaseFrontend = ({
       <h1 className={`mt-16 ${isImgLeft ? 'px-8' : 'px-4 lg:pl-23'}`}>
         {title}
       </h1>
-      <p className={`mt-6 text-3xl ${isImgLeft ? 'px-8' : 'px-4 lg:pl-23'}`}>
+      <p className={`mt-6 text-2xl ${isImgLeft ? 'px-8' : 'px-4 lg:pl-23'}`}>
         {content}
       </p>
     </div>

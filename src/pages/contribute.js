@@ -8,11 +8,13 @@ import SEO from '../components/SEO'
 
 export const ContributeTemplate = ({ title, content, helmet }) => {
   return (
-    <section className="bg-white">
-      {helmet || ''}
-      <h1 className="ml-4 lg:ml-0 text-blue-darker mb-4">{title}</h1>
-      <Content className="ml-4 lg:ml-0" content={content} />
-    </section>
+    <div className="bg-white h-full pb-12">
+      <section className="container mx-auto">
+        {helmet || ''}
+        <h1 className="ml-4 lg:ml-0 text-blue-darker mb-4">{title}</h1>
+        <Content className="ml-4 lg:ml-0" content={content} />
+      </section>
+    </div>
   )
 }
 
