@@ -1,0 +1,1 @@
+{"errors":[{"message":"Cannot read property 'id' of undefined","locations":[{"line":4,"column":3}],"path":["mdx"]}],"data":{"mdx":null,"allMdx":{"edges":[{"node":{"id":"f39842c6-ee98-5e7f-b26d-718eea392fc7","fields":{"slug":"/config-1/"},"frontmatter":{"title":"Working with the config system"}}}]}},"pageContext":{"id":"df9cba92-27aa-5842-8652-2c60dccfd448"}}
