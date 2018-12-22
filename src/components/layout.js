@@ -7,18 +7,18 @@ import { MDXProvider } from '@mdx-js/tag'
 import 'styled-components/macro'
 
 import mdxComponents from './mdxComponents'
-import Header from '../components/Header'
-import FooterContainer from '../containers/footerContainer'
-// import Footer from './footer'
 import SEO from './SEO'
 
-const Layout = ({ children }) => {
+import FooterContainer from 'containers/components/FooterContainer'
+import HeaderContainer from 'containers/components/HeaderContainer'
+
+const Layout = ({ children, theme }) => {
   return (
     <MDXProvider components={mdxComponents}>
       <div className="h-full w-full flex flex-col items-stretch font-sans">
         <SEO />
-        <Header />
-        <main role="main" className={`flex-1 bg-green-lighter`}>
+        <HeaderContainer />
+        <main role="main" className={`flex-1 bg-${theme.primaryLighter}`}>
           {children}
         </main>
         <FooterContainer />
@@ -29,13 +29,20 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  theme: PropTypes.object,
+}
+
+Layout.defaultProps = {
+  theme: {
+    primaryLighter: 'green-lighter',
+  },
 }
 
 export const LayoutWithLeftNav = ({ children, data, title, path }) => {
   return (
     <div className="h-full w-full flex flex-col items-stretch font-sans">
       <SEO />
-      <Header />
+      <HeaderContainer />
       <main role="main" className="flex-1 -mt-32">
         <div className="flex">
           <div className="w-64">

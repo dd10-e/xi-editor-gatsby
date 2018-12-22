@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/xi-editor-gatsby', // Example: `/xi-editor-gatsby`
+  pathPrefix: '/xi-editor-gatsby',
   siteTitle: 'Xi',
   sitetitleSeparator: '|',
   themeColor: '#fff',

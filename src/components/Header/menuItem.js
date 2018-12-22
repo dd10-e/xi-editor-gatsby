@@ -1,16 +1,25 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const MenuItem = props => {
+const MenuItem = ({ to, title, theme }) => {
   return (
     <Link
-      to={props.to}
-      className="flex items-center no-underline text-base uppercase text-blue-darker mx-5 font-semibold witespace-no-wrap"
+      to={to}
+      className={`flex items-center no-underline text-base uppercase text-blue-darker mx-5 font-semibold witespace-no-wrap text-${
+        theme.secondaryDarker
+      }`}
       activeClassName="border-green"
     >
-      {props.title}
+      {title}
     </Link>
   )
+}
+
+MenuItem.propTypes = {
+  to: PropTypes.string,
+  title: PropTypes.string,
+  theme: PropTypes.object,
 }
 
 export default MenuItem

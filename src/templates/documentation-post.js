@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Content from '../components/content'
-import { LayoutWithLeftNav } from '../components/layout'
-import SEO from '../components/SEO'
+import Content from 'components/content'
+import { LayoutWithLeftNav } from 'components/layout'
+import SEO from 'components/SEO'
 
 export const DocumentationPostTemplate = ({ content, title, helmet }) => {
   return (

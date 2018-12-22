@@ -96,7 +96,7 @@ let colors = {
   'teal-lighter': '#a0f0ed',
   'teal-lightest': '#e8fffe',
 
-  'blue-darkest': '#12283a',
+  'blue-darkest': '#070b17', // modified
   'blue-darker': '#20303A', // modified from upstream
   'blue-dark': '#2779bd',
   'blue': '#3490dc',

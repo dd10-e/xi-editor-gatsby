@@ -20,6 +20,7 @@ Investigate https://github.com/FormidableLabs/prism-react-renderer for code rend
 - [x] One config file for site-wide settings
 - [x] Automatically manifest support and favicons generated
 - [x] Sitemap support
+- [x] size-plugin to keep an eye on bundle sizes in production build
 - [ ] NetlifyCMS(?)
 - [ ] Documentation example(wip)
 - [ ] Redux starter or MobX with a real use case

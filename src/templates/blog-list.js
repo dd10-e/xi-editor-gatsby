@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Layout from 'components/layout'
+import SEO from 'components/SEO'
 
 class BlogList extends React.Component {
   render() {

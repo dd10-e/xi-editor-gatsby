@@ -1,6 +1,7 @@
 import React from 'react'
 import 'styled-components/macro'
 import { withPrefix } from 'gatsby'
+import PropTypes from 'prop-types'
 
 //! https://github.com/gatsbyjs/gatsby/issues/10482
 //! Useful for this case !
@@ -53,9 +54,20 @@ const ShowcaseFrontend = ({
           />
         )}
       /> */}
-      <img src={withPrefix(srcImg)} alt={altImg} className={className} />
+      <div className="flex-no-grow">
+        <img src={withPrefix(srcImg)} alt={altImg} className={className} />
+      </div>
     </div>
   </section>
 )
+
+ShowcaseFrontend.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+  isImgLeft: PropTypes.bool,
+  className: PropTypes.string,
+  altImg: PropTypes.string,
+  srcImg: PropTypes.string,
+}
 
 export default ShowcaseFrontend

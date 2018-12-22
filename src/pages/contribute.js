@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Content from '../components/content'
-import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Content from 'components/content'
+import Layout from 'components/layout'
+import SEO from 'components/SEO'
 
 export const ContributeTemplate = ({ title, content, helmet }) => {
   return (
@@ -37,6 +37,13 @@ const Contribute = ({ data }) => {
     </Layout>
   )
 }
+
+Contribute.propTypes = {
+  data: PropTypes.shape({
+    mdx: PropTypes.object,
+  }),
+}
+
 export const pageQuery = graphql`
   query {
     mdx(fields: { sourceName: { eq: "contribute" } }) {

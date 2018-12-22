@@ -82,15 +82,12 @@ module.exports = {
         gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
           },
           {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1035,
-              linkImagesToOriginal: false,
+              linkImagesToOriginal: true,
               withWebp: true,
               sizeByPixelDensity: true,
             },

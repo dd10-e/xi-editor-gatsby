@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Content from '../components/content'
-import Layout from '../components/layout'
-import SEO from '../components/SEO'
+import Content from 'components/content'
+import Layout from 'components/layout'
+import SEO from 'components/SEO'
 
 export const BuildindDocsTemplate = ({ title, content, helmet }) => {
   return (
@@ -40,6 +40,13 @@ const BuildindDocs = ({ data }) => {
     </Layout>
   )
 }
+
+BuildindDocs.propTypes = {
+  data: PropTypes.shape({
+    mdx: PropTypes.object,
+  }),
+}
+
 export const pageQuery = graphql`
   query {
     mdx(fields: { sourceName: { eq: "build-docs" } }) {

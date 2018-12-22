@@ -1,15 +1,22 @@
-import React from 'react'
 import 'styled-components/macro'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Layout from '../components/layout'
-import Image from '../components/images/image'
-import ShowcaseFrontend from '../components/showcaseFrontend'
+import Image from 'components/images/image'
+import ShowcaseFrontend from 'components/showcaseFrontend'
 
-const IndexPage = () => (
-  <Layout>
-    <div className="bg-white">
+import IndexPageContainer from 'containers/pages/indexContainer'
+import LayoutContainer from 'containers/components/layoutContainer'
+
+export const IndexPage = ({ theme }) => (
+  <LayoutContainer>
+    <div className={`bg-${theme.blackOrWhite}`}>
       <div className="container mx-auto">
-        <div className="relative flex flex-col-reverse lg:flex-row bg-blue-darker rounded-t-lg py-4 pl-8 lg:pl-23">
+        <div
+          className={`relative flex flex-col-reverse lg:flex-row rounded-t-lg py-4 pl-8 lg:pl-23 bg-${
+            theme.secondaryDarker
+          }`}
+        >
           <div className="absolute pin z-0 overflow-hidden">
             <div className="absolute pin-b ml-32" css="opacity: 0.2">
               <svg
@@ -170,31 +177,8 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="container mx-auto">
-      <div
-        className="pt-6 text-blue-darker"
-        css="background: linear-gradient(#3efc9c 0%, #d9f1e3 100%)"
-      >
-        <h1
-          className="pl-4 lg:pl-23 text-5xl relative z-10"
-          css={`
-          &:before {
-            position: absolute;
-            content: '';
-            z-index: -1;
-            width: 12rem;
-            height: 2rem;
-            background-color: #D9F1E3;
-            margin-top: 1rem
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left:0;
-            pointer-events: none;
-          }
-        `}
-        >
-          Powered by Xi.
-        </h1>
+      <div className="pt-6 text-blue-darker" css={theme.indexGradient}>
+        <h1 className="pl-4 lg:pl-23 text-5xl z-10">Powered by Xi.</h1>
         <ShowcaseFrontend
           title="MacOS Frontend."
           content="Xi Editor is the most Advanced of family of frontend of Xi. Lorem
@@ -209,7 +193,7 @@ const IndexPage = () => (
               molestie neque, ut auctor purus."
           srcImg="/uploads/xi-mac-preview-2.png"
           altImg="xi-mac-preview"
-          className="max-w-sm"
+          className=""
         />
         <ShowcaseFrontend
           title="GTK Frontend."
@@ -226,11 +210,15 @@ const IndexPage = () => (
           isImgLeft={true}
           altImg="xi-gtk-preview"
           srcImg="/uploads/xi-gtk-preview.png"
-          className="max-w-sm"
+          className=""
         />
       </div>
     </div>
-  </Layout>
+  </LayoutContainer>
 )
 
-export default IndexPage
+IndexPage.propTypes = {
+  theme: PropTypes.object,
+}
+
+export default IndexPageContainer

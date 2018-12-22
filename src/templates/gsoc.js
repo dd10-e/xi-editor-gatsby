@@ -3,9 +3,9 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
-import Content from '../components/content'
-import { LayoutWithLeftNav } from '../components/layout'
-import SEO from '../components/SEO'
+import Content from 'components/content'
+import { LayoutWithLeftNav } from 'components/layout'
+import SEO from 'components/SEO'
 
 export const GSoCTemplate = ({ content, title, helmet }) => {
   return (

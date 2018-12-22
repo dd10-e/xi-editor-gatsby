@@ -3,6 +3,10 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+
+const path = require('path')
+const SizePlugin = require('size-plugin')
+const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 const { createFilePath } = require('gatsby-source-filesystem')
 const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
 
@@ -123,4 +127,22 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       })
     }
   }
+}
+
+exports.onCreateWebpackConfig = ({ stage, actions }, options) => {
+  if (
+    (process.env.NODE_ENV === 'production' && stage === 'build-javascript') ||
+    options.development
+  ) {
+    actions.setWebpackConfig({
+      plugins: [new SizePlugin(options)],
+    })
+  }
+
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+      plugins: [new DirectoryNamedWebpackPlugin()],
+    },
+  })
 }
