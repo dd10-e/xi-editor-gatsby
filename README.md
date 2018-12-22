@@ -10,3 +10,13 @@ Don't forget to purgeCSS when you deploy!
 TODO:
 
 Investigate https://github.com/FormidableLabs/prism-react-renderer for code renderer
+
+- [x] TailwindCSS with PurgeCSS
+- [x] styled-components/macro
+- [x] SEO
+- [x] React Contextwith with SSR
+- [x] Offline support
+- [x] One config file for site-wide settings
+- [x] Automatically manifest support and favicons generated
+- [x] Sitemap support
+- [ ] NetlifyCMS(?)

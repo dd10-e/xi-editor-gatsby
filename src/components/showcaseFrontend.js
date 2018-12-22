@@ -2,6 +2,8 @@ import React from 'react'
 import 'styled-components/macro'
 import { withPrefix } from 'gatsby'
 
+//! https://github.com/gatsbyjs/gatsby/issues/10482
+//! Useful for this case !
 // import { StaticQuery, graphql } from 'gatsby'
 // import Img from 'gatsby-image'
 
@@ -10,7 +12,7 @@ const ShowcaseFrontend = ({
   content,
   isImgLeft,
   className,
-  alt,
+  altImg,
   srcImg,
 }) => (
   <section
@@ -51,7 +53,7 @@ const ShowcaseFrontend = ({
           />
         )}
       /> */}
-      <img src={withPrefix(srcImg)} alt={alt} className={className} />
+      <img src={withPrefix(srcImg)} alt={altImg} className={className} />
     </div>
   </section>
 )

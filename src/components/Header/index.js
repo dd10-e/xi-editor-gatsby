@@ -5,22 +5,6 @@ import MenuItem from './menuItem'
 import config from '../../../config/site'
 
 class Header extends React.Component {
-  constructor() {
-    super()
-
-    this.state = {
-      navActivated: false,
-    }
-
-    this.toggleNav = this.toggleNav.bind(this)
-  }
-
-  toggleNav() {
-    this.setState(previousState => ({
-      navActivated: !previousState.navActivated,
-    }))
-  }
-
   render() {
     return (
       <header className="flex flex-col flex-no-shrink border-t-2 border-green h-16 mb-32">

@@ -7,8 +7,9 @@ import { MDXProvider } from '@mdx-js/tag'
 import 'styled-components/macro'
 
 import mdxComponents from './mdxComponents'
-import Header from './Header/index'
-import Footer from './footer'
+import Header from '../components/Header'
+import FooterContainer from '../containers/footerContainer'
+// import Footer from './footer'
 import SEO from './SEO'
 
 const Layout = ({ children }) => {
@@ -20,7 +21,7 @@ const Layout = ({ children }) => {
         <main role="main" className={`flex-1 bg-green-lighter`}>
           {children}
         </main>
-        <Footer />
+        <FooterContainer />
       </div>
     </MDXProvider>
   )

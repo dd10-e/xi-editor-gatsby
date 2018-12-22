@@ -3,6 +3,7 @@ import { H1, H2, H3, H4 } from './titles'
 import Ul from './ul'
 import Li from './li'
 import Em from './em'
+import Code from './code'
 
 export default {
   h1: props => <H1 {...props} />,
@@ -21,6 +22,8 @@ export default {
   // TODO add `img`
   // TODO add `blockquote`
   // TODO add `em`
+  code: props => <Code {...props} />,
+  pre: props => <Code {...props} />,
   em: props => <Em {...props} />,
   ul: props => <Ul {...props} />,
   li: props => <Li {...props} />,
