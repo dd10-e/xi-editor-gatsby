@@ -23,3 +23,5 @@ Investigate https://github.com/FormidableLabs/prism-react-renderer for code rend
 - [ ] NetlifyCMS(?)
 - [ ] Documentation example(wip)
 - [ ] Redux starter or MobX with a real use case
+
+Discussions about architecture or whatever are welcome !
