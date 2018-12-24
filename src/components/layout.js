@@ -18,7 +18,11 @@ const Layout = ({ children, theme }) => {
       <div className="h-full w-full flex flex-col items-stretch font-sans">
         <SEO />
         <HeaderContainer />
-        <main role="main" className={`flex-1 bg-${theme.primaryLighter}`}>
+        <main
+          role="main"
+          className={`flex-1 bg-${theme.light.greenLighter ||
+            theme.dark.orangeLighter}`}
+        >
           {children}
         </main>
         <FooterContainer />
@@ -30,12 +34,6 @@ const Layout = ({ children, theme }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   theme: PropTypes.object,
-}
-
-Layout.defaultProps = {
-  theme: {
-    primaryLighter: 'green-lighter',
-  },
 }
 
 export const LayoutWithLeftNav = ({ children, data, title, path }) => {

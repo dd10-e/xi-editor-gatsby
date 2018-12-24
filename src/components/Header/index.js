@@ -11,9 +11,8 @@ class Header extends React.Component {
 
     return (
       <header
-        className={`flex flex-col flex-no-shrink border-t-2 border-green h-16 pb-32 bg-${
-          theme.blackOrWhite
-        }`}
+        className={`flex flex-col flex-no-shrink border-t-2 border-green h-16 pb-32 bg-${theme
+          .light.white || theme.dark.orange}`}
       >
         <div>
           <div className="container mx-auto">
@@ -24,9 +23,8 @@ class Header extends React.Component {
                   className="text-white no-underline flex items-center ml-2 md:ml-0"
                 >
                   <p
-                    className={`font-bold text-4xl text-${
-                      theme.secondaryDarker
-                    }`}
+                    className={`font-bold text-4xl text-${theme.light
+                      .blueDarker || theme.dark.blueDarker}`}
                   >
                     {config.siteTitle}
                   </p>

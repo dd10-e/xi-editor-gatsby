@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Layout from 'components/layout'
 import SEO from 'components/SEO'
+
+import LayoutContainer from 'containers/components/layoutContainer'
 
 class BlogList extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class BlogList extends React.Component {
     const nextPage = currentPage + 1
 
     return (
-      <Layout>
+      <LayoutContainer>
         <SEO categorieTitle="Blog" />
         <div className="flex flex-col content-end min-h-full container mx-auto py-6 px-8 -mt-16">
           <h1 className="ml-4 md:ml-0 mt-4 text-blue-darker">
@@ -96,7 +97,7 @@ class BlogList extends React.Component {
             </div>
           )}
         </div>
-      </Layout>
+      </LayoutContainer>
     )
   }
 }

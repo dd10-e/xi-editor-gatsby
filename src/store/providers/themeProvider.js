@@ -6,21 +6,29 @@ import ThemeContext from '../contexts/themeContext'
 // Secondary = blue
 
 const themes = {
-  light: {
-    primary: 'green',
-    primaryLighter: 'green-lighter',
-    primaryLightest: 'green-lightest',
-    secondaryDarker: 'blue-darker',
-    blackOrWhite: 'white',
-    indexGradient: `background: linear-gradient(#3efc9c 0%, #d9f1e3 100%);`,
+  lightMode: {
+    light: {
+      green: 'green',
+      greenLighter: 'green-lighter',
+      greenLightest: 'green-lightest',
+      blueDarker: 'blue-darker',
+      white: 'white',
+      indexGradient: `background: linear-gradient(#3efc9c 0%, #d9f1e3 100%);`,
+    },
+    dark: {},
   },
-  dark: {
-    primary: 'orange',
-    primaryLighter: 'orange-lighter',
-    primaryLightest: 'orange-lightest',
-    secondaryDarker: 'purple',
-    blackOrWhite: 'black',
-    indexGradient: `background: linear-gradient(#fff5eb 0%, #fcd9b6 100%)`,
+  darkMode: {
+    dark: {
+      orange: 'orange',
+      orangeLighter: 'orange-lighter',
+      orangeLightest: 'orange-lightest',
+      blueDarker: 'blue-darker',
+      blueDarkest: 'blue-darkest',
+      purpleDarker: 'purple-darker',
+      purpleDarkest: 'purple-darkest',
+      indexGradient: `background: linear-gradient(#fff5eb 0%, #fcd9b6 100%)`,
+    },
+    light: {},
   },
 }
 
@@ -31,14 +39,17 @@ class ThemeProvider extends React.Component {
     this.toggleTheme = this.toggleTheme.bind(this)
 
     this.state = {
-      theme: themes.light,
+      theme: themes.lightMode,
       toggleTheme: this.toggleTheme,
     }
   }
 
   toggleTheme() {
     this.setState({
-      theme: this.state.theme === themes.light ? themes.dark : themes.light,
+      theme:
+        this.state.theme === themes.lightMode
+          ? themes.darkMode
+          : themes.lightMode,
     })
   }
 

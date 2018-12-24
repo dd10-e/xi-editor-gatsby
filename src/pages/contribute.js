@@ -3,8 +3,9 @@ import { graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Content from 'components/content'
-import Layout from 'components/layout'
 import SEO from 'components/SEO'
+
+import LayoutContainer from 'containers/components/layoutContainer'
 
 export const ContributeTemplate = ({ title, content, helmet }) => {
   return (
@@ -26,7 +27,7 @@ ContributeTemplate.propTypes = {
 
 const Contribute = ({ data }) => {
   return (
-    <Layout>
+    <LayoutContainer>
       <ContributeTemplate
         title={data.mdx.frontmatter.title}
         content={data.mdx.code.body}
@@ -34,7 +35,7 @@ const Contribute = ({ data }) => {
           <SEO categorieTitle="Contribute" description={data.mdx.excerpt} />
         }
       />
-    </Layout>
+    </LayoutContainer>
   )
 }
 

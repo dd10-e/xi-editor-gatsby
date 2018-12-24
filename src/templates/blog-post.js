@@ -3,8 +3,9 @@ import { graphql, Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import Content from 'components/content'
-import Layout from 'components/layout'
 import SEO from 'components/SEO'
+
+import LayoutContainer from 'containers/components/layoutContainer'
 
 export const BlogPostTemplate = ({
   content,
@@ -75,7 +76,7 @@ class Post extends React.Component {
     const previous = this.props.pageContext.previous
     const next = this.props.pageContext.next
     return (
-      <Layout>
+      <LayoutContainer>
         <BlogPostTemplate
           content={post.code.body}
           description={post.frontmatter.description}
@@ -89,7 +90,7 @@ class Post extends React.Component {
             />
           }
         />
-      </Layout>
+      </LayoutContainer>
     )
   }
 }

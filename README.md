@@ -21,8 +21,10 @@ Investigate https://github.com/FormidableLabs/prism-react-renderer for code rend
 - [x] Automatically manifest support and favicons generated
 - [x] Sitemap support
 - [x] size-plugin to keep an eye on bundle sizes in production build
+- [x] Beautiful runtime theme system with `React.Context`
 - [ ] NetlifyCMS(?)
 - [ ] Documentation example(wip)
-- [ ] Redux starter or MobX with a real use case
+- [ ] Redux starter or MobX with a real use case(?) (replaced by React.Context for now)
+- [x] Ugly dark mode(yeah, I haven't spend so much time on)
 
 Discussions about architecture or whatever are welcome !

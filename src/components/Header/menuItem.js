@@ -6,9 +6,8 @@ const MenuItem = ({ to, title, theme }) => {
   return (
     <Link
       to={to}
-      className={`flex items-center no-underline text-base uppercase text-blue-darker mx-5 font-semibold witespace-no-wrap text-${
-        theme.secondaryDarker
-      }`}
+      className={`flex items-center no-underline text-base uppercase text-blue-darker mx-5 font-semibold witespace-no-wrap text-${theme
+        .light.blueDarker || theme.dark.blueDarker}`}
       activeClassName="border-green"
     >
       {title}

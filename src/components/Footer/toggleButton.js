@@ -19,7 +19,9 @@ const ToggleButton = ({ theme, toggleTheme }) => {
             <span className="absolute pin flex align-center h-full w-full pointer-events-none">
               <span
                 className={`flex-1 rounded-lg ${
-                  on ? `bg-${theme.primary}` : `bg-${theme.secondaryDarker}`
+                  on
+                    ? `bg-${theme.dark.orange}`
+                    : `bg-${theme.light.blueDarker}`
                 }`}
               />
               <span
@@ -33,7 +35,8 @@ const ToggleButton = ({ theme, toggleTheme }) => {
           </span>
           <label
             htmlFor="theme"
-            className={`ml-2 font-bold text-${theme.secondaryDarker}`}
+            className={`ml-2 font-bold text-${theme.light.blueDarker ||
+              theme.dark.blueDarker}`}
           >
             {on ? 'Theme Dark' : 'Theme Light'}
           </label>
