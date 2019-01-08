@@ -17,7 +17,7 @@
     "gatsby-plugin-sharp": "^2.0.14",
     "gatsby-plugin-sitemap": "^2.0.3",
     "gatsby-remark-autolink-headers": "^2.0.12",
-    "gatsby-remark-copy-linked-files": "^2.0.7",
+    "gatsby-remark-copy-linked-files": "^2.0.8",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.0.1",
     "gatsby-remark-prismjs": "^3.1.4",
@@ -44,7 +44,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:css && gatsby build",
+    "build": "yarn build:css && gatsby build --prefix-paths",
     "develop": "yarn build:css && gatsby develop",
     "start": "yarn develop",
     "format": "prettier --write \"src/**/*.{js,jsx,json}\"",
