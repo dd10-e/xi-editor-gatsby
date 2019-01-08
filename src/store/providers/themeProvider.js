@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ThemeContext from '../contexts/themeContext'
 
-// Primary = green
-// Secondary = blue
-
 const themes = {
   lightMode: {
     light: {
@@ -26,7 +23,7 @@ const themes = {
       blueDarkest: 'blue-darkest',
       purpleDarker: 'purple-darker',
       purpleDarkest: 'purple-darkest',
-      indexGradient: `background: linear-gradient(#fff5eb 0%, #fcd9b6 100%)`,
+      indexGradient: `background: linear-gradient(#fff5eb 0%, #fcd9b6 100%);`,
     },
     light: {},
   },
