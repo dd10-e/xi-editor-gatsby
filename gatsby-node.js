@@ -8,7 +8,6 @@ const path = require('path')
 const SizePlugin = require('size-plugin')
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin')
 const { createFilePath } = require('gatsby-source-filesystem')
-const componentWithMDXScope = require('gatsby-mdx/component-with-mdx-scope')
 
 exports.createPages = async ({ graphql, actions }) => {
   const result = await graphql(`
@@ -17,9 +16,6 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
-            code {
-              scope
-            }
             fields {
               slug
               sourceName
@@ -45,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
   Array.from({ length: numPages }, (_, i) => {
     actions.createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
-      component: require.resolve('./src/templates/blog-list.js'),
+      component: path.resolve('./src/templates/blog-list.js'),
       context: {
         limit: blogPostsPerPage,
         skip: i * blogPostsPerPage,
@@ -64,10 +60,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     actions.createPage({
       path: `/blog/post${post.fields.slug}`,
-      component: componentWithMDXScope(
-        require.resolve('./src/templates/blog-post.js'),
-        post.code.scope
-      ),
+      component: path.resolve('./src/templates/blog-post.js'),
       context: { id: post.id, previous, next },
     })
   })
@@ -80,10 +73,7 @@ exports.createPages = async ({ graphql, actions }) => {
   documentations.forEach(({ node: doc }) => {
     actions.createPage({
       path: `/documentation${doc.fields.slug}`,
-      component: componentWithMDXScope(
-        require.resolve('./src/templates/documentation-post.js'),
-        doc.code.scope
-      ),
+      component: path.resolve('./src/templates/documentation-post.js'),
       context: { id: doc.id },
     })
   })
@@ -95,10 +85,7 @@ exports.createPages = async ({ graphql, actions }) => {
   gsoc.forEach(({ node }) => {
     actions.createPage({
       path: `/gsoc${node.fields.slug}`,
-      component: componentWithMDXScope(
-        require.resolve('./src/templates/gsoc.js'),
-        node.code.scope
-      ),
+      component: path.resolve('./src/templates/gsoc.js'),
       context: { id: node.id },
     })
   })
