@@ -41,8 +41,8 @@ export const LayoutWithLeftNav = ({ children, data, title, path }) => {
     <div className="h-full w-full flex flex-col items-stretch font-sans">
       <SEO />
       <HeaderContainer />
-      <main role="main" className="flex-1 -mt-32">
-        <div className="flex">
+      <main role="main" className="flex-1">
+        <div className="flex justify-between">
           <div className="w-64">
             <nav className={`pt-6 max-w-xs w-auto pb-32`}>
               {!title === undefined && (
@@ -50,7 +50,7 @@ export const LayoutWithLeftNav = ({ children, data, title, path }) => {
                   {title}
                 </p>
               )}
-              <ul className="list-reset flex flex-col flex-1">
+              <ul className="list-reset flex flex-col flex-1 py-8">
                 {data.map(({ node: item }) => (
                   <li className="leading-tight max-x-xs" key={item.id}>
                     <Link
@@ -65,7 +65,7 @@ export const LayoutWithLeftNav = ({ children, data, title, path }) => {
               </ul>
             </nav>
           </div>
-          <div className="max-w-lg px-2 md:px-10 py-8 mb-24 content mx-auto lg:ml-8 overflow-hidden">
+          <div className="max-w-lg px-2 md:px-10 mb-24 content mx-auto lg:ml-32 overflow-hidden">
             {children}
           </div>
         </div>

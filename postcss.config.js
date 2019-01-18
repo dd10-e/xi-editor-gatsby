@@ -8,6 +8,7 @@ module.exports = {
     purgecss({
       content: ['./public/**/*.html', './src/**/*.js'],
       css: ['./output.css'],
+      // use for theme context
       whitelistPatterns: [
         /green$/,
         /white$/,

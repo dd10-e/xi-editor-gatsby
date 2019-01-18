@@ -28,13 +28,11 @@ class DocumentationPost extends React.Component {
   render() {
     const documentationPost = this.props.data.mdx
     const navBar = this.props.data.allMdx.edges
-    const components = this.props.components
     return (
       <LayoutWithLeftNav data={navBar} path="documentation">
         <DocumentationPostTemplate
           content={documentationPost.code.body}
           title={documentationPost.frontmatter.title}
-          components={components}
           helmet={
             <SEO
               categorieTitle={`${documentationPost.frontmatter.title}`}

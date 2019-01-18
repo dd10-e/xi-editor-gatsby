@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 class ToggleButton extends React.Component {
   render() {
     const { theme, toggleTheme, toggleState } = this.props
-    console.log(this.props)
     return (
       <Toggle>
         {({ on, getTogglerProps }) => (

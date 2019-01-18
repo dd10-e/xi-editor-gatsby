@@ -6,7 +6,7 @@ const Li = props => {
     <li
       className={props.className}
       css="
-    
+      color: red;
   "
     >
       {props.children}
