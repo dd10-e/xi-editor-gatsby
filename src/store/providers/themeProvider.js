@@ -38,6 +38,7 @@ class ThemeProvider extends React.Component {
     this.state = {
       theme: themes.lightMode,
       toggleTheme: this.toggleTheme,
+      toggleState: false,
     }
   }
 
@@ -47,6 +48,7 @@ class ThemeProvider extends React.Component {
         this.state.theme === themes.lightMode
           ? themes.darkMode
           : themes.lightMode,
+      toggleState: !this.state.toggleState,
     })
   }
 

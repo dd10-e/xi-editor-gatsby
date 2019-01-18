@@ -6,8 +6,8 @@ import Footer from 'components/Footer'
 const FooterContainer = () => {
   return (
     <ThemeContext.Consumer>
-      {({ theme, toggleTheme }) => {
-        return <Footer theme={theme} toggleTheme={toggleTheme} />
+      {({ theme }) => {
+        return <Footer theme={theme} />
       }}
     </ThemeContext.Consumer>
   )

@@ -6,8 +6,14 @@ import ToggleButton from 'components/Footer/toggleButton'
 const FooterContainer = () => {
   return (
     <ThemeContext.Consumer>
-      {({ theme, toggleTheme }) => {
-        return <ToggleButton theme={theme} toggleTheme={toggleTheme} />
+      {({ theme, toggleTheme, toggleState }) => {
+        return (
+          <ToggleButton
+            theme={theme}
+            toggleTheme={toggleTheme}
+            toggleState={toggleState}
+          />
+        )
       }}
     </ThemeContext.Consumer>
   )

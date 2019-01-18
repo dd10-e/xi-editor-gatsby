@@ -9,7 +9,6 @@ import IndexPageContainer from 'containers/pages/indexContainer'
 import LayoutContainer from 'containers/components/layoutContainer'
 
 export const IndexPage = ({ theme }) => {
-  console.log(theme)
   return (
     <LayoutContainer>
       <div className={`bg-${theme.light.white || theme.dark.orange}`}>

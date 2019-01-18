@@ -9,7 +9,7 @@
     "directory-named-webpack-plugin": "^4.0.0",
     "gatsby": "^2.0.53",
     "gatsby-image": "^2.0.20",
-    "gatsby-mdx": "^0.3.3",
+    "gatsby-mdx": "^0.3.4",
     "gatsby-plugin-manifest": "^2.0.12",
     "gatsby-plugin-offline": "^2.0.16",
     "gatsby-plugin-postcss": "^2.0.2",

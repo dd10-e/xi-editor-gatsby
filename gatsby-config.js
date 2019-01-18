@@ -72,7 +72,9 @@ module.exports = {
       resolve: `gatsby-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
-        globalScope: `import Image from './images/image';`,
+        // globalScope: `
+        //   import Image from './src/components/images/image';
+        // `,
         defaultLayouts: {
           blog: require.resolve('./src/templates/blog-post.js'),
           documentation: require.resolve(
